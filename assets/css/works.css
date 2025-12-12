@@ -141,3 +141,36 @@ a:hover{ border-bottom-color: rgba(242,222,156,.95); }
   h1{ font-size:24px; }
   .seal{ width:120px; height:120px; }
 }
+
+/* T35C1 — Song hành VI/EN: 2 cột, 6 ô */
+.bilingual-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 16px;
+}
+
+.bilingual-grid .box{
+  margin: 0;              /* để grid tự canh */
+  max-width: none;        /* bỏ giới hạn 760px trong grid */
+}
+
+.box-head{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom: 8px;
+}
+
+.box-head .lang{
+  font-size: 12px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  opacity: .85;
+}
+
+/* Mobile: xếp dọc cho dễ đọc */
+@media (max-width: 760px){
+  .bilingual-grid{ grid-template-columns: 1fr; }
+}
