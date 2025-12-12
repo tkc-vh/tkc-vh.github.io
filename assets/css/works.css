@@ -280,3 +280,84 @@ a:hover{ border-bottom-color: rgba(242,222,156,.75); }
   .bilingual-grid{ grid-template-columns:1fr; }
   .bilingual-grid::before{ display:none; }
 }
+
+/* ===================================================
+   FIX LOGO AXIS + ROYAL CORNERS + TITLE STROKE
+   (SAFE PATCH – override only)
+   =================================================== */
+
+/* --- FIX LOGO: căn tuyệt đối theo trục khung --- */
+.seal-wrap{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  width:100%;
+  margin:0 auto 10px !important;
+}
+
+.seal{
+  margin:0 auto !important;
+  position:relative;
+  left:0;
+  right:0;
+  transform:none !important;
+}
+
+/* --- ROYAL CORNERS (4 góc triện vàng) --- */
+.sanctuary{
+  position:relative;
+}
+
+.sanctuary .corner{
+  position:absolute;
+  width:22px;
+  height:22px;
+  border:2px solid rgba(242,222,156,.75);
+  box-shadow:0 0 10px rgba(242,222,156,.35);
+  pointer-events:none;
+}
+
+.sanctuary .corner.tl{
+  top:14px; left:14px;
+  border-right:none; border-bottom:none;
+}
+.sanctuary .corner.tr{
+  top:14px; right:14px;
+  border-left:none; border-bottom:none;
+}
+.sanctuary .corner.bl{
+  bottom:14px; left:14px;
+  border-right:none; border-top:none;
+}
+.sanctuary .corner.br{
+  bottom:14px; right:14px;
+  border-left:none; border-top:none;
+}
+
+/* --- TITLE STROKE: viền chữ hoàng gia --- */
+h1{
+  position:relative;
+  color:#fff;
+  text-shadow:
+    0 1px 0 rgba(0,0,0,.8),
+    0 0 18px rgba(242,222,156,.25);
+}
+
+h1::before{
+  content:attr(data-title);
+  position:absolute;
+  inset:0;
+  text-align:center;
+  z-index:-1;
+  color:transparent;
+  -webkit-text-stroke: 1.2px rgba(242,222,156,.75);
+  text-shadow:none;
+  pointer-events:none;
+}
+
+/* Subtitle nhấn nhẹ vàng */
+.subtitle{
+  color: rgba(242,222,156,.85);
+  text-shadow: 0 0 12px rgba(242,222,156,.25);
+}
+
