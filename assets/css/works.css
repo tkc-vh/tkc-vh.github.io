@@ -409,3 +409,32 @@ h1::before{
   .cover-grid{ grid-template-columns:1fr; }
 }
 
+/* ===== Moon Mirror Effect ===== */
+.cover-card{
+  position:relative;
+}
+
+.cover-card::before{
+  content:"";
+  position:absolute;
+  left:0; right:0;
+  bottom:-38%;
+  height:38%;
+  background:
+    linear-gradient(to bottom,
+      rgba(255,255,255,.28),
+      rgba(255,255,255,.12) 30%,
+      rgba(0,0,0,.25) 60%,
+      rgba(0,0,0,.65)
+    );
+  filter: blur(2px);
+  opacity:.45;
+  transform: scaleY(-1);
+  pointer-events:none;
+}
+
+.cover-card img{
+  position:relative;
+  z-index:2;
+}
+
