@@ -182,6 +182,68 @@
       .reveal{ opacity:1; transform:none; transition:none; }
       .navbtn, .btn, .work{ transition:none; }
     }
+/* ====== WORK TITLE – GOLDEN SHIMMER ====== */
+.work-title{
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  letter-spacing: .04em;
+  font-weight: 600;
+
+  background: linear-gradient(
+    120deg,
+    #f7e7b4 0%,
+    #e6c86f 20%,
+    #fff4cc 40%,
+    #d6b35c 60%,
+    #fff1c1 80%,
+    #cfae55 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 6s linear infinite;
+}
+
+@keyframes goldShimmer{
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Card gọn – trang trọng */
+.work-card{
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255,255,255,.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,.28);
+}
+
+.work-desc{
+  font-size: .95rem;
+  line-height: 1.6;
+  opacity: .9;
+  margin-bottom: 12px;
+}
+
+.work-enter{
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(255,255,255,.04);
+  text-decoration: none;
+  color: inherit;
+  font-size: .95rem;
+  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
+}
+
+.work-enter:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.35);
+  filter: brightness(1.06);
+}
+
   </style>
 </head>
 
@@ -238,103 +300,77 @@
         <!-- Lưới tác phẩm -->
         <div class="grid">
 
-          <!-- T19 -->
-          <div class="work reveal" id="t19c1">
-            <div class="workhead">
-              <a class="cover" href="./t19/c1/" aria-label="Open T19-C1">
-                <!-- cover gợi ý: nếu chàng muốn thay bằng ảnh local, đổi src -->
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh0lNEygyH_Ij-OdDMAd05kNnBDoxk3hNzSOQGpnNJdPsnGKI4IpOcQdbu5DhLp_oo8XggE8dhcOQZPgwjLfbXbB-h0r5Od0meUIFnJRIEEa3W63It-dwhLSVJMpaXktW7N2pufoDJj7PpbwhiwuNDOFYKnU-8Gc_cIVJ4AirzWO3hD3YLP_tyceooxxjI_/s900/T19C1_Cover_Vi.jpg" alt="T19-C1 cover">
-              </a>
-              <div>
-                <h3 class="wtitle">T19-C1 • Khai Mở Mạng Quang Tuyến — Cây Trường Sinh — Thân Thủy Sinh</h3>
-                <p class="wmeta">Trục “khai mở”: đặt nền cho hệ quang tuyến và cấu trúc thân-thức nội quan.</p>
+  <!-- T19-C1 -->
+  <div class="work-card">
+    <img
+      src="./t19/c1/T19C1_cover_vi.jpg"
+      alt="T19-C1 cover"
+      style="width:100%;border-radius:14px;margin-bottom:10px;"
+    >
 
-                <div class="pills">
-                  <span class="pill">VI</span><span class="pill">EN</span><span class="pill">FR</span>
-                  <span class="pill">JA</span><span class="pill">KO</span><span class="pill">ZH</span>
-                </div>
+    <h3 class="work-title">
+      T19-C1 · Khai Mở Mạng Quang Tuyến  
+      <br>Cây Trường Sinh – Thân Thủy Sinh
+    </h3>
 
-                <div class="btn-row">
-                  <a class="btn" href="./t19/c1/">Vào Cổng Tác Phẩm</a>
-                  <a class="btn disabled" data-href="" href="#">Đọc (VI)</a>
-                  <a class="btn disabled" data-href="" href="#">Đọc (EN)</a>
-                  <a class="btn" href="./legal/copyright.html">Bản quyền</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="work-desc">
+      Tập mở trục Quang Tuyến – đặt nền cho toàn bộ hệ thân-thức
+      và cấu trúc ánh sáng trong TKC-VH Diary.
+    </div>
 
-          <!-- T35 -->
-          <div class="work reveal" id="t35c1">
-            <div class="workhead">
-              <a class="cover" href="./t35/c1/" aria-label="Open T35-C1">
-                <!-- ưu tiên ảnh local (chàng có T35CoverVi/En trong repo) -->
-                <img src="./t35/c1/T35CoverVi.jpg" alt="T35-C1 cover">
-              </a>
-              <div>
-                <h3 class="wtitle">T35-C1 • Aqua-Fire Luminous Body & The Unicorn Spirit Embryo</h3>
-                <p class="wmeta">Trục “thân quang”: kỷ luật cổ điển — rõ, sâu, bền; biểu tượng vận hành như một bản đồ.</p>
+    <a class="work-enter" href="./t19/c1/">
+      Vào Cổng Tác Phẩm
+    </a>
+  </div>
 
-                <div class="pills">
-                  <span class="pill">VI</span><span class="pill">EN</span><span class="pill">FR</span>
-                  <span class="pill">JA</span><span class="pill">KO</span><span class="pill">ZH</span>
-                </div>
+  <!-- T35-C1 -->
+  <div class="work-card">
+    <img
+      src="./t35/c1/T35CoverVi.jpg"
+      alt="T35-C1 cover"
+      style="width:100%;border-radius:14px;margin-bottom:10px;"
+    >
 
-                <div class="btn-row">
-                  <a class="btn" href="./t35/c1/">Vào Cổng Tác Phẩm</a>
-                  <a class="btn disabled" data-href="" href="#">Đọc (VI)</a>
-                  <a class="btn disabled" data-href="" href="#">Đọc (EN)</a>
-                  <a class="btn" href="./legal/disclaimer.html">Disclaimer</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <h3 class="work-title">
+      T35-C1 · Aqua-Fire Luminous Body  
+      <br>The Unicorn Spirit Embryo
+    </h3>
 
-          <!-- T42 -->
-          <div class="work reveal" id="t42c2">
-            <div class="workhead">
-              <a class="cover" href="./t42/c2/" aria-label="Open T42-C2">
-                <!-- cover gợi ý EN (có thể thay sang ảnh local nếu chàng lưu) -->
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6_Gl0Z9L-x1Z9K9t9y5p8Kkq4c7pJt8F4d0hYwZVZpQb7cZP0cL9uEw8GmOe7V2gM2hGzQmFq8c7QH9n0f8qv2gQHnWmAq1p7cQ/s900/Cover_En_T42c2.jpg" alt="T42-C2 cover">
-              </a>
-              <div>
-                <h3 class="wtitle">T42-C2 • Twin Bodhi Diamond Trees — Eternal Golden Apricot Tree</h3>
-                <p class="wmeta">Trục “cổ thụ”: Bồ Đề Song Thụ & Mai Vàng vĩnh cửu; nhịp văn bền như kim thạch.</p>
+    <div class="work-desc">
+      Tập triển khai Thân Quang – cấu trúc nước-lửa, 
+      hợp nhất biểu tượng và kỷ luật nội tại.
+    </div>
 
-                <div class="pills">
-                  <span class="pill">VI</span><span class="pill">EN</span><span class="pill">FR</span>
-                  <span class="pill">JA</span><span class="pill">KO</span><span class="pill">ZH</span>
-                </div>
+    <a class="work-enter" href="./t35/c1/">
+      Vào Cổng Tác Phẩm
+    </a>
+  </div>
 
-                <div class="btn-row">
-                  <a class="btn" href="./t42/c2/">Vào Cổng Tác Phẩm</a>
-                  <a class="btn disabled" data-href="" href="#">Đọc (VI)</a>
-                  <a class="btn disabled" data-href="" href="#">Đọc (EN)</a>
-                  <a class="btn" href="./legal/nguon-anh-va-tu-lieu.html">Nguồn ảnh</a>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- T42-C2 -->
+  <div class="work-card">
+    <img
+      src="./t42/c2/T42C2_cover_vi.jpg"
+      alt="T42-C2 cover"
+      style="width:100%;border-radius:14px;margin-bottom:10px;"
+    >
 
-        </div>
+    <h3 class="work-title">
+      T42-C2 · Bồ Đề Song Thụ Kim Cương  
+      <br>Cội Mai Vàng Vĩnh Cửu
+    </h3>
 
-        <div class="swordline" aria-hidden="true"></div>
+    <div class="work-desc">
+      Trục Cổ Thụ – nơi hợp nhất Bồ Đề Song Thụ
+      và Mai Vàng như kim thạch vĩnh hằng.
+    </div>
 
-        <div class="panel reveal">
-          <p class="mini" style="margin:0;">
-            <strong> Các links sẽ được cập nhật vào các card ngôn ngữ trong tương lai trong quá trình dịch thuật và xuất bản</strong>
-            
-          </p>
-        </div>
+    <a class="work-enter" href="./t42/c2/">
+      Vào Cổng Tác Phẩm
+    </a>
+  </div>
 
-        <div class="swordline" aria-hidden="true"></div>
+</div>
 
-        <div class="topnav">
-          <a class="navbtn" href="./index.html">← Trang Chủ</a>
-          <a class="navbtn" href="./series.html">Series</a>
-          <a class="navbtn" href="./legal/">↩ Pháp Lý</a>
-          <a class="navbtn" href="./legal/public-gpg-key.html">GPG Key</a>
-        </div>
 
         <div class="footer">© TKC-VH • Works</div>
 
