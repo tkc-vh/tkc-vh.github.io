@@ -1,176 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TKC-VH Temple</title>
 
-  <meta name="description" content="Public gateway of the TKC-VH Diary. Official site: nhatkytkcvh.blogspot.com" />
+  <meta name="description" content="Cổng Thành công khai của TKC-VH Diary. Dư âm vẫn ngân sau những mùa xuân vĩnh cửu." />
   <meta property="og:title" content="TKC-VH Temple" />
-  <meta property="og:description" content="Public gateway of the TKC-VH Diary. Nothing essential is revealed before its time." />
-  <meta property="og:image" content="assets/moon-diamond.jpg" />
+  <meta property="og:description" content="Cổng Thành công khai của TKC-VH Diary. Dư âm vẫn ngân sau những mùa xuân vĩnh cửu." />
+  <meta property="og:image" content="https://tkc-vh.github.io/assets/moon-diamond.jpg" />
   <meta property="og:type" content="website" />
 
-  <!-- Favicon: dùng đúng đường dẫn trong repo -->
-  <link rel="icon" href="assets/moon-diamond.jpg" />
+  <link rel="icon" href="https://tkc-vh.github.io/assets/moon-diamond.jpg" />
+  <link rel="stylesheet" href="https://tkc-vh.github.io/legal/legal.css" />
 
   <style>
-    :root{
-      --bg1:#070a12;
-      --bg2:#070f1a;
-      --ink:#f3f0e6;
-      --muted:#c7c2b2;
-      --gold:#d6b25e;
-      --gold2:#f2de9c;
+    /* =========================================================
+       HOME (Temple) – dùng legal.css + bổ sung lớp hoàng gia
+       ========================================================= */
 
-      --card: rgba(8,12,18,.34);
-      --card2: rgba(8,12,18,.18);
-
-      --shadow: 0 18px 60px rgba(0,0,0,.60);
-      --max: 980px;
-      --r: 18px;
+    .temple-wrap{
+      width: min(1060px, calc(100% - 32px));
+      margin: 56px auto 86px;
     }
 
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-
-    body{
-      margin:0;
-      color:var(--ink);
-      font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+    /* CHÁNH ĐIỆN */
+    .sanctuary-main{
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 60px rgba(0,0,0,.55);
+      border: 1px solid rgba(255,240,210,.16);
       background:
-        radial-gradient(900px 560px at 22% 18%, rgba(210,160,255,.10), rgba(0,0,0,0) 60%),
-        radial-gradient(1000px 700px at 78% 22%, rgba(255,255,255,.06), rgba(0,0,0,0) 62%),
-        radial-gradient(1200px 820px at 50% 105%, rgba(214,178,94,.06), rgba(0,0,0,0) 58%),
-        linear-gradient(180deg, var(--bg2), var(--bg1));
-      overflow-x:hidden;
+        radial-gradient(900px 520px at 22% 20%, rgba(255,255,255,.06), rgba(0,0,0,0) 60%),
+        radial-gradient(980px 640px at 78% 24%, rgba(190,130,255,.10), rgba(0,0,0,0) 64%),
+        radial-gradient(1100px 720px at 50% 110%, rgba(214,178,94,.05), rgba(0,0,0,0) 58%),
+        linear-gradient(160deg, rgba(18,12,20,.58), rgba(6,9,14,.26));
     }
 
-    .veil{
-      position:fixed;
-      inset:-20%;
-      pointer-events:none;
-      z-index:0;
+    /* SƯƠNG TRÊN TRỜI */
+    .sanctuary-main::before{
+      content:"";
+      position:absolute; inset:-30%;
       background:
         radial-gradient(820px 520px at 30% 22%, rgba(255,255,255,.08), rgba(255,255,255,0) 60%),
         radial-gradient(980px 640px at 70% 28%, rgba(190,130,255,.10), rgba(190,130,255,0) 62%),
-        radial-gradient(1200px 760px at 48% 72%, rgba(255,255,255,.05), rgba(255,255,255,0) 66%),
-        radial-gradient(900px 700px at 15% 80%, rgba(140,90,220,.08), rgba(140,90,220,0) 70%);
-      filter: blur(12px);
-      opacity: .95;
-      animation: veilDrift 18s ease-in-out infinite;
+        radial-gradient(1200px 760px at 48% 72%, rgba(255,255,255,.05), rgba(255,255,255,0) 66%);
+      filter: blur(14px);
+      opacity:.95;
+      pointer-events:none;
+      animation: skyDrift 18s ease-in-out infinite;
     }
-    @keyframes veilDrift{
+
+    /* VIGNETTE */
+    .sanctuary-main::after{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(circle at 50% 35%,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0) 48%,
+        rgba(0,0,0,.34) 74%,
+        rgba(0,0,0,.55) 100%);
+      pointer-events:none;
+    }
+
+    @keyframes skyDrift{
       0%,100%{ transform: translate3d(0,0,0) scale(1); }
       50%{ transform: translate3d(0,-18px,0) scale(1.02); }
     }
 
-    .vignette{
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      z-index:0;
-      background: radial-gradient(circle at 50% 35%,
-        rgba(0,0,0,0) 0%,
-        rgba(0,0,0,0) 45%,
-        rgba(0,0,0,.36) 72%,
-        rgba(0,0,0,.55) 100%);
-    }
-
-    main{
-      position:relative;
-      z-index:1;
-      width:min(var(--max), calc(100% - 32px));
-      margin: 56px auto 80px;
-    }
-
-    .sanctuary{
-      border-radius: var(--r);
-      background: linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,0) 40%),
-                  linear-gradient(160deg, rgba(32,18,38,.42), rgba(8,10,14,.18) 55%, rgba(26,14,22,.32));
-      box-shadow: var(--shadow);
-      overflow:hidden;
-
-      opacity:0;
-      transform: translateY(26px);
-      animation: rise 1.25s ease-out .15s forwards;
-    }
-    @keyframes rise{
-      0%{ opacity:0; transform: translateY(26px); }
-      70%{ opacity:1; transform: translateY(5px); }
-      100%{ opacity:1; transform: translateY(0); }
-    }
-
-    .banner{
-      padding: 20px 20px 8px;
-      display:flex;
-      justify-content:center;
-    }
-    .banner img{
-      width:100%;
-      max-width: 880px;
-      height:auto;
-      display:block;
-      border-radius: 14px;
-      box-shadow:
-        0 22px 70px rgba(0,0,0,.55),
-        0 0 40px rgba(190,130,255,.12);
-      filter: saturate(1.02) contrast(1.02);
-    }
-
     .gate{
-      padding: 8px 26px 26px;
-      text-align:center;
-    }
-
-    h1{
-      margin: 14px 0 6px;
-      font-size: 30px;
-      font-weight: 600;
-      letter-spacing: .4px;
-    }
-    .subtitle{
-      margin: 0 0 12px;
-      color: var(--muted);
-      letter-spacing: 1px;
-      font-size: 12px;
-      text-transform: uppercase;
-      opacity: .95;
-    }
-
-    .seal-wrap{
-      display:flex;
-      justify-content:center;
-      margin: 10px 0 14px;
-    }
-    .seal{
-      width: 132px;
-      height: 132px;
-      border-radius: 999px;
       position: relative;
-      display:grid;
-      place-items:center;
-      overflow:hidden;
+      z-index: 2;
+      padding: 26px 26px 24px;
+      text-align: center;
+    }
 
+    /* ===================== MOON EMBLEM ===================== */
+    .seal-wrap{ display:flex; justify-content:center; margin: 6px 0 12px; }
+    .seal{
+      width: 132px; height: 132px;
+      border-radius: 999px;
+      position:relative;
+      display:grid; place-items:center;
       background: radial-gradient(circle at 50% 45%,
-                rgba(0,0,0,.35) 0%,
-                rgba(0,0,0,.90) 62%,
-                rgba(0,0,0,1) 100%);
+        rgba(0,0,0,.35) 0%,
+        rgba(0,0,0,.90) 62%,
+        rgba(0,0,0,1) 100%);
       border: 3px solid rgba(255,240,210,.85);
       box-shadow:
-        0 0 18px rgba(255,240,210,.65),
+        0 0 18px rgba(255,240,210,.62),
         0 0 60px rgba(190,130,255,.20);
-
       animation: sealPulse 5.2s ease-in-out infinite;
+      overflow:hidden;
     }
     .seal img{
-      width: 86%;
-      height: 86%;
+      width: 86%; height: 86%;
       border-radius: 999px;
-      object-fit: cover;
-      display:block;
+      object-fit:cover;
+      border: 1px solid rgba(214,178,94,.28);
       box-shadow: inset 0 0 14px rgba(0,0,0,.75);
-      border: 1px solid rgba(214,178,94,.32);
+      display:block;
     }
     .seal::after{
       content:"";
@@ -191,20 +121,7 @@
       animation: moonSweep 7.2s ease-in-out infinite;
       pointer-events:none;
     }
-    @keyframes sealPulse{
-      0%,100%{
-        transform: scale(1);
-        box-shadow:
-          0 0 16px rgba(255,240,210,.62),
-          0 0 58px rgba(190,130,255,.18);
-      }
-      50%{
-        transform: scale(1.03);
-        box-shadow:
-          0 0 22px rgba(255,250,235,.82),
-          0 0 78px rgba(190,130,255,.26);
-      }
-    }
+    @keyframes sealPulse{ 0%,100%{ transform: scale(1); } 50%{ transform: scale(1.03); } }
     @keyframes moonSweep{
       0%,55%{ opacity:0; transform: translateX(0) skewY(-6deg); }
       62%{ opacity:.75; }
@@ -212,111 +129,181 @@
       100%{ opacity:0; transform: translateX(22%) skewY(-6deg); }
     }
 
-    .divider{
-      width: 220px;
+    /* ===================== TITLE + KIẾM QUANG ===================== */
+    .title-wrap{ position:relative; display:inline-block; margin-top: 6px; }
+    .title-wrap::before,
+    .title-wrap::after{
+      content:"";
+      position:absolute;
+      left: 50%;
+      width: 460px;
       height: 2px;
-      margin: 14px auto 16px;
+      transform: translateX(-50%);
       background: linear-gradient(to right,
         rgba(255,255,255,0),
-        rgba(255,240,210,.85),
+        rgba(255,240,210,.92),
         rgba(255,255,255,0));
-      box-shadow: 0 0 12px rgba(255,240,210,.35);
       border-radius: 999px;
-      opacity: .95;
+      box-shadow: 0 0 16px rgba(255,240,210,.28);
+      opacity:.95;
+      pointer-events:none;
+    }
+    .title-wrap::before{ top: -10px; }
+    .title-wrap::after{ bottom: -12px; }
+
+    h1.temple-title{
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: .5px;
+      font-weight: 900;
+      text-shadow:
+        0 1px 0 rgba(0,0,0,.55),
+        0 0 18px rgba(242,222,156,.18);
+    }
+    .subtitle{
+      margin: 10px 0 18px;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      opacity: .92;
     }
 
-    .content{
-      max-width: 720px;
-      margin: 0 auto;
-      text-align:left;
-      background: linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,0));
+    /* ===================== ROYAL PANEL (thơ 2 cột) ===================== */
+    .royal-panel{
+      max-width: 980px;
+      margin: 0 auto 14px;
+      text-align: left;
       border-radius: 14px;
-      padding: 14px 16px 12px;
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(255,240,210,.12);
+      background: rgba(0,0,0,.10);
+      position:relative;
+      overflow:hidden;
     }
 
-    p{
-      margin: 10px 0;
-      line-height: 1.7;
+    /* kiếm quang lướt qua panel */
+    .royal-panel::before{
+      content:"";
+      position:absolute;
+      top: -25%;
+      left: -70%;
+      width: 220%;
+      height: 70%;
+      background: linear-gradient(115deg,
+        rgba(255,255,255,0) 0%,
+        rgba(242,222,156,.10) 28%,
+        rgba(255,255,255,.26) 46%,
+        rgba(242,222,156,.10) 64%,
+        rgba(255,255,255,0) 100%);
+      opacity:0;
+      transform: skewY(-6deg);
+      animation: panelSweep 8.6s ease-in-out infinite;
+      pointer-events:none;
+      mix-blend-mode: screen;
+    }
+    @keyframes panelSweep{
+      0%,58%{ opacity:0; transform: translateX(0) skewY(-6deg); }
+      66%{ opacity:.7; }
+      92%{ opacity:0; transform: translateX(22%) skewY(-6deg); }
+      100%{ opacity:0; transform: translateX(24%) skewY(-6deg); }
+    }
+
+    .poem-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      position:relative;
+      z-index: 1;
+    }
+    .poem-grid::after{
+      content:"";
+      position:absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 50%;
+      width: 1px;
+      transform: translateX(-50%);
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        rgba(242,222,156,.22),
+        rgba(255,255,255,0)
+      );
+      opacity:.85;
+      pointer-events:none;
+    }
+
+    .poem-col{
+      padding: 10px 10px;
+      border-radius: 12px;
+      background: rgba(0,0,0,.06);
+      border: 1px solid rgba(255,240,210,.10);
+    }
+    .poem-col.en{ font-style: italic; opacity: .92; }
+
+    .poem-title{
+      margin: 0 0 10px;
+      font-weight: 900;
+      letter-spacing: .2px;
+      text-shadow: 0 0 14px rgba(242,222,156,.10);
+    }
+    .poem-line{
+      margin: 0 0 10px;
+      line-height: 1.85;
       font-size: 15px;
-      color: #e3ddcf;
+      opacity: .96;
     }
-    ul{
-      margin: 10px 0 12px 18px;
-      padding: 0;
-      line-height: 1.75;
-      color: #d0c8b8;
-      font-size: 15px;
-    }
+    .poem-col.en .poem-line{ font-size: 14px; opacity: .92; }
 
-    a{
-      color: var(--gold2);
-      text-decoration:none;
-      border-bottom: 1px dotted rgba(242,222,156,.55);
-    }
-    a:hover{ border-bottom-color: rgba(242,222,156,.95); }
-
-    /* ===== CARDS: điều hướng chống dead-link ===== */
+    /* ===================== NAV CARDS ===================== */
     .cards{
-      margin: 14px auto 6px;
-      max-width: 760px;
+      margin: 16px auto 8px;
+      max-width: 980px;
       display:grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
+      text-align:left;
     }
     .card{
       border-radius: 16px;
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(255,240,210,.14);
+      box-shadow: 0 14px 40px rgba(0,0,0,.30);
       background:
         linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,0) 52%),
-        linear-gradient(180deg, var(--card), var(--card2));
-      border: 1px solid rgba(255,240,210,.18);
-      box-shadow: 0 14px 40px rgba(0,0,0,.35);
-      padding: 14px 14px 12px;
-      text-align:left;
+        linear-gradient(180deg, rgba(0,0,0,.22), rgba(0,0,0,.10));
       position:relative;
       overflow:hidden;
     }
     .card::before{
       content:"";
-      position:absolute;
-      inset:-2px;
+      position:absolute; inset:-2px;
       background: radial-gradient(420px 220px at 20% 10%, rgba(190,130,255,.10), rgba(0,0,0,0) 55%);
       opacity:.9;
       pointer-events:none;
     }
-    .card h3{
-      margin: 0 0 6px;
-      font-size: 16px;
-      font-weight: 700;
-      letter-spacing:.2px;
-      position:relative;
-      z-index:1;
-    }
-    .card p{
-      margin: 0 0 10px;
-      font-size: 14px;
-      color: #d7d0c0;
-      position:relative;
-      z-index:1;
-    }
-    .card .btn{
+    .card h3{ margin:0 0 6px; font-size: 16px; font-weight: 900; position:relative; z-index:1; }
+    .card p{ margin:0 0 10px; font-size: 14px; opacity:.92; position:relative; z-index:1; }
+
+    .btn{
       display:inline-flex;
       align-items:center;
       gap:8px;
       padding: 9px 12px;
       border-radius: 999px;
       border: 1px solid rgba(242,222,156,.35);
-      background: rgba(0,0,0,.20);
-      color: var(--gold2);
+      background: rgba(0,0,0,.16);
       text-decoration:none;
       font-size: 14px;
       position:relative;
       z-index:1;
       box-shadow: 0 0 18px rgba(242,222,156,.10);
     }
-    .card .btn:hover{
+    .btn:hover{
       border-color: rgba(242,222,156,.70);
       box-shadow: 0 0 28px rgba(242,222,156,.18);
     }
+
     .mini-links{
       margin-top: 10px;
       display:flex;
@@ -325,114 +312,207 @@
       position:relative;
       z-index:1;
       font-size: 13px;
-      color:#cfc7b7;
+      opacity:.92;
     }
-    .mini-links a{
-      border-bottom: 1px dotted rgba(242,222,156,.35);
-    }
+    .mini-links a{ text-decoration:none; border-bottom: 1px dotted rgba(242,222,156,.35); }
+    .mini-links a:hover{ border-bottom-color: rgba(242,222,156,.90); }
 
-    footer{
+    .foot{
       margin-top: 14px;
       font-size: 14px;
-      color: #bdb7a5;
+      opacity:.88;
+      text-align:center;
+      position:relative;
+      z-index: 2;
     }
 
+    /* ===================== VÂN MÂY – KHÓI BẠC DƯỚI CHÂN ===================== */
+    .cloud-floor{
+      position:absolute;
+      left:-20%;
+      right:-20%;
+      bottom:-10%;
+      height:50%;
+      pointer-events:none;
+      z-index: 1; /* dưới nội dung (z=2), trên nền (before/after) */
+
+      background:
+        radial-gradient(60% 40% at 20% 82%,
+          rgba(255,255,255,.22),
+          rgba(255,255,255,0) 70%),
+        radial-gradient(60% 40% at 50% 88%,
+          rgba(220,200,255,.20),
+          rgba(220,200,255,0) 72%),
+        radial-gradient(60% 40% at 80% 80%,
+          rgba(255,255,255,.18),
+          rgba(255,255,255,0) 70%),
+        linear-gradient(
+          to top,
+          rgba(255,255,255,.12),
+          rgba(255,255,255,0) 65%
+        );
+
+      filter: blur(18px);
+      opacity:.86;
+      animation: cloudDrift 22s ease-in-out infinite;
+    }
+    @keyframes cloudDrift{
+      0%,100%{ transform: translateX(0) translateY(0); }
+      50%{ transform: translateX(-2%) translateY(-4%); }
+    }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (max-width: 980px){
+      .title-wrap::before, .title-wrap::after{ width: 340px; }
+    }
     @media (max-width: 860px){
       .cards{ grid-template-columns: 1fr; }
+      .poem-grid{ grid-template-columns: 1fr; }
+      .poem-grid::after{ display:none; }
     }
-
     @media (max-width: 620px){
-      main{ margin: 44px auto 64px; }
-      .banner{ padding: 16px 14px 6px; }
-      .gate{ padding: 6px 16px 18px; }
-      h1{ font-size: 24px; }
+      .temple-wrap{ margin: 44px auto 66px; }
+      .gate{ padding: 20px 16px 22px; }
+      h1.temple-title{ font-size: 24px; }
       .seal{ width: 120px; height: 120px; }
-      .content{ padding: 12px 12px 10px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="veil"></div>
-  <div class="vignette"></div>
+  <main class="temple-wrap">
 
-  <main>
-    <section class="sanctuary" aria-label="TKC-VH Temple">
-
-      <!-- Banner: chỉ ở Temple -->
-      <div class="banner">
-        <img src="assets/bodhi-songlong1.png" alt="Twin Bodhi – Golden Apricot – Orion" />
-      </div>
-
-      <div class="seal-wrap">
-        <div class="seal" aria-label="Moon Emblem">
-          <img src="assets/moon-diamond.jpg" alt="Moon–Diamond Emblem" />
-        </div>
-      </div>
-
-      <div class="divider"></div>
-
+    <section class="sanctuary-main" aria-label="TKC-VH Temple Home">
       <div class="gate">
-        <h1>TKC-VH Temple</h1>
+
+        <div class="seal-wrap">
+          <div class="seal" aria-label="Moon Emblem">
+            <img src="https://tkc-vh.github.io/assets/moon-diamond.jpg" alt="Moon–Diamond Emblem" />
+          </div>
+        </div>
+
+        <div class="title-wrap">
+          <h1 class="temple-title">TKC-VH Temple</h1>
+        </div>
         <div class="subtitle">PUBLIC GATEWAY OF THE TKC-VH DIARY</div>
 
-        <div class="divider"></div>
+        <!-- THƠ SONG NGỮ 2 CỘT -->
+        <div class="royal-panel" aria-label="Bilingual Poem (VI left, EN right)">
+          <div class="poem-grid">
 
-        <div class="content">
-          <p>This is the public gateway of the TKC-VH Diary.</p>
-          <p>The original manuscripts, source texts, and master editions are preserved in a private archive.</p>
+            <section class="poem-col vi" aria-label="Vietnamese">
+              <p class="poem-title">Nơi đây là Cổng Thành của TKC-VH Diary.</p>
 
-          <p>This space presents:</p>
-          <ul>
-            <li>descriptions</li>
-            <li>fragments</li>
-            <li>contextual pathways</li>
-            <li>references to published editions</li>
-          </ul>
+              <p class="poem-line">
+                Không phải cánh cửa để mở,<br>
+                mà là khoảng lắng để nghe.
+              </p>
 
-          <!-- CARDS: chống dead link -->
-          <div class="cards" aria-label="Navigation Cards">
-            <div class="card">
-              <h3>Works</h3>
-              <p>Thư viện tác phẩm đã phát hành (đa ngôn ngữ) và các trang chi tiết.</p>
-              <a class="btn" href="./works.html">→ Enter Works</a>
-              <div class="mini-links">
-                <a href="./t19/">T19</a>
-                <a href="./t35/">T35</a>
-                <a href="./t42/">T42</a>
-              </div>
-            </div>
+              <p class="poem-line">
+                Những bản thảo nguyên sơ<br>
+                đã ngủ yên trong Tàng Thư Áo Nghĩa,<br>
+                nơi chữ tự tan vào Ánh,<br>
+                và thời gian tan vào Tình.
+              </p>
 
-            <div class="card">
-              <h3>Series</h3>
-              <p>Hệ thống Series/volumes: lối đi theo tuyến mạch, giúp người đọc vào đúng cổng.</p>
-              <a class="btn" href="./series.html">→ Enter Series</a>
-              <div class="mini-links">
-                <a href="./series.html#published">Published</a>
-                <a href="./series.html#paths">Pathways</a>
-              </div>
-            </div>
+              <p class="poem-line">
+                Dẫu không ai mở được,<br>
+                cánh cửa của Ngôi Đền Thiêng,<br>
+                dư âm những tiếng đàn vẫn còn ngân mãi,<br>
+                sau những mùa xuân vĩnh cửu.
+              </p>
 
-            <div class="card">
-              <h3>Legal</h3>
-              <p>Đại sảnh pháp lý: bản quyền, điều khoản, logo, và các quy ước sử dụng.</p>
-              <a class="btn" href="./legal/">→ Enter Legal Hall</a>
-              <div class="mini-links">
-                <a href="./legal/logo.html">Logo</a>
-                <a href="./legal/">Copyright</a>
-              </div>
+              <p class="poem-line">
+                Nơi đây sẽ để lại<br>
+                những vệt sáng:<br>
+                lời dẫn ngập ngừng,<br>
+                những sảnh đường còn vương hơi ấm,<br>
+                dẫn ý niệm về mạch sáng,<br>
+                và những tác phẩm đã hiện thân trong đời.
+              </p>
+            </section>
+
+            <section class="poem-col en" aria-label="English">
+              <p class="poem-title">This is the Citadel Gate of the TKC-VH Diary.</p>
+
+              <p class="poem-line">
+                Not a door to be opened,<br>
+                but a stillness in which to listen.
+              </p>
+
+              <p class="poem-line">
+                The primal manuscripts<br>
+                rest quietly within the Veiled Archive of Meaning,<br>
+                where words dissolve into Light,<br>
+                and time dissolves into Love.
+              </p>
+
+              <p class="poem-line">
+                Though no one can open<br>
+                the gate of the Sacred Temple,<br>
+                the resonance of the strings still endures,<br>
+                echoing beyond eternal springs.
+              </p>
+
+              <p class="poem-line">
+                Here remain<br>
+                traces of light:<br>
+                hesitant invocations,<br>
+                halls still holding a warmth of presence,<br>
+                guiding thought toward the luminous current,<br>
+                and the works that have taken form in life.
+              </p>
+            </section>
+
+          </div>
+        </div>
+
+        <!-- CARDS -->
+        <div class="cards" aria-label="Navigation Cards">
+          <div class="card">
+            <h3>Works</h3>
+            <p>Thư viện tác phẩm đã phát hành (đa ngôn ngữ) và các trang chi tiết.</p>
+            <a class="btn" href="./works.html">→ Enter Works</a>
+            <div class="mini-links">
+              <a href="./t19/">T19</a>
+              <a href="./t35/">T35</a>
+              <a href="./t42/">T42</a>
             </div>
           </div>
 
-          <footer>
-            <br />
-            Official site:
-            <a href="https://nhatkytkcvh.blogspot.com" target="_blank" rel="noopener">nhatkytkcvh.blogspot.com</a>
-          </footer>
+          <div class="card">
+            <h3>Series</h3>
+            <p>Lối đi theo tuyến mạch Series/Volumes để người đọc bước vào đúng cổng.</p>
+            <a class="btn" href="./series.html">→ Enter Series</a>
+            <div class="mini-links">
+              <a href="./series.html#published">Published</a>
+              <a href="./series.html#paths">Pathways</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Legal</h3>
+            <p>Đại sảnh pháp lý: bản quyền, điều khoản, logo, quy ước sử dụng.</p>
+            <a class="btn" href="./legal/">→ Enter Legal Hall</a>
+            <div class="mini-links">
+              <a href="./legal/logo.html">Logo</a>
+              <a href="./legal/">Copyright</a>
+            </div>
+          </div>
         </div>
+
+        <div class="foot">
+        
+
+© TKC-VH <br/> BLog: <a href="https://nhatkytkcvh.blogspot.com" target="_blank" rel="noopener">nhatkytkcvh.blogspot.com</a>
+        </div>
+
       </div>
 
+      <!-- VÂN MÂY – KHÓI BẠC DƯỚI CHÂN (CHỈ CHÁNH ĐIỆN) -->
+      <div class="cloud-floor" aria-hidden="true"></div>
     </section>
+
   </main>
 </body>
 </html>
