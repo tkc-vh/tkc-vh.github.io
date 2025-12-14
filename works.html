@@ -6,7 +6,7 @@
   <title>Works | TKC-VH Diary</title>
 
   <!-- Legal style (khung vàng lồng ngọc) -->
-  <link rel="stylesheet" href="https://tkc-vh.github.io/legal/legal.css">
+  <link rel="stylesheet" href="./legal/legal.css">
 
   <style>
     /* ===== Works: Royal – Elegant – Mystical (tối giản, không phá legal.css) ===== */
@@ -244,6 +244,33 @@
   filter: brightness(1.06);
 }
 
+
+    /* ===== Mobile fix: chống tràn lề & co ảnh đúng chuẩn ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { max-width: 100%; overflow-x: hidden; }
+
+    /* media luôn co vào khung */
+    img, svg, video, canvas { max-width: 100%; height: auto; }
+
+    /* ảnh bìa trong work-card */
+    .work-card img{
+      display:block;
+      margin: 0 auto 10px;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    /* grid: tránh min-width gây tràn trên màn nhỏ */
+    @media (max-width: 520px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    /* nếu legal.css có padding lớn, giữ card không vượt viewport */
+    .page, .card, .gold-frame{ max-width: 100%; }
+
+
   </style>
 </head>
 
@@ -268,7 +295,7 @@
         <!-- Logo chuẩn “Nguyệt Ấn” -->
         <div class="moon-wrap">
           <div class="moon" aria-label="TKC-VH Moon Emblem">
-            <img alt="TKC-VH Moon Emblem" src="https://tkc-vh.github.io/assets/moon-diamond.jpg">
+            <img alt="TKC-VH Moon Emblem" src="./assets/moon-diamond.jpg">
           </div>
         </div>
 
@@ -413,3 +440,4 @@
   </script>
 </body>
 </html>
+
