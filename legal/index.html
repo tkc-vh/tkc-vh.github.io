@@ -6,6 +6,12 @@
   <title>Legal Library | TKC-VH</title>
   <link rel="stylesheet" href="./legal.css">
 
+  
+
+
+
+  
+
   <style>
 /* =========================
    NAVDOCK: Global + Legal
@@ -19,35 +25,61 @@
 .tabs-global .tab{background:rgba(0,0,0,.30)}
 .tabs-legal .tab{font-size:.88rem;opacity:.96}
 @media (max-width:520px){.tab{padding:10px 12px;font-size:.95rem}}
-  </style>
-</head>
 
-<body>
-  <div class="page">
-    <div class="card">
 
-      <!-- Vân mây hoàng gia 4 góc -->
-      <div class="orn tl" aria-hidden="true">
-        <svg viewBox="0 0 260 180">
-          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/>
-          <path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/>
-          <path class="mist" d="M34,98 C58,84 74,92 90,82"/>
-        </svg>
-      </div>
-      <div class="orn tr" aria-hidden="true"><svg viewBox="0 0 260 180"><path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/><path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/><path class="mist" d="M34,98 C58,84 74,92 90,82"/></svg></div>
-      <div class="orn bl" aria-hidden="true"><svg viewBox="0 0 260 180"><path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/><path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/><path class="mist" d="M34,98 C58,84 74,92 90,82"/></svg></div>
-      <div class="orn br" aria-hidden="true"><svg viewBox="0 0 260 180"><path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/><path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/><path class="mist" d="M34,98 C58,84 74,92 90,82"/></svg></div>
+  /* Song ngữ 2 cột – chuẩn “đại sảnh”, tự co về 1 cột trên mobile */
+  .poem-bilingual{
+    margin: 10px 0 0;
+    padding: 14px 14px 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(0,0,0,.18);
+    box-shadow: 0 10px 26px rgba(0,0,0,.22);
+  }
+  .poem-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .poem-col{
+    padding: 2px 4px;
+  }
+  .poem-col h4{
+    margin: 0 0 8px;
+    font-size: .92rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    opacity: .85;
+  }
+  .poem{
+    margin: 0;
+    line-height: 1.75;
+    opacity: .93;
+  }
+  .poem p{ margin: 0 0 10px; }
+  .poem p:last-child{ margin-bottom: 0; }
 
-      <div class="gold-frame">
+  /* Vạch pha lê giữa 2 cột */
+  .poem-divider{
+    position: relative;
+  }
+  .poem-divider:before{
+    content:"";
+    position:absolute;
+    top: 6px; bottom: 6px; left: -7px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(255,255,255,.14), transparent);
+    opacity: .9;
+  }
 
-        <div class="moon-wrap">
-          <div class="moon">
-            <img alt="TKC-VH Moon Emblem" src="../assets/moon-diamond.jpg">
-          </div>
-        </div>
+  @media (max-width: 820px){
+    .poem-grid{ grid-template-columns: 1fr; }
+    .poem-divider:before{ display:none; }
+  }
 
-        <style>
-          /* Tiêu đề vàng kim phát sáng – nét, không lố */
+/* ===== MERGED STYLES (cleaned) ===== */
+
+/* Tiêu đề vàng kim phát sáng – nét, không lố */
           .gold-title{
             margin: 0;
             letter-spacing: .6px;
@@ -130,17 +162,192 @@
             font-size:.95rem;
           }
           .navbtn:hover{transform:translateY(-1px);transition:.2s ease}
-        </style>
+
+/* ===== MERGED STYLES (cleaned) ===== */
+
+/* Song ngữ 2 cột – “Đại sảnh” (tự co về 1 cột trên mobile) */
+  .poem-bilingual{
+    margin: 10px 0 0;
+    padding: 14px 14px 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(0,0,0,.18);
+    box-shadow: 0 10px 26px rgba(0,0,0,.22);
+  }
+  .poem-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .poem-col{
+    padding: 2px 4px;
+  }
+  .poem-col h4{
+    margin: 0 0 8px;
+    font-size: .92rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    opacity: .85;
+  }
+  .poem{
+    margin: 0;
+    line-height: 1.78;
+    opacity: .93;
+  }
+  .poem p{ margin: 0 0 10px; }
+  .poem p:last-child{ margin-bottom: 0; }
+
+  /* Vạch pha lê giữa 2 cột */
+  .poem-divider{ position: relative; }
+  .poem-divider:before{
+    content:"";
+    position:absolute;
+    top: 6px; bottom: 6px; left: -7px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(255,255,255,.14), transparent);
+    opacity: .9;
+  }
+
+  @media (max-width: 820px){
+    .poem-grid{ grid-template-columns: 1fr; }
+    .poem-divider:before{ display:none; }
+  }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="card">
+
+      <!-- Vân mây hoàng gia 4 góc -->
+      <div class="orn tl" aria-hidden="true">
+        <svg viewBox="0 0 260 180">
+          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/>
+          <path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/>
+          <path class="mist" d="M34,98 C58,84 74,92 90,82"/>
+        </svg>
+      </div>
+      <div class="orn tr" aria-hidden="true"><svg viewBox="0 0 260 180"><path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/><path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/><path class="mist" d="M34,98 C58,84 74,92 90,82"/></svg></div>
+      <div class="orn bl" aria-hidden="true"><svg viewBox="0 0 260 180"><path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/><path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/><path class="mist" d="M34,98 C58,84 74,92 90,82"/></svg></div>
+      <div class="orn br" aria-hidden="true"><svg viewBox="0 0 260 180"><path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/><path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/><path class="mist" d="M34,98 C58,84 74,92 90,82"/></svg></div>
+
+      <div class="gold-frame">
+
+        <div class="moon-wrap">
+          <div class="moon">
+            <img alt="TKC-VH Moon Emblem" src="../assets/moon-diamond.jpg">
+          </div>
+        </div>
+
+        
 
         <h1 class="gold-title">THƯ VIỆN LEGAL</h1>
         <div class="subtitle gold-sub">THE LEGAL LIBRARY • CÁC CỔ THƯ BẢO HỘ & TUYÊN NGÔN (VI/EN)</div>
 
         <hr>
 
-        <div class="note">
-          Đây là “Đại Sảnh Pháp Chế” của TKC-VH. Mỗi cánh cửa là một hành lang pha lê.
-          Chọn đúng mục, đọc chậm, và để mọi thứ rõ ràng như ánh trăng.
-        </div>
+        
+
+<div class="poem-bilingual">
+  <div class="poem-grid">
+
+    <!-- VI -->
+    <div class="poem-col">
+      <h4>VI</h4>
+      <div class="poem">
+        <p><strong>Đây là Đại Sảnh Pháp Chế của TKC-VH.</strong><br>
+        Mỗi cánh cửa mở ra một hành lang pha lê,<br>
+        dẫn vào miền tĩnh lặng nơi ánh hồng ngọc<br>
+        lặng lẽ lưu hương.</p>
+
+        <p>Những dòng chữ được đặt nơi đây<br>
+        không sinh ra để nắm giữ,<br>
+        cũng không nhằm phân ranh hay chiếm đoạt.</p>
+
+        <p>Chúng chỉ lặng lẽ đứng gác<br>
+        cho những điều mong manh mà cao quý,<br>
+        để chúng không bị lẫn vào ồn ào,<br>
+        không bị mài mòn bởi vội vã.</p>
+
+        <p>Có những giá trị<br>
+        được nuôi lớn bằng sự chăm nom thầm lặng,<br>
+        bằng trong sáng,<br>
+        và bằng một tình yêu không cần gọi tên.</p>
+
+        <p>Những điều ấy<br>
+        không tìm cách được cân đo,<br>
+        cũng không bước lên bàn mặc cả.</p>
+
+        <p>Bởi đôi khi,<br>
+        một vũ trụ ánh sáng của tâm hồn<br>
+        chỉ lặng lẽ đi ngang qua đời<br>
+        để đổi lấy một bữa sáng giản dị —<br>
+        và rồi tan vào nắng.</p>
+
+        <p>Đại Sảnh Pháp Lý hiện diện<br>
+        không để gọi tên đúng – sai,<br>
+        mà để giữ cho khoảnh khắc ấy<br>
+        được đi qua<br>
+        mà không bị hiểu lầm.</p>
+
+        <p>Dưới ánh trăng hiền,<br>
+        mọi sự được nhìn đúng như nó vốn là:<br>
+        trong trẻo, tiết độ,<br>
+        và bền bỉ như viên kim cương<br>
+        đã học được cách im lặng cùng thời gian.</p>
+      </div>
+    </div>
+
+    <!-- EN -->
+    <div class="poem-col poem-divider">
+      <h4>EN</h4>
+      <div class="poem">
+        <p><strong>This is the Legal Grand Hall of TKC-VH.</strong><br>
+        Each door opens into a corridor of crystal light,<br>
+        leading inward to a quiet realm<br>
+        where a ruby glow rests in silence.</p>
+
+        <p>The words placed here<br>
+        were not born to hold,<br>
+        nor to divide or to claim.</p>
+
+        <p>They stand gently<br>
+        to watch over what is fragile and precious,<br>
+        so it may pass through the world<br>
+        without being worn down by haste or noise.</p>
+
+        <p>Some values<br>
+        are raised through silent care,<br>
+        through clarity,<br>
+        and through a love that does not ask to be named.</p>
+
+        <p>Such things<br>
+        do not seek to be weighed,<br>
+        nor do they step onto the table of exchange.</p>
+
+        <p>For at times,<br>
+        an entire universe of inner light<br>
+        moves softly through life<br>
+        to meet something as simple as a morning meal—<br>
+        and then dissolves into daylight.</p>
+
+        <p>The Legal Grand Hall exists<br>
+        not to declare judgment,<br>
+        but to allow such moments<br>
+        to pass through<br>
+        without being misunderstood.</p>
+
+        <p>Beneath a gentle moon,<br>
+        all things are seen as they truly are:<br>
+        clear, restrained,<br>
+        and enduring—<br>
+        like a diamond<br>
+        that has learned the language of silence over time.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
 
         <div class="gate-grid">
 
@@ -195,20 +402,17 @@
 
       
 
-<div class="mini">
-  Thư viện Legal được trình bày như một đại sảnh thống nhất.
-  Độc giả nên bắt đầu từ trang tổng hợp để cảm nhận trọn vẹn bố cục
-  và tinh thần của các tuyên ngôn đi kèm.
-</div>
 
 
         <!-- 3 nút điều hướng -->
         <div class="rowline"></div>
-        <div class="nav-row">
-          <a class="navbtn" href="https://tkc-vh.github.io/index.html">← Trang Chủ</a>
-          <a class="navbtn" href="https://tkc-vh.github.io/works.html">→ Works</a>
-          <a class="navbtn" href="./logo.html">Logo</a>
-        </div>
+       <div class="nav-row">
+  <a class="navbtn" href="../index.html">← Trang Chủ</a>
+  <a class="navbtn" href="../works.html">→ Works</a>
+  <a class="navbtn" href="../series.html">Series</a>
+  <a class="navbtn" href="./logo.html">Logo</a>
+</div>
+
 
         <div class="footer">© TKC-VH • Legal Library Index</div>
 
