@@ -1,0 +1,59 @@
+/* Legal Library — Mobile Bilingual Fix
+   - Show VI/EN switch on small screens
+   - Prevent two columns from squeezing on phones
+*/
+
+/* Keep the switch visible and centered */
+.lang-switch{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 14px 0 6px;
+  flex-wrap: wrap;
+}
+
+.lang-switch button{
+  appearance: none;
+  border-radius: 999px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,211,119,.28);
+  background: rgba(0,0,0,.22);
+  color: rgba(255,240,210,.92);
+  cursor: pointer;
+}
+
+.lang-switch button.active{
+  border-color: rgba(255,211,119,.60);
+  background: rgba(255,211,119,.12);
+}
+
+/* Desktop stays two columns */
+.poem-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+/* Mobile: switch mode */
+@media (max-width: 900px){
+  .lang-switch{ display:flex !important; }
+
+  .poem-grid{
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .poem-col{
+    display: none;
+  }
+  .poem-col.active{
+    display: block;
+  }
+
+  /* Remove divider effect on mobile */
+  .poem-divider{
+    border-left: 0 !important;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
+  }
+}
