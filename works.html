@@ -4,6 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Works | TKC-VH Diary</title>
+<!-- === TKC-VH | Security Header (FINAL • no inline scripts) === -->
+<meta http-equiv="Content-Security-Policy"
+content="
+default-src 'self';
+img-src 'self' https://tkc-vh.github.io data:;
+style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+font-src 'self' https://fonts.gstatic.com;
+script-src 'self';
+frame-ancestors 'none';
+base-uri 'self';
+form-action 'self';
+upgrade-insecure-requests;
+">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
 
   <!-- Legal style (khung vàng lồng ngọc) -->
   <link rel="stylesheet" href="./legal/legal.css">
@@ -244,7 +261,6 @@
   filter: brightness(1.06);
 }
 
-
     /* ===== Mobile fix: chống tràn lề & co ảnh đúng chuẩn ===== */
     *, *::before, *::after { box-sizing: border-box; }
     html, body { max-width: 100%; overflow-x: hidden; }
@@ -270,8 +286,8 @@
     /* nếu legal.css có padding lớn, giữ card không vượt viewport */
     .page, .card, .gold-frame{ max-width: 100%; }
 
-
   </style>
+  <script src="./site.js" defer></script>
 </head>
 
 <body>
@@ -400,45 +416,10 @@
 
 </div>
 
-
         <div class="footer">© TKC-VH • Works</div>
 
       </div>
     </div>
   </div>
-
-  <script>
-    // Chống dead link: nút nào có data-href thì bật; không có thì tắt
-    (function(){
-      const btns = document.querySelectorAll('a.btn[data-href]');
-      btns.forEach(a => {
-        const href = (a.getAttribute('data-href') || '').trim();
-        if(href){
-          a.setAttribute('href', href);
-          a.classList.remove('disabled');
-          a.removeAttribute('aria-disabled');
-        }else{
-          a.setAttribute('href', '#');
-          a.classList.add('disabled');
-          a.setAttribute('aria-disabled', 'true');
-        }
-      });
-    })();
-
-    // Reveal mượt (nhẹ như Apple, không “gồng”)
-    (function(){
-      const targets = document.querySelectorAll(".reveal");
-      const io = new IntersectionObserver((entries)=>{
-        entries.forEach(e=>{
-          if(e.isIntersecting){
-            e.target.classList.add("show");
-            io.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
-
-      targets.forEach(el => io.observe(el));
-    })();
-  </script>
 </body>
 </html>
