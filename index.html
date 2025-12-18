@@ -31,7 +31,7 @@ upgrade-insecure-requests;
   <link rel="icon" href="assets/moon-diamond.jpg" />
   <link rel="stylesheet" href="legal/legal.css" />
 <script src="./legal/legal.js" defer></script>
-
+<script src="./site_upgraded.js" defer></script>
 
   <style>
     /* =========================================================
@@ -275,6 +275,57 @@ upgrade-insecure-requests;
     }
 
     /* ===================== NAV CARDS ===================== */
+
+    /* ===================== RIPPLE + LIFT (Index-only, no class changes) ===================== */
+    .card{
+      will-change: transform;
+      transform: translateZ(0);
+    }
+    @media (prefers-reduced-motion: no-preference){
+      .card{ animation: tkcCardFloat 8.6s ease-in-out infinite; }
+      .card:nth-child(2){ animation-delay: -1.9s; }
+      .card:nth-child(3){ animation-delay: -3.8s; }
+      @keyframes tkcCardFloat{
+        0%,100%{ transform: translateY(0); }
+        50%{ transform: translateY(-5px); }
+      }
+    }
+    .card::after{
+      /* subtle “supporting wave” glow under each card */
+      content:"";
+      position:absolute;
+      left:10%;
+      right:10%;
+      bottom:-16px;
+      height:34px;
+      border-radius:999px;
+      background: radial-gradient(60% 100% at 50% 0%,
+        rgba(255,240,210,.20),
+        rgba(190,130,255,.10),
+        rgba(0,0,0,0) 72%);
+      filter: blur(10px);
+      opacity:.75;
+      pointer-events:none;
+      transform: translateZ(0);
+    }
+
+    /* JS-injected ripple */
+    .tkc-ripple{
+      position:absolute;
+      inset:auto;
+      border-radius:999px;
+      pointer-events:none;
+      transform: translate(-50%, -50%) scale(0);
+      opacity:.55;
+      border: 1px solid rgba(255,240,210,.55);
+      box-shadow: 0 0 26px rgba(255,240,210,.12);
+      animation: tkcRipple 780ms ease-out forwards;
+      mix-blend-mode: screen;
+    }
+    @keyframes tkcRipple{
+      to{ transform: translate(-50%, -50%) scale(1); opacity:0; }
+    }
+
     .cards{
       margin: 16px auto 8px;
       max-width: 980px;
@@ -459,11 +510,42 @@ animation: waveMove 9.6s linear infinite;
   <main class="temple-wrap">
 
     <section class="sanctuary-main" aria-label="TKC-VH DIARY  Home">
+
+      <!-- ORNAMENT CORNERS (reuse .orn from legal.css) -->
+      <div class="orn tl" aria-hidden="true">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 128 C40 96, 66 84, 96 76 C70 76, 50 64, 38 44 C34 80, 26 106, 22 128" />
+          <path class="mist" d="M28 124 C60 108, 78 96, 108 86" />
+          <path class="mist" d="M44 52 C62 72, 84 78, 110 78" />
+        </svg>
+      </div>
+      <div class="orn tr" aria-hidden="true">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 128 C40 96, 66 84, 96 76 C70 76, 50 64, 38 44 C34 80, 26 106, 22 128" />
+          <path class="mist" d="M28 124 C60 108, 78 96, 108 86" />
+          <path class="mist" d="M44 52 C62 72, 84 78, 110 78" />
+        </svg>
+      </div>
+      <div class="orn bl" aria-hidden="true">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 128 C40 96, 66 84, 96 76 C70 76, 50 64, 38 44 C34 80, 26 106, 22 128" />
+          <path class="mist" d="M28 124 C60 108, 78 96, 108 86" />
+          <path class="mist" d="M44 52 C62 72, 84 78, 110 78" />
+        </svg>
+      </div>
+      <div class="orn br" aria-hidden="true">
+        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 128 C40 96, 66 84, 96 76 C70 76, 50 64, 38 44 C34 80, 26 106, 22 128" />
+          <path class="mist" d="M28 124 C60 108, 78 96, 108 86" />
+          <path class="mist" d="M44 52 C62 72, 84 78, 110 78" />
+        </svg>
+      </div>
+
       <div class="gate">
 
         <div class="seal-wrap">
           <div class="seal" aria-label="Moon Emblem">
-            <img src="assets/moon-diamond.jpg" alt="Moon–Diamond Emblem" />
+            <img src="assets/moon-diamond.jpg" alt="Moon–Diamond Emblem" draggable="false" decoding="async" loading="eager" data-protect="logo" />
           </div>
         </div>
 
@@ -474,7 +556,7 @@ animation: waveMove 9.6s linear infinite;
 
 
        <!-- THƠ SONG NGỮ 2 CỘT -->
-<div class="royal-panel" aria-label="Bilingual Poem (VI left, EN right)">
+<div class="royal-panel reveal" aria-label="Bilingual Poem (VI left, EN right)">
   <div class="poem-grid">
 
     <section class="poem-col vi" aria-label="Vietnamese">
@@ -551,9 +633,9 @@ animation: waveMove 9.6s linear infinite;
         
 
         <!-- CARDS -->
-        <div class="cards-stage" aria-label="Navigation Cards Stage">
+        <div class="cards-stage reveal" aria-label="Navigation Cards Stage">
           <div class="cards" aria-label="Navigation Cards">
-          <div class="card">
+          <div class="card reveal">
             <h3>Works</h3>
             <p>Thư viện tác phẩm đã phát hành (đa ngôn ngữ) và các trang chi tiết.</p>
             <a class="btn" href="./works.html">→ Enter Works</a>
@@ -564,7 +646,7 @@ animation: waveMove 9.6s linear infinite;
             </div>
           </div>
 
-          <div class="card">
+          <div class="card reveal">
             <h3>Series</h3>
             <p>Lối đi theo tuyến mạch Series/Volumes để người đọc bước vào đúng cổng.</p>
             <a class="btn" href="./series.html">→ Enter Series</a>
@@ -574,7 +656,7 @@ animation: waveMove 9.6s linear infinite;
             </div>
           </div>
 
-          <div class="card">
+          <div class="card reveal">
             <h3>Legal</h3>
             <p>Đại sảnh pháp lý: bản quyền, điều khoản, logo, quy ước sử dụng.</p>
             <a class="btn" href="./legal/">→ Enter Legal Hall</a>
