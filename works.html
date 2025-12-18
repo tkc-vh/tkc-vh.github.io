@@ -26,400 +26,319 @@ upgrade-insecure-requests;
   <link rel="stylesheet" href="./legal/legal.css">
 
   <style>
-    /* ===== Works: Royal – Elegant – Mystical (tối giản, không phá legal.css) ===== */
-    .topnav{
-      display:flex; flex-wrap:wrap; gap:10px;
-      justify-content:center;
-      margin: 10px 0 0;
-      opacity:.92;
-    }
-    .navbtn{
-      display:inline-block; text-decoration:none; color:inherit;
-      padding:8px 12px; border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.02);
-      box-shadow:0 10px 22px rgba(0,0,0,.18);
-      transition: transform .22s cubic-bezier(.16,1,.3,1),
-                  filter .22s cubic-bezier(.16,1,.3,1),
-                  box-shadow .22s cubic-bezier(.16,1,.3,1);
-      will-change: transform;
-      font-size:.95rem;
-    }
-    .navbtn:hover{ transform: translateY(-2px); filter:brightness(1.06); box-shadow:0 16px 34px rgba(0,0,0,.28); }
-    .navbtn:active{ transform: translateY(0) scale(.98); filter:brightness(.98); }
+  /* Works — compact frame, responsive covers, glass + gentle lift */
+  *, *::before, *::after{ box-sizing: border-box; }
+  html, body{ max-width:100%; overflow-x:hidden; }
 
-    .subtitle{
-      text-align:center;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      opacity:.88;
-      margin-top:6px;
-      font-size:.92rem;
-    }
+  /* If legal.css fails to load, we still keep the frame */
+  .tkc-page{
+    min-height: 100vh;
+    padding: 26px 14px 34px;
+  }
+  .tkc-shell{
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 26px;
+    border: 1px solid rgba(255,211,119,.18);
+    background: rgba(255,255,255,.02);
+    box-shadow: 0 26px 70px rgba(0,0,0,.45);
+    overflow: hidden;
+  }
+  .tkc-shell::before{
+    content:"";
+    position:absolute; inset:0;
+    background: radial-gradient(1200px 500px at 50% -120px, rgba(255,211,119,.12), transparent 60%),
+                radial-gradient(900px 400px at 10% 20%, rgba(200,220,255,.10), transparent 55%),
+                radial-gradient(900px 400px at 90% 30%, rgba(255,205,220,.08), transparent 55%);
+    pointer-events:none;
+  }
 
-    .swordline{
-      height:1px;
-      margin:14px 0 12px;
-      background:linear-gradient(90deg,
-        transparent,
-        rgba(255,255,255,.18),
-        rgba(255,205,220,.14),
-        rgba(200,220,255,.12),
-        rgba(255,255,255,.18),
-        transparent
-      );
-      opacity:.9;
-    }
+  .tkc-hero{
+    position: relative;
+    padding: 22px 20px 14px;
+    text-align: center;
+  }
 
-    .panel{
-      margin: 14px 0 0;
-      padding: 14px 14px 12px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.02);
-      box-shadow: 0 12px 32px rgba(0,0,0,.22);
-      line-height: 1.85;
-    }
+  .moon-wrap{ display:flex; justify-content:center; margin-top: 6px; }
+  .moon{
+    width: 72px; height: 72px; border-radius: 999px;
+    border: 1px solid rgba(255,211,119,.26);
+    background: rgba(0,0,0,.18);
+    box-shadow: 0 18px 42px rgba(0,0,0,.45);
+    overflow: hidden;
+  }
+  .moon img{ width:100%; height:100%; display:block; object-fit: cover; }
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
+  .tkc-title{
+    margin: 10px 0 0;
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+    letter-spacing: .08em;
+  }
+  .tkc-subtitle{
+    margin: 8px 0 0;
+    opacity: .86;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-size: .92rem;
+  }
 
-    .work{
-      border:1px solid rgba(255,255,255,.10);
-      border-radius:18px;
-      padding:14px 14px 12px;
-      background:rgba(255,255,255,.03);
-      box-shadow:0 10px 30px rgba(0,0,0,.25);
-      position:relative;
-      overflow:hidden;
-      transition: transform .28s cubic-bezier(.2,.8,.2,1),
-                  box-shadow .28s cubic-bezier(.2,.8,.2,1),
-                  border-color .28s cubic-bezier(.2,.8,.2,1);
-      will-change: transform;
-    }
-    .work:hover{
-      transform: translateY(-3px);
-      box-shadow:0 18px 44px rgba(0,0,0,.34);
-      border-color: rgba(255,255,255,.20);
-    }
-    .work:before{
-      content:"";
-      position:absolute; left:14px; right:14px; top:12px; height:1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), rgba(255,205,220,.14), rgba(200,220,255,.12), rgba(255,255,255,.18), transparent);
-      opacity:.9;
-      pointer-events:none;
-    }
+  .tkc-topnav{
+    display:flex; flex-wrap:wrap; gap:10px;
+    justify-content:center;
+    margin: 14px 0 8px;
+    position: relative;
+    z-index: 2;
+  }
 
-    .workhead{
-      display:flex; gap:12px; align-items:flex-start;
-      margin-top: 10px;
+  /* Ensure nav buttons look consistent even without legal.css */
+  .navbtn{
+    display:inline-block;
+    text-decoration:none;
+    padding:8px 12px;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.03);
+    box-shadow: 0 10px 22px rgba(0,0,0,.18);
+    transition: transform .22s cubic-bezier(.16,1,.3,1),
+                filter .22s cubic-bezier(.16,1,.3,1);
+    will-change: transform;
+  }
+  .navbtn:hover{ transform: translateY(-2px); filter: brightness(1.06); }
+
+  .tkc-main{ position: relative; padding: 10px 18px 22px; }
+  .tkc-panel{
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,.10);
+    background: rgba(255,255,255,.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 14px 14px 12px;
+    line-height: 1.85;
+    box-shadow: 0 14px 36px rgba(0,0,0,.24);
+    position: relative;
+    overflow: hidden;
+  }
+  .tkc-panel::after{
+    content:"";
+    position:absolute; inset:-1px;
+    background: linear-gradient(115deg, rgba(255,211,119,.10), transparent 40%, rgba(200,220,255,.08));
+    opacity: .65;
+    pointer-events:none;
+  }
+  .tkc-panel p{ margin: 0 0 10px; position: relative; }
+  .tkc-panel p:last-child{ margin-bottom: 0; }
+  .tkc-panel .muted{ opacity:.85; }
+
+  .tkc-grid{
+    margin-top: 14px;
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  /* Card — glass + mirror sheen + wave lift */
+  .work-card{
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.11);
+    background: rgba(255,255,255,.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 14px 38px rgba(0,0,0,.30);
+    overflow: hidden;
+    position: relative;
+    transform: translateY(0);
+    transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s cubic-bezier(.2,.8,.2,1);
+    will-change: transform;
+  }
+  .work-card::before{
+    content:"";
+    position:absolute; inset:0;
+    background: radial-gradient(500px 220px at 20% 0%, rgba(255,211,119,.12), transparent 60%),
+                linear-gradient(120deg, rgba(255,255,255,.08), transparent 35%, rgba(200,220,255,.06));
+    opacity: .75;
+    pointer-events:none;
+  }
+  .work-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 22px 56px rgba(0,0,0,.38);
+  }
+
+  .work-media{
+    display:block;
+    padding: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .work-media img{
+    width: 100%;
+    height: auto;
+    display:block;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 18px 40px rgba(0,0,0,.32);
+    /* crisp + smooth */
+    image-rendering: auto;
+    transform: translateZ(0);
+  }
+  /* subtle mirror sheen */
+  .work-media::after{
+    content:"";
+    position:absolute;
+    left: 18px; right: 18px; top: 18px; height: 42%;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(255,255,255,.22), rgba(255,255,255,0));
+    opacity: .18;
+    pointer-events:none;
+    z-index: 2;
+    transform: skewY(-8deg);
+    filter: blur(.2px);
+  }
+
+  .work-body{ padding: 0 14px 14px; position: relative; z-index: 1; }
+  .work-title{
+    margin: 2px 0 8px;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    letter-spacing: .04em;
+    font-weight: 600;
+    /* gold shimmer but lightweight */
+    background: linear-gradient(120deg, rgba(255,240,210,.92), rgba(255,211,119,.92), rgba(255,240,210,.92));
+    background-size: 180% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: tkcShimmer 7s linear infinite;
+  }
+  @keyframes tkcShimmer{ to{ background-position: 180% center; } }
+
+  .work-desc{ margin: 0 0 12px; opacity: .90; line-height: 1.65; font-size: .95rem; }
+  .work-actions{ display:flex; flex-wrap:wrap; gap:10px; }
+  .work-enter{
+    display:inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.14);
+    background: rgba(255,255,255,.03);
+    text-decoration:none;
+    transition: transform .22s cubic-bezier(.16,1,.3,1), filter .22s cubic-bezier(.16,1,.3,1);
+  }
+  .work-enter:hover{ transform: translateY(-2px); filter: brightness(1.06); }
+
+  /* Gentle “wave lift” — only when user allows motion */
+  @media (prefers-reduced-motion: no-preference){
+    .work-card{ animation: tkcFloat 7.5s ease-in-out infinite; }
+    .work-card:nth-child(2){ animation-delay: -1.8s; }
+    .work-card:nth-child(3){ animation-delay: -3.6s; }
+    @keyframes tkcFloat{
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-6px); }
     }
-    .cover{
-      width:92px; min-width:92px; aspect-ratio: 2/3;
-      border-radius: 14px;
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(0,0,0,.18);
-      box-shadow: 0 12px 24px rgba(0,0,0,.28);
-    }
-    .cover img{
-      width:100%; height:100%;
-      object-fit: cover; display:block;
-      transform: scale(1.02);
-    }
-    .wtitle{
-      margin:0;
-      font-size: 1.06rem;
-      line-height: 1.35;
-      letter-spacing:.2px;
-    }
-    .wmeta{
-      margin:6px 0 0;
-      opacity:.88;
-      line-height:1.55;
-      font-size:.95rem;
-    }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .work-card{ animation: none; transition:none; }
+  }
 
-    .pills{
-      display:flex; flex-wrap:wrap; gap:8px;
-      margin-top: 10px;
-    }
-    .pill{
-      display:inline-block;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.02);
-      font-size:.92rem;
-      opacity:.92;
-    }
+  /* Responsive */
+  @media (max-width: 1060px){
+    .tkc-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 720px){
+    .tkc-shell{ border-radius: 22px; }
+    .tkc-main{ padding: 10px 14px 18px; }
+    .tkc-grid{ grid-template-columns: 1fr; }
+  }
 
-    .btn-row{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top: 12px;
-    }
-    .btn{
-      display:inline-block;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.02);
-      box-shadow:0 10px 22px rgba(0,0,0,.18);
-      color:inherit;
-      text-decoration:none;
-      font-size:.95rem;
-      opacity:.95;
-      transition: transform .22s cubic-bezier(.16,1,.3,1),
-                  filter .22s cubic-bezier(.16,1,.3,1),
-                  box-shadow .22s cubic-bezier(.16,1,.3,1);
-      will-change: transform;
-    }
-    .btn:hover{ transform: translateY(-2px); filter:brightness(1.06); box-shadow:0 16px 34px rgba(0,0,0,.28); }
-    .btn:active{ transform: translateY(0) scale(.98); filter:brightness(.98); }
-    .btn.disabled{
-      opacity:.45;
-      pointer-events:none;
-      filter:saturate(.7);
-    }
+  .tkc-footer{
+    text-align:center;
+    opacity:.70;
+    padding: 18px 0 6px;
+    font-size: .92rem;
+  }
 
-    .mini{
-      font-size:.95rem;
-      opacity:.90;
-      line-height: 1.75;
-    }
-
-    /* Smooth reveal (nhẹ như Apple, nhưng tiết chế) */
-    .reveal{ opacity:0; transform: translateY(10px); transition: opacity .6s cubic-bezier(.2,.8,.2,1), transform .6s cubic-bezier(.2,.8,.2,1); }
-    .reveal.show{ opacity:1; transform: translateY(0); }
-    @media (prefers-reduced-motion: reduce){
-      .reveal{ opacity:1; transform:none; transition:none; }
-      .navbtn, .btn, .work{ transition:none; }
-    }
-/* ====== WORK TITLE – GOLDEN SHIMMER ====== */
-.work-title{
-  margin: 0 0 6px;
-  font-size: 1.1rem;
-  line-height: 1.35;
-  letter-spacing: .04em;
-  font-weight: 600;
-
-  background: linear-gradient(
-    120deg,
-    #f7e7b4 0%,
-    #e6c86f 20%,
-    #fff4cc 40%,
-    #d6b35c 60%,
-    #fff1c1 80%,
-    #cfae55 100%
-  );
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: goldShimmer 6s linear infinite;
-}
-
-@keyframes goldShimmer{
-  0%   { background-position: 0% center; }
-  100% { background-position: 200% center; }
-}
-
-/* Card gọn – trang trọng */
-.work-card{
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 18px;
-  padding: 14px;
-  background: rgba(255,255,255,.03);
-  box-shadow: 0 12px 30px rgba(0,0,0,.28);
-}
-
-.work-desc{
-  font-size: .95rem;
-  line-height: 1.6;
-  opacity: .9;
-  margin-bottom: 12px;
-}
-
-.work-enter{
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.04);
-  text-decoration: none;
-  color: inherit;
-  font-size: .95rem;
-  transition: transform .22s ease, box-shadow .22s ease, filter .22s ease;
-}
-
-.work-enter:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 16px 36px rgba(0,0,0,.35);
-  filter: brightness(1.06);
-}
-
-    /* ===== Mobile fix: chống tràn lề & co ảnh đúng chuẩn ===== */
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { max-width: 100%; overflow-x: hidden; }
-
-    /* media luôn co vào khung */
-    img, svg, video, canvas { max-width: 100%; height: auto; }
-
-    /* ảnh bìa trong work-card */
-    .work-card img{
-      display:block;
-      margin: 0 auto 10px;
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-
-    /* grid: tránh min-width gây tràn trên màn nhỏ */
-    @media (max-width: 520px){
-      .grid{ grid-template-columns: 1fr; }
-    }
-
-    /* nếu legal.css có padding lớn, giữ card không vượt viewport */
-    .page, .card, .gold-frame{ max-width: 100%; }
-
-  </style>
+  /* Reveal (reuse your pattern) */
+  .reveal{ opacity:0; transform: translateY(10px); transition: opacity .6s cubic-bezier(.2,.8,.2,1), transform .6s cubic-bezier(.2,.8,.2,1); }
+  .reveal.show{ opacity:1; transform: translateY(0); }
+</style>
   <script src="./site.js" defer></script>
 </head>
 
+
 <body>
-  <div class="page">
-    <div class="card">
-
-      <!-- Vân mây 4 góc (giữ đúng “đại sảnh”) -->
-      <div class="orn tl" aria-hidden="true">
-        <svg viewBox="0 0 260 180">
-          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/>
-          <path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/>
-          <path class="mist" d="M34,98 C58,84 74,92 90,82"/>
-        </svg>
-      </div>
-      <div class="orn tr" aria-hidden="true"><svg viewBox="0 0 260 180"><path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/><path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/><path class="mist" d="M34,98 C58,84 74,92 90,82"/></svg></div>
-      <div class="orn bl" aria-hidden="true"><svg viewBox="0 0 260 180"><path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/><path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/><path class="mist" d="M34,98 C58,84 74,92 90,82"/></svg></div>
-      <div class="orn br" aria-hidden="true"><svg viewBox="0 0 260 180"><path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138"/><path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84"/><path class="mist" d="M34,98 C58,84 74,92 90,82"/></svg></div>
-
-      <div class="gold-frame">
-
-        <!-- Logo chuẩn “Nguyệt Ấn” -->
-        <div class="moon-wrap">
-          <div class="moon" aria-label="TKC-VH Moon Emblem">
-            <img alt="TKC-VH Moon Emblem" src="./assets/moon-diamond.jpg">
+  <div class="tkc-page">
+    <div class="tkc-shell">
+      <header class="tkc-hero">
+        <div class="moon-wrap" aria-hidden="true">
+          <div class="moon">
+            <img src="./assets/moon-diamond.jpg" alt="TKC-VH Moon Emblem" width="160" height="160" decoding="async" loading="eager">
           </div>
         </div>
 
-        <h1>Works</h1>
-        <div class="subtitle">TKC-VH DIARY • THƯ VIỆN TÁC PHẨM • SERIES & EDITIONS</div>
+        <h1 class="tkc-title">Works</h1>
+        <p class="tkc-subtitle">TKC-VH DIARY • THƯ VIỆN TÁC PHẨM • SERIES & EDITIONS</p>
 
-        <div class="topnav">
+        <nav class="tkc-topnav" aria-label="Điều hướng">
           <a class="navbtn" href="./index.html">← Trang Chủ</a>
           <a class="navbtn" href="./series.html">Series</a>
           <a class="navbtn" href="./legal/">Pháp Lý</a>
           <a class="navbtn" href="./legal/logo.html">Logo</a>
-        </div>
+        </nav>
+      </header>
 
-        <div class="swordline" aria-hidden="true"></div>
+      <main class="tkc-main">
+        <section class="tkc-panel reveal" aria-label="Giới thiệu">
+          <p><strong>Works</strong> là “Thư Phòng” của <strong>TKC-VH Diary</strong> — nơi các ấn bản được xếp theo <em>series → volume → chapter</em>.</p>
+          <p>Ở đây, mỗi tác phẩm có một cổng riêng, và mỗi ngôn ngữ là một ấn bản đi kèm.</p>
+          <p class="muted">Nơi Dấu Chân Sống của Tác Phẩm hiện diện trong hệ sinh thái Google Books, Amazon Kindle eBooks, Apple Books, Kobo eBooks…</p>
+        </section>
 
-        <!-- Lời dẫn “hoàng gia” – gọn, sang, huyền ảo -->
-        <div class="panel reveal">
-          <p style="margin:0 0 10px;">
-            <strong>Works</strong> là “Thư Phòng” của <strong>TKC-VH Diary</strong> — nơi các ấn bản được xếp theo
-            <em>series → volume → chapter</em>. 
-          </p>
-          <p style="margin:0;">
-            Ở đây, mỗi tác phẩm có một cổng riêng,
-            và mỗi ngôn ngữ là một ấn bản đi kèm.
-          </p>
-           <p style="margin:0;">
-           Nơi Dấu Chân Sống của Tác Phẩm hiện diện trong hệ sinh thái Google Books, Amazone Kindle eBooks, Alple iBooks, Kobo eBooks...
-          </p>
-        </div>
+        <section class="tkc-grid reveal" aria-label="Danh sách tác phẩm">
+          <!-- Card: T19-C1 -->
+          <article class="work-card">
+            <a class="work-media" href="./t19/c1/" aria-label="Vào tác phẩm T19-C1">
+              <img src="./t19/c1/T19C1_Cover_Vi.jpg" alt="T19-C1 cover" loading="lazy" decoding="async">
+            </a>
+            <div class="work-body">
+              <h3 class="work-title">T19-C1 · Khai Mở Mạng Quang Tuyến<br>Cây Trường Sinh – Thân Thủy Sinh</h3>
+              <p class="work-desc">Tập mở trục Quang Tuyến – đặt nền cho toàn bộ hệ thân‑thức và cấu trúc ánh sáng trong TKC‑VH Diary.</p>
+              <div class="work-actions">
+                <a class="work-enter" href="./t19/c1/">Vào Cổng Tác Phẩm</a>
+              </div>
+            </div>
+          </article>
 
-        <!-- Lưới tác phẩm -->
-        <div class="grid">
+          <!-- Card: T35-C1 -->
+          <article class="work-card">
+            <a class="work-media" href="./t35/c1/" aria-label="Vào tác phẩm T35-C1">
+              <img src="./t35/c1/T35C1_Cover_Vi.jpg" alt="T35-C1 cover" loading="lazy" decoding="async">
+            </a>
+            <div class="work-body">
+              <h3 class="work-title">T35-C1 · Aqua‑Fire Luminous Body<br>The Unicorn Spirit Embryo</h3>
+              <p class="work-desc">Tập triển khai Thân Quang – cấu trúc nước‑lửa, hợp nhất biểu tượng và kỷ luật nội tại.</p>
+              <div class="work-actions">
+                <a class="work-enter" href="./t35/c1/">Vào Cổng Tác Phẩm</a>
+              </div>
+            </div>
+          </article>
 
-  <!-- T19-C1 -->
-  <div class="work-card">
-    <img
-      src="./t19/c1/T19C1_Cover_Vi.jpg"
-      alt="T19-C1 cover"
-      style="width:100%;border-radius:14px;margin-bottom:10px;"
-    >
+          <!-- Card: T42-C2 -->
+          <article class="work-card">
+            <a class="work-media" href="./t42/c2/" aria-label="Vào tác phẩm T42-C2">
+              <img src="./t42/c2/T42C2_Cover_Vi.jpg" alt="T42-C2 cover" loading="lazy" decoding="async">
+            </a>
+            <div class="work-body">
+              <h3 class="work-title">T42-C2 · Bồ Đề Song Thụ Kim Cương<br>Cội Mai Vàng Vĩnh Cửu</h3>
+              <p class="work-desc">Trục Cổ Thụ – nơi hợp nhất Bồ Đề Song Thụ và Mai Vàng như kim thạch vĩnh hằng.</p>
+              <div class="work-actions">
+                <a class="work-enter" href="./t42/c2/">Vào Cổng Tác Phẩm</a>
+              </div>
+            </div>
+          </article>
+        </section>
 
-    <h3 class="work-title">
-      T19-C1 · Khai Mở Mạng Quang Tuyến  
-      <br>Cây Trường Sinh – Thân Thủy Sinh
-    </h3>
-
-    <div class="work-desc">
-      Tập mở trục Quang Tuyến – đặt nền cho toàn bộ hệ thân-thức
-      và cấu trúc ánh sáng trong TKC-VH Diary.
-    </div>
-
-    <a class="work-enter" href="./t19/c1/">
-      Vào Cổng Tác Phẩm
-    </a>
-  </div>
-
-  <!-- T35-C1 -->
-  <div class="work-card">
-    <img
-      src="./t35/c1/T35C1_Cover_Vi.jpg"
-      alt="T35-C1 cover"
-      style="width:100%;border-radius:14px;margin-bottom:10px;"
-    >
-
-    <h3 class="work-title">
-      T35-C1 · Aqua-Fire Luminous Body  
-      <br>The Unicorn Spirit Embryo
-    </h3>
-
-    <div class="work-desc">
-      Tập triển khai Thân Quang – cấu trúc nước-lửa, 
-      hợp nhất biểu tượng và kỷ luật nội tại.
-    </div>
-
-    <a class="work-enter" href="./t35/c1/">
-      Vào Cổng Tác Phẩm
-    </a>
-  </div>
-
-  <!-- T42-C2 -->
-  <div class="work-card">
-    <img
-      src="./t42/c2/T42C2_Cover_Vi.jpg"
-      alt="T42-C2 cover"
-      style="width:100%;border-radius:14px;margin-bottom:10px;"
-    >
-
-    <h3 class="work-title">
-      T42-C2 · Bồ Đề Song Thụ Kim Cương  
-      <br>Cội Mai Vàng Vĩnh Cửu
-    </h3>
-
-    <div class="work-desc">
-      Trục Cổ Thụ – nơi hợp nhất Bồ Đề Song Thụ
-      và Mai Vàng như kim thạch vĩnh hằng.
-    </div>
-
-    <a class="work-enter" href="./t42/c2/">
-      Vào Cổng Tác Phẩm
-    </a>
-  </div>
-
-</div>
-
-        <div class="footer">© TKC-VH • Works</div>
-
-      </div>
+        <footer class="tkc-footer">© TKC‑VH • Works</footer>
+      </main>
     </div>
   </div>
 </body>
+
 </html>
