@@ -25,11 +25,15 @@ upgrade-insecure-requests;
   <meta name="description" content="Cổng Thành công khai của TKC-VH Diary. Dư âm vẫn ngân sau những mùa xuân vĩnh cửu." />
   <meta property="og:title" content="TKC-VH Temple" />
   <meta property="og:description" content="Cổng Thành công khai của TKC-VH Diary. Dư âm vẫn ngân sau những mùa xuân vĩnh cửu." />
-  <meta property="og:image" content="./assets/moon-diamond.jpg" />
+  <meta property="og:image" content="assets/moon-diamond.jpg" />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="./assets/moon-diamond.jpg" />
-<style>
+  <link rel="icon" href="assets/moon-diamond.jpg" />
+  <link rel="stylesheet" href="legal/legal.css" />
+<script src="./legal/legal.js" defer></script>
+
+
+  <style>
     /* =========================================================
        HOME (Temple) – dùng legal.css + bổ sung lớp hoàng gia
        ========================================================= */
@@ -189,7 +193,7 @@ upgrade-insecure-requests;
       margin: 0 auto 14px;
       text-align: left;
       border-radius: 14px;
-      padding: 18px 18px 16px;
+      padding: 16px 16px 14px;
       border: 1px solid rgba(255,240,210,.12);
       background: rgba(0,0,0,.10);
       position:relative;
@@ -249,7 +253,7 @@ upgrade-insecure-requests;
     }
 
     .poem-col{
-      padding: 16px 16px;
+      padding: 14px 14px;
       border-radius: 12px;
       background: rgba(0,0,0,.06);
       border: 1px solid rgba(255,240,210,.10);
@@ -265,8 +269,7 @@ upgrade-insecure-requests;
     }
     .poem-line{
       margin: 0 0 14px;
-      line-height: 2.12;
-      letter-spacing: .12px;
+      line-height: 1.95;
       font-size: 14.6px;
       opacity: .96;
     }
@@ -377,7 +380,64 @@ upgrade-insecure-requests;
       50%{ transform: translateX(-2%) translateY(-4%); }
     }
 
-    /* ===================== RESPONSIVE ===================== */
+    /* ===================== CARD STAGE + SÓNG LƯỢN (CSS-ONLY) ===================== */
+.cards-stage{
+  position: relative;
+  max-width: 980px;
+  margin: 16px auto 8px;
+  padding-bottom: 30px; /* chừa chỗ cho sóng */
+}
+.cards-stage .cards{
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+.wave-floor{
+  position:absolute;
+  left:-6%;
+  right:-6%;
+  bottom: 4px;
+  height: 64px;
+  z-index: 1;
+  pointer-events:none;
+  opacity: .82;
+  background-repeat: repeat-x;
+  background-size: 420px 64px;
+  background-position: 0 100%;
+  filter: blur(.15px);
+        background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22420%22%20height=%2264%22%20viewBox=%220%200%20420%2064%22%3E%0A%3Cdefs%3E%0A%20%20%3ClinearGradient%20id=%22g%22%20x1=%220%22%20y1=%220%22%20x2=%220%22%20y2=%221%22%3E%0A%20%20%20%20%3Cstop%20offset=%220%22%20stop-color=%22rgba(242,222,156,0)%22/%3E%0A%20%20%20%20%3Cstop%20offset=%220.55%22%20stop-color=%22rgba(242,222,156,0.16)%22/%3E%0A%20%20%20%20%3Cstop%20offset=%221%22%20stop-color=%22rgba(190,130,255,0.16)%22/%3E%0A%20%20%3C/linearGradient%3E%0A%3C/defs%3E%0A%3Cpath%20d=%22M0%2038%20C%2052%2022,%20105%2054,%20157%2038%20S%20262%2022,%20314%2038%20S%20367%2054,%20420%2038%20L420%2064%20L0%2064%20Z%22%20fill=%22url(#g)%22/%3E%0A%3Cpath%20d=%22M0%2040%20C%2052%2026,%20105%2056,%20157%2040%20S%20262%2026,%20314%2040%20S%20367%2056,%20420%2040%22%20fill=%22none%22%20stroke=%22rgba(255,240,210,0.26)%22%20stroke-width=%221.2%22/%3E%0A%3C/svg%3E");
+animation: waveMove 9.6s linear infinite;
+}
+.wave-floor::after{
+  content:"";
+  position:absolute;
+  inset:-14px -10%;
+  background:
+    radial-gradient(60% 80% at 30% 70%, rgba(255,255,255,.16), rgba(255,255,255,0) 62%),
+    radial-gradient(60% 80% at 70% 70%, rgba(220,200,255,.14), rgba(220,200,255,0) 60%),
+    linear-gradient(to top, rgba(255,255,255,.10), rgba(255,255,255,0) 70%);
+  filter: blur(14px);
+  opacity: .82;
+  animation: waveGlow 6.8s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes waveMove{
+  0%{ background-position: 0 100%; }
+  100%{ background-position: 420px 100%; }
+}
+@keyframes waveGlow{
+  0%,100%{ transform: translateY(0); opacity: .76; }
+  50%{ transform: translateY(-5px); opacity: .90; }
+}
+
+/* ===================== MOBILE FIX: POEM 1 CỘT (tránh toang spacing) ===================== */
+@media (max-width: 860px){
+  .poem-grid{ grid-template-columns: 1fr !important; }
+  .poem-grid::after{ display:none !important; }
+  .poem-line{ text-align:left !important; word-spacing:normal !important; }
+}
+
+/* ===================== RESPONSIVE ===================== */
     @media (max-width: 980px){
       .title-wrap::before, .title-wrap::after{ width: 340px; }
     }
@@ -390,24 +450,9 @@ upgrade-insecure-requests;
       .temple-wrap{ margin: 44px auto 66px; }
       .gate{ padding: 20px 16px 22px; }
       h1.temple-title{ font-size: 24px; }
-}
-  /* ===================== MOBILE HARD FIX (tránh chữ bị kéo giãn & 2 cột quá hẹp) ===================== */
-@media (max-width: 860px){
-  .poem-grid{ grid-template-columns: 1fr !important; }
-  .poem-grid::after{ display:none !important; }
-  .poem-line{
-    text-align: left !important;
-    word-spacing: normal !important;
-    letter-spacing: .08px !important;
-  }
-}
-@media (max-width: 620px){
-  .poem-title{ font-size: 15px; }
-  .poem-line{ font-size: 15px; line-height: 2.1; }
-}
+      .seal{ width: 120px; height: 120px; }
+    }
   </style>
-  <script src="./site.js" defer></script>
-  <link rel="stylesheet" href="./legal/legal.css" />
 </head>
 
 <body>
@@ -418,15 +463,14 @@ upgrade-insecure-requests;
 
         <div class="seal-wrap">
           <div class="seal" aria-label="Moon Emblem">
-            <img src="./assets/moon-diamond.jpg" alt="Moon–Diamond Emblem" />
+            <img src="assets/moon-diamond.jpg" alt="Moon–Diamond Emblem" />
           </div>
         </div>
 
         <div class="title-wrap">
           <h1 class="temple-title">TKC-VH DIARY</h1>
         </div>
-      
-<div > </div>
+       <div class="subtitle" style="margin-bottom:16px;">PUBLIC GATEWAY OF THE TKC-VH DIARY</div>
 
 
         <!-- THƠ SONG NGỮ 2 CỘT -->
@@ -501,7 +545,8 @@ upgrade-insecure-requests;
         </div>
 
         <!-- CARDS -->
-        <div class="cards" aria-label="Navigation Cards">
+        <div class="cards-stage" aria-label="Navigation Cards Stage">
+          <div class="cards" aria-label="Navigation Cards">
           <div class="card">
             <h3>Works</h3>
             <p>Thư viện tác phẩm đã phát hành (đa ngôn ngữ) và các trang chi tiết.</p>
@@ -532,6 +577,8 @@ upgrade-insecure-requests;
               <a href="./legal/">Copyright</a>
             </div>
           </div>
+          </div>
+          <div class="wave-floor" aria-hidden="true"></div>
         </div>
 
         <div class="foot">
