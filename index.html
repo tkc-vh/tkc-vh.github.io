@@ -31,7 +31,7 @@ upgrade-insecure-requests;
   <link rel="icon" href="assets/moon-diamond.jpg" />
   <link rel="stylesheet" href="legal/legal.css" />
 <script src="./legal/legal.js" defer></script>
-<script src="./site_upgraded.js" defer></script>
+
 
   <style>
     /* =========================================================
@@ -68,6 +68,7 @@ upgrade-insecure-requests;
       filter: blur(14px);
       opacity:.95;
       pointer-events:none;
+      z-index:0;
       animation: skyDrift 18s ease-in-out infinite;
     }
 
@@ -81,7 +82,78 @@ upgrade-insecure-requests;
         rgba(0,0,0,.34) 74%,
         rgba(0,0,0,.55) 100%);
       pointer-events:none;
+      z-index:0;
     }
+
+    /* ===================== FRAME ORNAMENT (Diamond + Orbit + Wave) ===================== */
+    .frame-orn{
+      position:absolute;
+      inset:0;
+      border-radius: 18px;
+      pointer-events:none;
+      z-index: 1; /* above fog/vignette, below content */
+      opacity: .88;
+      /* 4 diamond corner points */
+      background:
+        conic-gradient(from 225deg at 18px 18px,
+          rgba(242,222,156,.55), rgba(242,222,156,0) 22deg),
+        conic-gradient(from 315deg at calc(100% - 18px) 18px,
+          rgba(242,222,156,.55), rgba(242,222,156,0) 22deg),
+        conic-gradient(from 135deg at 18px calc(100% - 18px),
+          rgba(242,222,156,.45), rgba(242,222,156,0) 22deg),
+        conic-gradient(from 45deg at calc(100% - 18px) calc(100% - 18px),
+          rgba(242,222,156,.45), rgba(242,222,156,0) 22deg);
+      background-repeat:no-repeat;
+      mix-blend-mode: screen;
+    }
+    /* Orbit halo near header */
+    .frame-orn::before{
+      content:"";
+      position:absolute;
+      left:50%;
+      top:-160px;
+      width: 620px;
+      height: 620px;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 50% 50%,
+          rgba(0,0,0,0) 56%,
+          rgba(242,222,156,.15) 58%,
+          rgba(242,222,156,0) 62%);
+      opacity:.62;
+      filter: blur(.2px);
+      pointer-events:none;
+      mix-blend-mode: screen;
+    }
+    /* Wave lift at the bottom edge */
+    .frame-orn::after{
+      content:"";
+      position:absolute;
+      left:-15%;
+      right:-15%;
+      bottom:-30px;
+      height: 120px;
+      background:
+        radial-gradient(90px 40px at 10% 40%,
+          rgba(242,222,156,.18), rgba(0,0,0,0) 72%),
+        radial-gradient(120px 46px at 35% 55%,
+          rgba(242,222,156,.14), rgba(0,0,0,0) 74%),
+        radial-gradient(140px 52px at 60% 45%,
+          rgba(255,255,255,.10), rgba(0,0,0,0) 72%),
+        radial-gradient(120px 46px at 85% 55%,
+          rgba(242,222,156,.14), rgba(0,0,0,0) 74%);
+      opacity:.82;
+      filter: blur(1px);
+      pointer-events:none;
+      mix-blend-mode: screen;
+    }
+
+    @media (max-width: 620px){
+      .frame-orn::before{ width: 520px; height: 520px; top:-150px; }
+      .frame-orn::after{ height: 105px; bottom:-28px; }
+    }
+
 
     @keyframes skyDrift{
       0%,100%{ transform: translate3d(0,0,0) scale(1); }
@@ -275,57 +347,6 @@ upgrade-insecure-requests;
     }
 
     /* ===================== NAV CARDS ===================== */
-
-    /* ===================== RIPPLE + LIFT (Index-only, no class changes) ===================== */
-    .card{
-      will-change: transform;
-      transform: translateZ(0);
-    }
-    @media (prefers-reduced-motion: no-preference){
-      .card{ animation: tkcCardFloat 8.6s ease-in-out infinite; }
-      .card:nth-child(2){ animation-delay: -1.9s; }
-      .card:nth-child(3){ animation-delay: -3.8s; }
-      @keyframes tkcCardFloat{
-        0%,100%{ transform: translateY(0); }
-        50%{ transform: translateY(-5px); }
-      }
-    }
-    .card::after{
-      /* subtle “supporting wave” glow under each card */
-      content:"";
-      position:absolute;
-      left:10%;
-      right:10%;
-      bottom:-16px;
-      height:34px;
-      border-radius:999px;
-      background: radial-gradient(60% 100% at 50% 0%,
-        rgba(255,240,210,.20),
-        rgba(190,130,255,.10),
-        rgba(0,0,0,0) 72%);
-      filter: blur(10px);
-      opacity:.75;
-      pointer-events:none;
-      transform: translateZ(0);
-    }
-
-    /* JS-injected ripple */
-    .tkc-ripple{
-      position:absolute;
-      inset:auto;
-      border-radius:999px;
-      pointer-events:none;
-      transform: translate(-50%, -50%) scale(0);
-      opacity:.55;
-      border: 1px solid rgba(255,240,210,.55);
-      box-shadow: 0 0 26px rgba(255,240,210,.12);
-      animation: tkcRipple 780ms ease-out forwards;
-      mix-blend-mode: screen;
-    }
-    @keyframes tkcRipple{
-      to{ transform: translate(-50%, -50%) scale(1); opacity:0; }
-    }
-
     .cards{
       margin: 16px auto 8px;
       max-width: 980px;
@@ -511,51 +532,15 @@ animation: waveMove 9.6s linear infinite;
 
     <section class="sanctuary-main" aria-label="TKC-VH DIARY  Home">
 
-      <!-- ORNAMENT CORNERS (reuse .orn from legal.css) -->
-      <div class="orn tl" aria-hidden="true">
-        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 128 C40 96, 66 84, 96 76 C70 76, 50 64, 38 44 C34 80, 26 106, 22 128" />
-          <path class="mist" d="M28 124 C60 108, 78 96, 108 86" />
-          <path class="mist" d="M44 52 C62 72, 84 78, 110 78" />
-        </svg>
-      </div>
-      <div class="orn tr" aria-hidden="true">
-        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 128 C40 96, 66 84, 96 76 C70 76, 50 64, 38 44 C34 80, 26 106, 22 128" />
-          <path class="mist" d="M28 124 C60 108, 78 96, 108 86" />
-          <path class="mist" d="M44 52 C62 72, 84 78, 110 78" />
-        </svg>
-      </div>
-      <div class="orn bl" aria-hidden="true">
-        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 128 C40 96, 66 84, 96 76 C70 76, 50 64, 38 44 C34 80, 26 106, 22 128" />
-          <path class="mist" d="M28 124 C60 108, 78 96, 108 86" />
-          <path class="mist" d="M44 52 C62 72, 84 78, 110 78" />
-        </svg>
-      </div>
-      <div class="orn br" aria-hidden="true">
-        <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg">
-          <path d="M22 128 C40 96, 66 84, 96 76 C70 76, 50 64, 38 44 C34 80, 26 106, 22 128" />
-          <path class="mist" d="M28 124 C60 108, 78 96, 108 86" />
-          <path class="mist" d="M44 52 C62 72, 84 78, 110 78" />
-        </svg>
-      </div>
+      <div class="frame-orn" aria-hidden="true"></div>
 
       <div class="gate">
 
-       
-  <div class="seal-wrap" data-protect="logo">
-  <div class="seal" aria-label="Moon Emblem" data-protect="logo">
-    <img src="assets/moon-diamond.jpg"
-         alt="Moon–Diamond Emblem"
-         draggable="false"
-         decoding="async"
-         loading="eager"
-         data-protect="logo" />
-  </div>
-</div>
-
-        
+        <div class="seal-wrap">
+          <div class="seal" aria-label="Moon Emblem">
+            <img src="assets/moon-diamond.jpg" alt="Moon–Diamond Emblem" />
+          </div>
+        </div>
 
         <div class="title-wrap">
           <h1 class="temple-title">TKC-VH DIARY</h1>
@@ -564,7 +549,7 @@ animation: waveMove 9.6s linear infinite;
 
 
        <!-- THƠ SONG NGỮ 2 CỘT -->
-<div class="royal-panel reveal" aria-label="Bilingual Poem (VI left, EN right)">
+<div class="royal-panel" aria-label="Bilingual Poem (VI left, EN right)">
   <div class="poem-grid">
 
     <section class="poem-col vi" aria-label="Vietnamese">
@@ -641,9 +626,9 @@ animation: waveMove 9.6s linear infinite;
         
 
         <!-- CARDS -->
-        <div class="cards-stage reveal" aria-label="Navigation Cards Stage">
+        <div class="cards-stage" aria-label="Navigation Cards Stage">
           <div class="cards" aria-label="Navigation Cards">
-          <div class="card reveal">
+          <div class="card">
             <h3>Works</h3>
             <p>Thư viện tác phẩm đã phát hành (đa ngôn ngữ) và các trang chi tiết.</p>
             <a class="btn" href="./works.html">→ Enter Works</a>
@@ -654,7 +639,7 @@ animation: waveMove 9.6s linear infinite;
             </div>
           </div>
 
-          <div class="card reveal">
+          <div class="card">
             <h3>Series</h3>
             <p>Lối đi theo tuyến mạch Series/Volumes để người đọc bước vào đúng cổng.</p>
             <a class="btn" href="./series.html">→ Enter Series</a>
@@ -664,7 +649,7 @@ animation: waveMove 9.6s linear infinite;
             </div>
           </div>
 
-          <div class="card reveal">
+          <div class="card">
             <h3>Legal</h3>
             <p>Đại sảnh pháp lý: bản quyền, điều khoản, logo, quy ước sử dụng.</p>
             <a class="btn" href="./legal/">→ Enter Legal Hall</a>
