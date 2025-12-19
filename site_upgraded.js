@@ -86,4 +86,40 @@
     });
   }
 
+          ripple.addEventListener("animationend", ()=> ripple.remove(), {once:true});
+      }, {passive:true});
+    });
+  }
+
+  /* ===== LOGO PROTECTION (INDEX / TEMPLE) ===== */
+  const protectLogo = (el) => {
+    if (!el) return;
+
+    el.addEventListener("contextmenu", e => e.preventDefault(), { capture: true });
+    el.addEventListener("dragstart", e => e.preventDefault(), { capture: true });
+
+    el.style.userSelect = "none";
+    el.style.webkitUserSelect = "none";
+    el.style.webkitTouchCallout = "none";
+  };
+
+  // Protect all elements marked with data-protect
+  document.querySelectorAll('[data-protect="logo"], [data-protect]').forEach(protectLogo);
+
+  // Extra safety for seal structure on index
+  protectLogo(document.querySelector(".seal-wrap"));
+  protectLogo(document.querySelector(".seal"));
+  protectLogo(document.querySelector(".seal img"));
+
+  // Global capture guard: block right-click if click is inside logo area
+  document.addEventListener(
+    "contextmenu",
+    (e) => {
+      const hit = e.target.closest('.seal-wrap, .seal, [data-protect="logo"], [data-protect]');
+      if (hit) e.preventDefault();
+    },
+    { capture: true }
+  );
+
+
 })();
