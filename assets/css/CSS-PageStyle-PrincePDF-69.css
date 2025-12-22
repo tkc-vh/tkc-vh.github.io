@@ -7,18 +7,17 @@
    =========================================================== */
 
 /* ===========================================================
-  Chèn vào đầu sách:
+  1. Chèn vào đầu sách:
 
 <body>
-
 <div style="page-break-after: always;"></div>
-
 <p class="start-page">
-
 <img src="images/image26.jpeg" alt="Nhật Ký TKC-VH T42-C2 BỒ ĐỀ SONG THỤ KIM CƯƠNG  Cội Mai Vàng Vĩnh Cửu Author Tran Khac Cuong"/>
-
 </p>
 
+   2. Ngắt trang: 
+
+<p style="page-break-before: always;"></p>
    =========================================================== */
 
 
