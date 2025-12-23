@@ -200,10 +200,36 @@
               <div><b>Tác giả:</b> <span>Trần Khắc Cường (TKC-VH)</span></div>
               <div><b>Ngày ấn định:</b> <span>22/12/2025</span></div>
             </div>
-            <p class="note">
-              Chứng chỉ này ghi nhận <b>dấu vân tay số</b> (SHA-256) cho các tệp phát hành chính thức.
-              Nếu nội dung tệp thay đổi dù chỉ 1 ký tự, mã SHA-256 sẽ thay đổi theo.
-            </p>
+            
+
+
+
+
+
+<p class="note">
+  <b>VI:</b>
+  Mỗi tệp phát hành chính thức đều có một <b>dấu vân tay số (SHA-256)</b> riêng.
+  Chỉ cần ai đó “chạm tay” vào nội dung — dù chỉ thêm một dấu chấm, bớt một dấu phẩy
+  hay lỡ tay tạo thêm một khoảng trắng — dấu vân tay sẽ lập tức thay đổi, và khi đó
+  tài liệu này <b>không còn được xác nhận là bản gốc của tác giả</b>, dù bề ngoài
+  có thể “trông y hệt”.
+</p>
+
+<p class="note">
+  <b>EN:</b>
+  Each officially released file has its own unique <b>digital fingerprint (SHA-256)</b>.
+  Any change to the content — even something as small as adding a period, removing a comma,
+  or accidentally inserting a single space — will immediately alter this fingerprint.
+  At that point, the file <b>can no longer be verified as the author’s original version</b>,
+  no matter how identical it may appear on the surface.
+</p>
+
+
+
+
+
+
+
           </div>
 
           <div class="panel" role="group" aria-label="Danh sách dấu vân tay số">
@@ -271,32 +297,189 @@
             
           </div>
 
+
+<div class="panel" role="group" aria-label="Ký số và xác thực tác giả">
+  
+<h2>Ký số &amp; xác thực tác giả (GPG / PGP)</h2>
+
+  
+<p class="note">
+  <b>VI:</b><br>
+  Ngoài <b>dấu vân tay số (SHA-256)</b>, các tệp phát hành chính thức của tác phẩm này
+  còn được <b>ký số bằng GPG/PGP</b> — có thể hiểu là tác giả “ký tên” trực tiếp lên
+  từng tệp bằng ngôn ngữ của điện toán.
+</p>
+
+<p class="note">
+  Chữ ký số (<code>.asc</code>) được tạo bằng <b>khóa RSA 4096-bit</b>, nhằm xác nhận rằng:
+</p>
+
+<ul class="note">
+  <li>Các mã SHA-256 là do chính tác giả công bố</li>
+  <li>Nội dung đã tồn tại tại thời điểm ký</li>
+  <li>Bất kỳ chỉnh sửa nào về sau cũng sẽ khiến chữ ký thay đổi, và khi đó tác phẩm
+      không còn được xem là bản gốc hợp lệ của tác giả</li>
+</ul>
+
+<p class="note">
+  Các tệp EPUB/PDF gốc chưa được chia sẻ tại đây.
+  Thay vào đó, <b>chữ ký số</b> và <b>khóa công khai</b> được cung cấp để
+  <b>hành lang pháp lý có thể xác minh độc lập</b>.
+</p>
+
+<p class="note">
+  Bản gốc được phát hành qua các kênh phân phối hợp pháp
+  (ví dụ: Amazon, Google Play Books, Apple Books, Rakuten Kobo…).
+</p>
+
+
+<hr>
+
+<p class="note">
+  <b>EN:</b><br>
+  In addition to the <b>digital fingerprint (SHA-256)</b>, the officially released files
+  of this work are also <b>digitally signed using GPG/PGP</b> — essentially allowing
+  the author to “sign” each file directly in the language of computation.
+</p>
+
+<p class="note">
+  The digital signature (<code>.asc</code>) is generated using a <b>4096-bit RSA key</b>,
+  confirming that:
+</p>
+
+<ul class="note">
+  <li>The published SHA-256 hashes were issued by the author</li>
+  <li>The corresponding content already existed at the time of signing</li>
+  <li>Any modification made afterward will alter the signature, and the file can no longer
+      be considered the author’s verified original version</li>
+</ul>
+
+<p class="note">
+  The original EPUB/PDF files are not shared here.
+  Instead, the <b>digital signatures</b> and <b>public key</b> are provided so that
+  the <b>legal and technical verification process</b> may be carried out independently.
+</p>
+
+
+<p class="note">
+  The original version is distributed through legitimate commercial platforms
+  (e.g., Amazon, Google Play Books, Apple Books, Rakuten Kobo…).
+</p>
+
+
+
+
+</div>
+
+<div class="panel" role="group" aria-label="Thông tin khóa ký số">
+  <h2>Thông tin khóa ký số</h2>
+
+  <div class="meta">
+    <div><b>Chuẩn:</b> <span>OpenPGP (GPG)</span></div>
+    <div><b>Thuật toán:</b> <span>RSA 4096</span></div>
+    <div><b>Chủ thể ký:</b> <span>Trần Khắc Cường (TKC-VH)</span></div>
+    <div><b>Key ID:</b> <span>26281F7A</span></div>
+    <div><b>Ngày ký:</b> <span>22/12/2025</span></div>
+  </div>
+
+  <p class="note">
+    Khóa công khai và toàn bộ chữ ký số được lưu trữ công khai trong
+    <b>Legal Library (GitHub)</b>, đóng vai trò mốc thời gian độc lập
+    của bên thứ ba.
+  </p>
+</div>
+
+
+
+
           <div class="panel" role="group" aria-label="Hướng dẫn kiểm tra">
-            <h2>Kiểm tra (Verification)</h2>
+          
+ 
 
-            <div class="howto">
-              <div>
-                <div class="tips"><b>macOS / Linux</b> (Terminal):</div>
-                <code class="cmd">shasum -a 256 "ten_file_sach.epub"</code>
-              </div>
 
-              <div>
-                <div class="tips"><b>Windows</b> (PowerShell):</div>
-                <code class="cmd">Get-FileHash "ten_file_sach.epub" -Algorithm SHA256</code>
-              </div>
 
-              <p class="tips">
-                So sánh chuỗi mã trả về với dòng tương ứng trong bảng trên.
-                Khớp hoàn toàn = tệp <b>trùng khớp bản công bố</b>.
-              </p>
-            </div>
-          </div>
+<h2>Kiểm tra &amp; xác minh (Verification)</h2>
 
-          <p class="note" style="text-align:center;">
-            Bản gốc được phát hành qua các kênh phân phối hợp pháp (ví dụ: Amazon, Google Play Books, Apple Books, Kobo…).
-          </p>
+<div class="howto">
 
-          <hr>
+  <!-- SHA-256 -->
+  <div>
+    <div class="tips"><b>Bước 1 – Kiểm tra dấu vân tay số (SHA-256)</b></div>
+
+    <div>
+      <div class="tips"><b>macOS / Linux</b> (Terminal):</div>
+      <code class="cmd">shasum -a 256 "ten_file_sach.epub"</code>
+    </div>
+
+    <div>
+      <div class="tips"><b>Windows</b> (PowerShell):</div>
+      <code class="cmd">Get-FileHash "ten_file_sach.epub" -Algorithm SHA256</code>
+    </div>
+
+    <p class="tips">
+      So sánh mã SHA-256 thu được với dòng tương ứng trong bảng công bố ở trên.
+      <br>
+      <b>Khớp hoàn toàn</b> = nội dung tệp trùng khớp với bản phát hành chính thức.
+    </p>
+  </div>
+
+  <!-- GPG Signature -->
+  <div>
+    <div class="tips"><b>Bước 2 – Kiểm tra chữ ký số GPG (.asc)</b></div>
+
+    <p class="tips">
+      Chữ ký số dùng để xác nhận rằng tệp đã được <b>chính tác giả ký xác nhận</b>
+      và không bị thay đổi sau thời điểm ký.
+    </p>
+
+    <div>
+      <div class="tips"><b>Nhập khóa công khai của tác giả</b> (chỉ cần làm một lần):</div>
+      <code class="cmd">gpg --import TKC-VH-public-key.asc</code>
+    </div>
+
+    <div>
+      <div class="tips"><b>Xác minh chữ ký số</b>:</div>
+      <code class="cmd">gpg --verify ten_file_sach.epub.asc ten_file_sach.epub</code>
+    </div>
+
+    <p class="tips">
+      Nếu hệ thống trả về thông báo tương đương:
+      <br>
+      <b>“Good signature from … (TKC-VH)”</b>
+      <br>
+      điều đó xác nhận rằng:
+    </p>
+
+    <ul class="tips">
+      <li>Tệp đã được ký bởi chính tác giả</li>
+      <li>Nội dung tồn tại tại thời điểm ký</li>
+      <li>Tệp không bị chỉnh sửa sau khi ký</li>
+    </ul>
+  </div>
+
+  <!-- Summary -->
+  <p class="tips" style="text-align:center;">
+    ✔️ SHA-256 khớp &nbsp; + &nbsp; ✔️ Chữ ký GPG hợp lệ
+    <br>
+    ⇒ Tệp được xác nhận là <b>bản gốc do tác giả phát hành</b>.
+  </p>
+
+</div>
+
+
+
+
+
+<p class="note" style="text-align:center;">
+   Kho chữ ký số &amp; khóa công khai (Technical Reference):<br>
+  <a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/t19/c1/signatures"
+     target="_blank" rel="noopener">
+    🔗 github.com * TKC-VH * Signatures
+  </a>
+</p>
+
+
+              <hr>
 
           <div class="footer">© 2025 TKC-VH • All Rights Reserved</div>
           <div class="subtitle" style="margin-top:6px;">⚜︎ TRẦN KHẮC CƯỜNG ⚜︎</div>
