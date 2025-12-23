@@ -1,0 +1,19 @@
+SIGNING INFORMATION – T42C2
+
+Work: T42C2 (Complete EPUB & PDF editions)
+Author: Tran Khac Cuong (Pen name: TKC-VH)
+
+Digital Signature Standard:
+- OpenPGP (GPG)
+- Algorithm: RSA 4096-bit
+- Key ID: 26281F7A
+
+Signing Date: 23 December 2025
+
+All original release files of T42C2 were digitally signed using the author's private key.
+Detached signatures (.asc) are provided for independent verification.
+
+Any modification, even minimal, will invalidate the signature and prove the file is not the original author-issued version.
+
+Public key is provided to allow third-party verification.
+
