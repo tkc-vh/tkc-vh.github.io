@@ -1,0 +1,403 @@
+
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light">
+  <title>TKC-VH • Chứng chỉ xác thực bản quyền (SHA-256)</title>
+
+  <!-- Gợi ý đường dẫn (đúng khi file nằm trong /t19/ trên GitHub Pages) -->
+  <link rel="stylesheet" href="../legal/legal.css">
+  <script src="../legal/legal.js" defer></script>
+
+  <style>
+    /* Tinh chỉnh nhẹ cho "card" – không phá style tổng /legal/legal.css */
+    .certificate-body{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 14px 22px;
+      color: rgba(245,245,245,.92);
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .kicker{
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-size: .82rem;
+      opacity: .78;
+      margin: 8px 0 4px;
+    }
+
+    .title{
+      margin: 6px 0 2px;
+      font-size: clamp(1.35rem, 2.1vw, 1.9rem);
+      letter-spacing: .14em;
+      color: #ceae7b;
+    }
+
+    .subtitle{
+      margin: 0 0 18px;
+      font-size: .9rem;
+      opacity: .72;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+
+    .panel{
+      text-align: left;
+      margin: 18px auto;
+      padding: 14px 14px;
+      border-radius: 6px;
+      border: 1px solid rgba(206,174,123,.28);
+      background: rgba(0,0,0,.22);
+    }
+    .panel h2{
+      margin: 0 0 10px;
+      font-size: 1rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: #ceae7b;
+      text-align: center;
+    }
+
+    .meta{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 6px;
+      font-size: .95rem;
+    }
+    .meta b{ color: rgba(245,245,245,.95); }
+    .meta span{ opacity: .92; }
+
+    .note{
+      margin: 10px 0 0;
+      font-size: .9rem;
+      opacity: .78;
+    }
+
+    .table-wrap{
+      margin: 14px 0 0;
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    table.hash{
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 780px;
+      background: rgba(0,0,0,.18);
+    }
+    table.hash thead th{
+      font-size: .78rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #ceae7b;
+      border-bottom: 1px solid rgba(206,174,123,.65);
+      padding: 10px 10px;
+      white-space: nowrap;
+    }
+    table.hash td{
+      padding: 10px 10px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      vertical-align: top;
+      font-size: .92rem;
+    }
+    table.hash td.small{ white-space: nowrap; opacity: .92; }
+
+    code.hash{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: .86rem;
+      color: #ceae7b;
+      word-break: break-all;
+    }
+
+    /* Cột SHA + nút copy */
+    .hashcell{
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .hashtext{ flex: 1; min-width: 0; }
+    .copybtn{
+      flex: 0 0 auto;
+      appearance: none;
+      border: 1px solid rgba(206,174,123,.45);
+      background: rgba(0,0,0,.25);
+      color: rgba(245,245,245,.90);
+      padding: 7px 10px;
+      border-radius: 8px;
+      font-size: .78rem;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform .06s ease, background .2s ease, border-color .2s ease, opacity .2s ease;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .copybtn:hover{
+      background: rgba(206,174,123,.12);
+      border-color: rgba(206,174,123,.75);
+    }
+    .copybtn:active{ transform: translateY(1px); }
+    .copybtn:focus-visible{
+      outline: 2px solid rgba(206,174,123,.85);
+      outline-offset: 2px;
+    }
+    .copybtn[data-state="done"]{
+      border-color: rgba(152,255,152,.65);
+      background: rgba(152,255,152,.10);
+    }
+    .copybtn[disabled]{ opacity:.55; cursor:not-allowed; }
+
+    .howto{
+      display: grid;
+      gap: 10px;
+    }
+    .cmd{
+      display: block;
+      padding: 10px 12px;
+      border-left: 3px solid rgba(206,174,123,.85);
+      background: rgba(0,0,0,.35);
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      color: #98ff98;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .tips{
+      font-size: .9rem;
+      opacity: .82;
+      margin: 0;
+    }
+
+    .divider{
+      height: 1px;
+      border: 0;
+      background: rgba(206,174,123,.22);
+      margin: 18px auto 12px;
+      width: min(760px, 90%);
+    }
+
+    .foot{
+      text-align: center;
+      padding: 0 14px 20px;
+    }
+    .rights{
+      font-size: .75rem;
+      letter-spacing: .16em;
+      opacity: .7;
+      margin: 10px 0 0;
+      text-transform: uppercase;
+    }
+    .sign{
+      margin: 10px 0 0;
+      color: #ceae7b;
+      letter-spacing: .12em;
+      font-size: 1.05rem;
+    }
+
+    /* Hỗ trợ mobile: giảm chật */
+    @media (max-width: 520px){
+      .panel{ padding: 12px; }
+      .kicker{ letter-spacing: .14em; }
+      .subtitle{ letter-spacing: .10em; }
+      table.hash{ min-width: 740px; }
+      .copybtn{ padding: 7px 9px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page" aria-label="Chứng chỉ xác thực bản quyền">
+    <section class="card">
+      <div class="gold-frame">
+
+        <div class="moon-wrap">
+          <div class="moon" aria-label="TKC-VH Moon Emblem">
+            <img src="../assets/moon-diamond.jpg" alt="TKC-VH Moon Emblem">
+          </div>
+        </div>
+
+        <div class="certificate-body">
+          <div class="kicker">TKC-VH Diary • Legal Library</div>
+          <h1 class="title">⚜︎ CHỨNG CHỈ XÁC THỰC ⚜︎</h1>
+          <div class="subtitle">Digital Copyright Authenticity Certificate • SHA-256</div>
+
+          <div class="panel" role="group" aria-label="Thông tin tác phẩm">
+            <h2>Thông tin tác phẩm</h2>
+            <div class="meta">
+              <div><b>Tác phẩm:</b> <span>T19C1 (Trọn bộ EPUB &amp; PDF)</span></div>
+              <div><b>Tác giả:</b> <span>Trần Khắc Cường (TKC-VH)</span></div>
+              <div><b>Ngày ấn định:</b> <span>22/12/2025</span></div>
+            </div>
+            <p class="note">
+              Chứng chỉ này ghi nhận <b>dấu vân tay số</b> của các tệp phát hành chính thức.
+              Nếu chỉ một ký tự thay đổi, mã SHA-256 sẽ thay đổi theo — đây là cách nhận diện bản nguyên gốc một cách khách quan.
+            </p>
+          </div>
+
+          <div class="panel" role="group" aria-label="Danh sách dấu vân tay số">
+            <h2>Danh sách dấu vân tay số (SHA-256)</h2>
+
+            <div class="table-wrap" aria-label="Bảng SHA-256">
+              <table class="hash">
+                <thead>
+                  <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Tên tệp</th>
+                    <th scope="col">Định dạng</th>
+                    <th scope="col">Mã SHA-256</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="small">01</td>
+                    <td><b>T19C1-EN</b></td>
+                    <td class="small"><code>EPUB</code></td>
+                    <td>
+                      <div class="hashcell">
+                        <div class="hashtext"><code class="hash" data-hash="b57695dd2f9c8b6bd004529ce23715ffe96a319840c3e2a4019e1477448ac6c1">b57695dd2f9c8b6bd004529ce23715ffe96a319840c3e2a4019e1477448ac6c1</code></div>
+                        <button class="copybtn" type="button" data-copy="#row1" aria-label="Copy SHA-256 dòng 01">COPY</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="small">02</td>
+                    <td><b>T19C1-EN</b></td>
+                    <td class="small"><code>PDF</code></td>
+                    <td>
+                      <div class="hashcell">
+                        <div class="hashtext"><code class="hash" data-hash="7c5929e006b83477f25a4469dc32c5b742349cb5dc5c7c2f501982f64a305f83">7c5929e006b83477f25a4469dc32c5b742349cb5dc5c7c2f501982f64a305f83</code></div>
+                        <button class="copybtn" type="button" data-copy="#row2" aria-label="Copy SHA-256 dòng 02">COPY</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="small">03</td>
+                    <td><b>T19C1-VI</b></td>
+                    <td class="small"><code>EPUB</code></td>
+                    <td>
+                      <div class="hashcell">
+                        <div class="hashtext"><code class="hash" data-hash="51a92b6a9915c0c24d61f947bf200f35739c1a2450416d6e94d950a15cfac4aa">51a92b6a9915c0c24d61f947bf200f35739c1a2450416d6e94d950a15cfac4aa</code></div>
+                        <button class="copybtn" type="button" data-copy="#row3" aria-label="Copy SHA-256 dòng 03">COPY</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="small">04</td>
+                    <td><b>T19C1-VI</b></td>
+                    <td class="small"><code>PDF</code></td>
+                    <td>
+                      <div class="hashcell">
+                        <div class="hashtext"><code class="hash" data-hash="0eeabc0e17dc50702ca07cf7f86158c74f959b95c313a6329ca7c7e84409207e">0eeabc0e17dc50702ca07cf7f86158c74f959b95c313a6329ca7c7e84409207e</code></div>
+                        <button class="copybtn" type="button" data-copy="#row4" aria-label="Copy SHA-256 dòng 04">COPY</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="note">
+              Mẹo: nhấn <b>COPY</b> để sao chép mã SHA-256. Khi cần đối chiếu, hãy tính SHA-256 của tệp bạn đang cầm rồi so sánh.
+            </p>
+          </div>
+
+          <div class="panel" role="group" aria-label="Hướng dẫn kiểm tra">
+            <h2>Kiểm tra (Verification)</h2>
+
+            <div class="howto">
+              <div>
+                <div class="tips"><b>macOS / Linux</b> (Terminal):</div>
+                <code class="cmd">shasum -a 256 "ten_file_sach.epub"</code>
+              </div>
+
+              <div>
+                <div class="tips"><b>Windows</b> (PowerShell):</div>
+                <code class="cmd">Get-FileHash "ten_file_sach.epub" -Algorithm SHA256</code>
+              </div>
+
+              <p class="tips">
+                So sánh chuỗi mã trả về với dòng tương ứng trong bảng trên.
+                Khớp hoàn toàn = tệp <b>trùng khớp bản công bố</b>.
+              </p>
+            </div>
+          </div>
+
+          <p class="note" style="text-align:center; margin-top:14px;">
+            Bản gốc được phát hành qua các kênh phân phối hợp pháp (ví dụ: Amazon, Google Play Books, Apple Books, Kobo…).
+          </p>
+
+          <hr class="divider">
+        </div><!-- /certificate-body -->
+
+        <div class="foot">
+          <div class="rights">© 2025 TKC-VH • All Rights Reserved</div>
+          <div class="sign">⚜︎ TRẦN KHẮC CƯỜNG ⚜︎</div>
+        </div>
+
+      </div><!-- /gold-frame -->
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const buttons = document.querySelectorAll(".copybtn");
+
+      function setDone(btn, okText) {
+        const old = btn.textContent;
+        btn.dataset.state = "done";
+        btn.textContent = okText || "COPIED";
+        setTimeout(() => {
+          btn.dataset.state = "";
+          btn.textContent = "COPY";
+        }, 1200);
+        return old;
+      }
+
+      async function copyText(text) {
+        // Ưu tiên Clipboard API
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return;
+        }
+        // Fallback (nếu chạy file local hoặc http)
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "fixed";
+        ta.style.top = "-9999px";
+        ta.style.left = "-9999px";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }
+
+      buttons.forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const cell = btn.closest("td") || btn.parentElement;
+          const code = cell ? cell.querySelector("code.hash") : null;
+          const value = (code?.dataset?.hash || code?.textContent || "").trim();
+          if (!value) return;
+
+          btn.disabled = true;
+          try {
+            await copyText(value);
+            setDone(btn, "COPIED");
+          } catch (e) {
+            setDone(btn, "FAILED");
+            console.warn("Copy failed:", e);
+          } finally {
+            setTimeout(() => { btn.disabled = false; }, 300);
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
