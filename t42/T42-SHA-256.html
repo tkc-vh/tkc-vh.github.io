@@ -1,75 +1,271 @@
 
+
 <!doctype html>
 <html lang="vi">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="dark light">
-  <title>TKC-VH • Chứng chỉ xác thực bản quyền T42C2 (SHA-256)</title>
+  <title>T42C2 — Chứng thư xác thực (SHA-256 + GPG/PGP) | TKC-VH Legal Library</title>
 
-  <!-- Dùng style & script chung của Legal Library -->
+  <!-- Dùng đúng cấu trúc giống trang T42C2 (đang chạy tốt) -->
   <link rel="stylesheet" href="../legal/legal.css">
   <script src="../legal/legal.js" defer></script>
 
-  <!-- CSS RIÊNG – giữ đúng chuẩn file gốc -->
+
   <style>
-    .certificate-body{max-width:980px;margin:0 auto;padding:0 14px 22px;}
-    .kicker{text-align:center;letter-spacing:.16em;text-transform:uppercase;font-size:.82rem;opacity:.78;margin:8px 0 2px;}
-    .panel{text-align:left;margin:18px auto;padding:14px;border-radius:14px;border:1px solid rgba(255,211,119,.20);background:rgba(0,0,0,.18);box-shadow:0 10px 26px rgba(0,0,0,.20);overflow:hidden;}
-    .panel h2{text-align:center;margin:0 0 10px;font-size:1rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,211,119,.92);}
-    .meta{display:grid;grid-template-columns:1fr;gap:6px;font-size:.95rem;}
-    .meta b{color:rgba(255,240,210,.95);}
-    .meta span{color:rgba(244,236,223,.92);}
-    .table-wrap{margin:14px 0 0;overflow-x:auto;border-radius:14px;border:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.12);-webkit-overflow-scrolling:touch;}
-    table.hash{width:100%;border-collapse:collapse;min-width:780px;}
-    table.hash thead th{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,211,119,.92);border-bottom:1px solid rgba(255,211,119,.55);padding:10px;white-space:nowrap;}
-    table.hash td{padding:10px;border-bottom:1px solid rgba(255,255,255,.08);vertical-align:top;font-size:.92rem;}
-    table.hash td.small{white-space:nowrap;}
-    code.hash{font-family:ui-monospace,monospace;font-size:.86rem;color:rgba(255,211,119,.92);word-break:break-all;}
-    .hashcell{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;}
-    .hashtext{flex:1;min-width:0;}
-    .copybtn{appearance:none;border:1px solid rgba(255,211,119,.32);background:rgba(0,0,0,.25);color:#f5f5f5;padding:7px 10px;border-radius:12px;font-size:.78rem;letter-spacing:.10em;text-transform:uppercase;cursor:pointer;white-space:nowrap;}
-    .copybtn:hover{background:rgba(255,211,119,.10);border-color:rgba(255,211,119,.60);}
-    .howto{display:grid;gap:12px;}
-    .cmd{display:block;padding:10px 12px;border-left:3px solid rgba(255,211,119,.70);background:rgba(0,0,0,.35);border-radius:12px;font-family:ui-monospace,monospace;color:#98ff98;overflow-x:auto;white-space:nowrap;}
-    @media(max-width:600px){
-      .panel{padding:12px;}
-      table.hash{min-width:720px;}
-      .cmd{white-space:pre-wrap;overflow-x:hidden;overflow-wrap:anywhere;word-break:break-word;line-height:1.5;}
+    /* Giữ “hơi thở” legal.css, chỉ bổ sung phần bảng + nút copy + khối hướng dẫn */
+    h2{
+      margin: 18px 0 10px;
+      font-size: 17px;
+      letter-spacing:.08em;
+      text-transform: uppercase;
+      color: rgba(255,223,136,.95);
+      text-shadow: 0 0 8px rgba(255,190,110,.22);
+    }
+
+    .kicker{
+      text-align:center;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      font-size:12px;
+      opacity:.8;
+      margin-top: 2px;
+    }
+
+    .subnote{
+      margin: 10px auto 0;
+      max-width: 900px;
+      color: rgba(244,236,223,.90);
+      line-height: 1.8;
+    }
+
+    .hashbox{
+      border: 1px solid rgba(255,230,180,.18);
+      border-radius: 14px;
+      background: rgba(0,0,0,.18);
+      padding: 12px 12px;
+      margin: 10px 0 16px;
+      box-shadow: 0 12px 26px rgba(0,0,0,.22);
+    }
+
+    .table-wrap{
+      overflow-x:auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.12);
+    }
+    table.hash{
+      width:100%;
+      border-collapse:collapse;
+      min-width: 820px;
+    }
+    table.hash th, table.hash td{
+      padding: 10px 10px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      vertical-align: top;
+      font-size: 13.2px;
+    }
+    table.hash thead th{
+      font-size: 12px;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      color: rgba(255,211,119,.92);
+      border-bottom: 1px solid rgba(255,211,119,.55);
+      white-space: nowrap;
+    }
+
+    code.mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12.4px;
+      color: rgba(255,211,119,.92);
+      word-break: break-all;
+    }
+
+    .hashcell{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      justify-content:space-between;
+    }
+    .copybtn{
+      flex: 0 0 auto;
+      display:inline-block;
+      padding: 7px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,211,119,.26);
+      background: rgba(255,211,119,.08);
+      color: rgba(255,240,210,.95);
+      text-decoration:none;
+      font-size: 12px;
+      letter-spacing:.06em;
+      text-transform: uppercase;
+      cursor:pointer;
+      user-select:none;
+      box-shadow: 0 10px 22px rgba(0,0,0,.20);
+    }
+    .copybtn:hover{ background: rgba(255,211,119,.12); }
+
+    .howto{
+      border: 1px solid rgba(255,230,180,.18);
+      border-radius: 14px;
+      background: rgba(0,0,0,.18);
+      padding: 12px 12px;
+      margin: 10px 0;
+      box-shadow: 0 12px 26px rgba(0,0,0,.22);
+    }
+    .tips{ opacity: .92; font-size: 13px; line-height: 1.75; }
+    .cmd{
+      display:block;
+      padding: 10px 12px;
+      border-left: 3px solid rgba(255,211,119,.70);
+      background: rgba(0,0,0,.35);
+      border-radius: 12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      color: #98ff98;
+      overflow-x:auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 6px;
+    }
+
+    .pillrow{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin: 6px 0 0;
+    }
+    .pillrow a{
+      display:inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,211,119,.26);
+      background: rgba(255,211,119,.08);
+      color: rgba(255,240,210,.95);
+      text-decoration:none;
+      font-size: 12.5px;
+      letter-spacing:.04em;
+      box-shadow: 0 10px 22px rgba(0,0,0,.20);
+    }
+    .pillrow a:hover{ background: rgba(255,211,119,.12); text-decoration:none; }
+
+    @media (max-width: 720px){
+      .cmd{ white-space: pre-wrap; overflow-x: hidden; overflow-wrap:anywhere; }
+      table.hash{ min-width: 760px; }
     }
   </style>
 </head>
 
 <body>
-<main class="page">
-<section class="card">
-<div class="gold-frame">
+  <div class="page">
+    <div class="card">
 
-  <div class="moon-wrap">
-    <div class="moon">
-      <img src="../assets/moon-diamond.jpg" alt="TKC-VH Moon Emblem">
-    </div>
-  </div>
-
-  <div class="certificate-body">
-    <div class="kicker">TKC-VH Diary • Legal Library</div>
-    <h1>⚜︎ CHỨNG CHỈ XÁC THỰC ⚜︎</h1>
-    <div class="subtitle">T42C2 • Digital Copyright Authenticity Certificate • SHA-256</div>
-
-    <div class="panel">
-      <h2>Thông tin tác phẩm</h2>
-      <div class="meta">
-        <div><b>Tác phẩm:</b> <span>T42C2 (Trọn bộ EPUB &amp; PDF)</span></div>
-        <div><b>Tác giả:</b> <span>Trần Khắc Cường (TKC-VH)</span></div>
-        <div><b>Ngày ấn định:</b> <span>22/12/2025</span></div>
+      <!-- NAV giống trang T42C2 -->
+      <nav class="topnav" aria-label="Primary" style="display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:0 0 10px;">
+        <a href="../../index.html" style="display:inline-block;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,211,119,.26);background:rgba(255,211,119,.08);color:rgba(255,240,210,.95);text-decoration:none;font-size:12.5px;letter-spacing:.04em;box-shadow:0 10px 22px rgba(0,0,0,.20);">← Trang Chủ</a>
+        <a href="/t42/c2/index.html" style="display:inline-block;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,211,119,.26);background:rgba(255,211,119,.08);color:rgba(255,240,210,.95);text-decoration:none;font-size:12.5px;letter-spacing:.04em;box-shadow:0 10px 22px rgba(0,0,0,.20);">T42C2</a>
+        <a href="../../legal/" style="display:inline-block;padding:8px 12px;border-radius:999px;border:1px solid rgba(255,211,119,.26);background:rgba(255,211,119,.08);color:rgba(255,240,210,.95);text-decoration:none;font-size:12.5px;letter-spacing:.04em;box-shadow:0 10px 22px rgba(0,0,0,.20);">Pháp Lý</a>
+      </nav>
+      <!-- Moon emblem giống trang đang chạy -->
+      <div class="moon-wrap">
+        <div class="moon">
+          <img src="../assets/moon-diamond.jpg" alt="TKC-VH Moon Emblem" />
+        </div>
       </div>
-    </div>
 
-    <div class="panel">
-      <h2>Danh sách dấu vân tay số (SHA-256)</h2>
+      <div class="kicker">TKC-VH Diary • Legal Library</div>
 
-      <div class="table-wrap">
-        <table class="hash">
+      <!-- Title bilingual -->
+      <h1 id="top" style="margin-top:10px;" data-vi>⚜︎ CHỨNG THƯ XÁC THỰC ⚜︎</h1>
+      <div class="subtitle" data-vi>SHA-256 Hash Manifest + GPG/PGP Digital Signatures (T42C2)</div>
+
+      <h1 id="top-en" style="margin-top:10px;display:none;" data-en>⚜︎ AUTHENTICITY CERTIFICATE ⚜︎</h1>
+      <div class="subtitle" style="display:none;" data-en>SHA-256 Hash Manifest + GPG/PGP Digital Signatures (T42C2)</div>
+
+      <hr />
+
+      <!-- Language switch: dùng đúng pattern của trang chủ T42C2 -->
+      <div class="lang-switch" aria-label="Language switch">
+        <button type="button" class="js-lang active" data-lang="vi">VI</button>
+        <button type="button" class="js-lang" data-lang="en">EN</button>
+      </div>
+
+      <!-- VI BLOCK -->
+      <section id="lang-vi" class="lang-block active">
+
+<div class="hashbox">
+
+<h2>Thông tin tác phẩm</h2>
+
+
+  <p><b>Tác phẩm:</b> T42C2 (Trọn bộ EPUB &amp; PDF)</p>
+  <p><b>Tác giả:</b> Trần Khắc Cường (TKC-VH)</p>
+  <p><b>Ngày ấn định nội dung (Effective date):</b> 22/12/2025</p>
+</div>
+
+
+<div class="hashbox">
+
+<h2>Thông tin khóa ký số</h2>
+
+
+  <p><b>Chuẩn:</b> OpenPGP (GPG)</p>
+  <p><b>Thuật toán:</b> RSA 4096-bit</p>
+  <p><b>Chủ thể ký:</b> Trần Khắc Cường (TKC-VH)</p>
+  <p><b>Key ID:</b> 26281F7A</p>
+  <p><b>Ngày ký xác thực số (GPG signing date):</b> 23/12/2025</p>
+
+  <p style="margin-top:10px;opacity:.9">
+    Khóa công khai và toàn bộ chữ ký số được lưu trữ công khai trong
+    <b>Legal Library (GitHub)</b>, đóng vai trò như một mốc thời gian độc lập
+    của bên thứ ba, phục vụ cho việc xác minh pháp lý và kỹ thuật.
+  </p>
+</div>
+
+
+
+
+
+
+        <div class="gold-frame">
+          <h2>Ý nghĩa</h2>
+          <p class="subnote">
+            Mỗi tệp phát hành chính thức đều có một <b>dấu vân tay số (SHA-256)</b> riêng.
+            Chỉ cần ai đó “chạm tay” vào nội dung — dù chỉ thêm một dấu chấm, bớt một dấu phẩy hay lỡ tay tạo thêm một khoảng trắng —
+            dấu vân tay sẽ lập tức thay đổi, và khi đó tài liệu không còn được xác nhận là bản gốc của tác giả,
+            dù bề ngoài “trông y hệt”.
+          </p>
+
+          <p class="subnote">
+            Ngoài SHA-256, các tệp phát hành chính thức còn được <b>ký số bằng GPG/PGP</b> — “ký tên”
+            trực tiếp lên từng tệp bằng chữ ký điện toán.
+          </p>
+
+          <ul class="subnote" style="margin-top:8px;">
+            <li>Các mã SHA-256 là do chính tác giả công bố</li>
+            <li>Nội dung đã tồn tại tại thời điểm ký</li>
+            <li>Bất kỳ chỉnh sửa nào về sau đều khiến chữ ký mất hiệu lực (không còn là bản gốc)</li>
+          </ul>
+
+          <p class="subnote">
+            Lưu ý: Các tệp EPUB/PDF gốc <b>không được chia sẻ </b> tại đây. Thay vào đó, dấu vân tay (hash),
+            chữ ký số (.asc) và khóa công khai được xuất bản để mọi bên có thể xác minh độc lập.
+          </p>
+
+          <p class="subnote">
+            Bản gốc được phát hành qua các kênh phân phối hợp pháp (ví dụ: Amazon, Google Play Books, Apple Books, Rakuten Kobo…).
+          </p>
+
+          
+        </div>
+
+        <div class="hashbox">
+
+        <h2>Danh sách dấu vân tay số (SHA-256)</h2>
+
+            <div class="table-wrap" aria-label="Bảng SHA-256 T42C2">
+              <table class="hash">
           <thead>
             <tr><th>STT</th><th>Tên tệp</th><th>Định dạng</th><th>Mã SHA-256</th></tr>
           </thead>
@@ -100,28 +296,316 @@
             </tr>
           </tbody>
         </table>
-      </div>
-    </div>
 
-    <div class="panel">
-      <h2>Kiểm tra (Verification)</h2>
-      <div class="howto">
-        <div><b>macOS / Linux</b><code class="cmd">shasum -a 256 "ten_file_sach.epub"</code></div>
-        <div><b>Windows (PowerShell)</b><code class="cmd">Get-FileHash "ten_file_sach.epub" -Algorithm SHA256</code></div>
-      </div>
-    </div>
 
-    <p class="note" style="text-align:center;">
-      Bản gốc được phát hành qua các kênh phân phối hợp pháp (Amazon, Google Play Books, Apple Books, Kobo…)
-    </p>
 
-    <hr>
-    <div class="footer">© 2025 TKC-VH • All Rights Reserved</div>
-    <div class="subtitle" style="margin-top:6px;">⚜︎ TRẦN KHẮC CƯỜNG ⚜︎</div>
+            </div>
 
-  </div>
+        <div class="howto">
+
+        <h2>Kiểm tra (Verification)</h2>
+
+
+          <div class="tips"><b>Bước 1 — Kiểm tra SHA-256</b></div>
+          <div class="tips"><b>macOS / Linux</b> (Terminal):</div>
+          <code class="cmd">shasum -a 256 "ten_file_sach.epub"</code>
+
+          <div class="tips"><b>Windows</b> (PowerShell):</div>
+          <code class="cmd">Get-FileHash "ten_file_sach.epub" -Algorithm SHA256</code>
+
+          <p class="tips">
+            So sánh chuỗi mã trả về với dòng tương ứng trong bảng trên.
+            <b>Khớp hoàn toàn</b> = tệp trùng khớp bản công bố.
+          </p>
+
+          <hr style="opacity:.25;margin:10px 0;">
+
+          <div class="tips"><b>Bước 2 — Xác minh chữ ký GPG (.asc)</b></div>
+          <div class="tips">1) Nhập khóa công khai (chỉ cần 1 lần):</div>
+          <code class="cmd">gpg --import "signatures/TKC-VH-public-key.asc"</code>
+
+          <div class="tips">2) Xác minh chữ ký (ví dụ EPUB):</div>
+          <code class="cmd">gpg --verify "ten_file_sach.epub.asc" "ten_file_sach.epub"</code>
+
+          <p class="tips">
+            Nếu hiện thông báo kiểu <b>“Good signature from … (TKC-VH)”</b> thì có thể hiểu đơn giản:
+            tệp đúng bản đã ký, và không bị sửa sau thời điểm ký.
+          </p>
+
+          <p class="tips">
+            ✔️ SHA-256 khớp &nbsp; + &nbsp; ✔️ Chữ ký GPG hợp lệ ⇒ <b>Bản gốc do tác giả phát hành</b>.
+          </p>
+        </div>
+
+
+<p class="note" style="text-align:center;">
+
+Kho chữ ký số & khóa công khai (Technical Reference):<br>
+
+ <a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/t42/c2/signatures"
+
+
+target="_blank" rel="noopener">
+🦎 GITHUB • TKC-VH • Signatures </a>  
+
+<a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/t42/c2/legal-archive"
+target="_blank" rel="noopener">
+🦎 GITHUB • TKC-VH • Legal Archive </a>
+
+
+  
+</p>
+
+<hr>
+
+<div class="footer">© 2025 TKC-VH • Bảo lưu mọi quyền</div>
+
+<div class="subtitle" style="margin-top:6px;">⚜︎ TRẦN KHẮC CƯỜNG ⚜︎</div>
+
+
+
+
+      </section>
+
+      <!-- EN BLOCK -->
+      <section id="lang-en" class="lang-block">
+
+
+
+
+<div class="hashbox">
+
+<h2>Work Information</h2>
+
+  <p><b>Work:</b> T42C2 (Complete EPUB &amp; PDF editions)</p>
+  <p><b>Author:</b> Tran Khac Cuong (Pen name: TKC-VH)</p>
+  <p><b>Content effective date:</b> 22 December 2025</p>
 </div>
-</section>
-</main>
+
+
+<div class="hashbox">
+
+<h2>Digital Signing Key Information</h2>
+
+  <p><b>Standard:</b> OpenPGP (GPG)</p>
+  <p><b>Algorithm:</b> RSA 4096-bit</p>
+  <p><b>Signer:</b> Tran Khac Cuong (TKC-VH)</p>
+  <p><b>Key ID:</b> 26281F7A</p>
+  <p><b>Digital signature date (GPG):</b> 23 December 2025</p>
+
+  <p style="margin-top:10px;opacity:.9">
+    The public key and all detached signatures are publicly archived in the
+    <b>Legal Library (GitHub)</b>, serving as an independent third-party
+    timestamp for legal and technical verification.
+  </p>
+</div>
+
+
+
+        <div class="gold-frame">
+          <h2>What this means</h2>
+          <p class="subnote">
+            Each officially released file has its own unique <b>digital fingerprint (SHA-256)</b>.
+            If someone “touches” the content — even by adding a period, removing a comma,
+            or accidentally inserting a single space — the fingerprint changes immediately.
+            At that point, the document can no longer be verified as the author’s original,
+            even if it still “looks identical”.
+          </p>
+
+          <p class="subnote">
+            Beyond SHA-256, the official release files are also <b>digitally signed with GPG/PGP</b> — "Sign" each file directly using a computer signature.
+
+          </p>
+
+          <ul class="subnote" style="margin-top:8px;">
+            <li>The published SHA-256 hashes were issued by the author</li>
+            <li>The content existed at the moment of signing</li>
+            <li>Any later modification invalidates the signature (no longer an author-verified original)</li>
+          </ul>
+
+          <p class="subnote">
+            Note: Original EPUB/PDF files are not shared here. Instead, fingerprints (hash), digital signatures (.asc), and public keys are published so that all parties can independently verify them.
+
+          </p>
+
+          <p class="subnote">
+            The original is distributed through legitimate commercial platforms (e.g., Amazon, Google Play Books, Apple Books, Rakuten Kobo…).
+          </p>
+
+
+
+        </div>
+
+               <div class="hashbox">
+
+          <div class="table-wrap" aria-label="SHA-256 Table">
+ <h2>Digital fingerprints (SHA-256)</h2>
+
+           <table class="hash">
+          <thead>
+            <tr><th>STT</th><th>Tên tệp</th><th>Định dạng</th><th>Mã SHA-256</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="small">01</td>
+              <td><b>T42C2-EN</b></td>
+              <td class="small"><code>EPUB</code></td>
+              <td><div class="hashcell"><div class="hashtext"><code id="sha-01" class="hash">ce1dda79229eff85c2bd26a8dfd0492b34d5cbd358240eb7df5d6e8641ec6313</code></div><button class="copybtn" data-copy="#sha-01">COPY</button></div></td>
+            </tr>
+            <tr>
+              <td class="small">02</td>
+              <td><b>T42C2-EN</b></td>
+              <td class="small"><code>PDF</code></td>
+              <td><div class="hashcell"><div class="hashtext"><code id="sha-02" class="hash">5f7b9b75e80fc782d29c3a8cf2587a7ce51a5447f529718a1da7286d97427f2e</code></div><button class="copybtn" data-copy="#sha-02">COPY</button></div></td>
+            </tr>
+            <tr>
+              <td class="small">03</td>
+              <td><b>T42C2-VI</b></td>
+              <td class="small"><code>EPUB</code></td>
+              <td><div class="hashcell"><div class="hashtext"><code id="sha-03" class="hash">77dc472884b4c951e1dc17f792867e2acdc846319e4467476f5f8d574bbf5976</code></div><button class="copybtn" data-copy="#sha-03">COPY</button></div></td>
+            </tr>
+            <tr>
+              <td class="small">04</td>
+              <td><b>T42C2-VI</b></td>
+              <td class="small"><code>PDF</code></td>
+              <td><div class="hashcell"><div class="hashtext"><code id="sha-04" class="hash">9a9c4f117694928ea87df5834d4e2772ac49d5318985a30db3ee3b3584d061ad</code></div><button class="copybtn" data-copy="#sha-04">COPY</button></div></td>
+            </tr>
+          </tbody>
+        </table>
+
+
+          </div>
+        </div>
+
+        <div class="howto">
+
+        <h2>Verification</h2>
+
+          <div class="tips"><b>Step 1 — Check SHA-256</b></div>
+          <div class="tips"><b>macOS / Linux</b> (Terminal):</div>
+          <code class="cmd">shasum -a 256 "your_book_file.epub"</code>
+
+          <div class="tips"><b>Windows</b> (PowerShell):</div>
+          <code class="cmd">Get-FileHash "your_book_file.epub" -Algorithm SHA256</code>
+
+          <p class="tips">
+            Compare the computed hash with the matching row above.
+            <b>Exact match</b> = the file matches the official release.
+          </p>
+
+          <hr style="opacity:.25;margin:10px 0;">
+
+          <div class="tips"><b>Step 2 — Verify GPG signature (.asc)</b></div>
+          <div class="tips">1) Import the public key (one time only):</div>
+          <code class="cmd">gpg --import "signatures/TKC-VH-public-key.asc"</code>
+
+          <div class="tips">2) Verify the signature (example for EPUB):</div>
+          <code class="cmd">gpg --verify "your_book_file.epub.asc" "your_book_file.epub"</code>
+
+          <p class="tips">
+            If you see something like <b>“Good signature from … (TKC-VH)”</b>, it means the file is the signed version
+            and has not been modified since signing.
+          </p>
+
+          <p class="tips">
+            ✔️ SHA-256 match &nbsp; + &nbsp; ✔️ Valid GPG signature ⇒ <b>Author-verified original release</b>.
+          </p>
+        </div>
+
+
+<p class="note" style="text-align:center;">
+
+Digital Signature & Public Key Repository (Technical Reference):<br>
+
+ <a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/t42/c2/signatures"
+
+
+target="_blank" rel="noopener">
+🦎 GITHUB • TKC-VH • Signatures </a>  
+
+<a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/t42/c2/legal-archive"
+target="_blank" rel="noopener">
+🦎 GITHUB • TKC-VH • Legal Archive </a>
+
+
+  
+</p>
+
+<hr>
+
+<div class="footer">© 2025 TKC-VH • All rights reserved</div>
+
+<div class="subtitle" style="margin-top:6px;">⚜︎ TRAN KHAC CUONG ⚜︎</div>
+
+
+
+
+
+
+      </section>
+
+    </div>
+  </div>
+
+         
+
+
+
+
+  <!-- JS: toggle theo chuẩn legal.css (.lang-block / .active) — giống hệt cấu trúc trang index T42C2 -->
+  <script>
+    (function(){
+      const buttons = document.querySelectorAll('.js-lang');
+      const blocks = {
+        vi: document.getElementById('lang-vi'),
+        en: document.getElementById('lang-en')
+      };
+
+      function setLang(lang){
+        buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+        Object.keys(blocks).forEach(k => blocks[k].classList.toggle('active', k === lang));
+        document.documentElement.lang = (lang === 'en') ? 'en' : 'vi';
+
+        // show/hide tiny title helpers (optional)
+        document.querySelectorAll('[data-vi]').forEach(el => el.style.display = (lang==='vi') ? '' : 'none');
+        document.querySelectorAll('[data-en]').forEach(el => el.style.display = (lang==='en') ? '' : 'none');
+      }
+
+      buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+      setLang('vi');
+    })();
+
+    // Copy buttons
+    (function(){
+      function copyText(text){
+        if(navigator.clipboard && window.isSecureContext){
+          return navigator.clipboard.writeText(text);
+        }
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try{ document.execCommand('copy'); }catch(e){}
+        document.body.removeChild(ta);
+        return Promise.resolve();
+      }
+
+      document.addEventListener('click', function(e){
+        const btn = e.target.closest('[data-copy]');
+        if(!btn) return;
+        const sel = btn.getAttribute('data-copy');
+        const el = document.querySelector(sel);
+        if(!el) return;
+
+        copyText(el.textContent.trim()).then(() => {
+          const old = btn.textContent;
+          btn.textContent = 'COPIED';
+          setTimeout(()=> btn.textContent = old, 900);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
