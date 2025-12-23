@@ -26,4 +26,7 @@ are commercially distributed via:
 Buyers may verify integrity by hashing
 their purchased copy and comparing with this manifest.
 
+Public signing key: RSA 4096 – Key ID 26281F7A
+
+
 © 2025 TRAN KHAC CUONG (TKC-VH). All rights reserved.
