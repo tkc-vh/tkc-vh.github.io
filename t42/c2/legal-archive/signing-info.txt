@@ -1,0 +1,33 @@
+cat > signing-info.txt << 'EOF'
+SIGNING INFO — T42C2 (TKC-VH) — OpenPGP / GPG
+
+Work: T42C2 (Complete EPUB & PDF)
+Author / Signer: TRAN KHAC CUONG (Pen name: TKC-VH)
+
+Signing standard: OpenPGP (GPG)
+Key type: RSA 4096
+Key ID: 26281F7A
+
+What these .asc files are:
+- Detached signatures (.asc) for each official release file.
+- Any change to the signed file (even 1 character, one space, or metadata differences) will cause signature verification to fail.
+
+How to verify (example):
+1) Import the public key (one time only):
+   gpg --import TKC-VH-public-key.asc
+
+2) Verify a signed file:
+   gpg --verify T42C2-EN.epub.asc T42C2-EN.epub
+   gpg --verify T42C2-EN.pdf.asc  T42C2-EN.pdf
+   gpg --verify T42C2-VI.epub.asc T42C2-VI.epub
+   gpg --verify T42C2-VI.pdf.asc  T42C2-VI.pdf
+
+Expected result:
+- “Good signature from … (TKC-VH)” means the file matches the author-signed original at signing time.
+
+Repository notes:
+- Original EPUB/PDF files may be distributed commercially.
+- This folder publishes signatures and the public key to enable independent verification.
+
+© TKC-VH — All Rights Reserved.
+EOF
