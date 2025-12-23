@@ -1,0 +1,55 @@
+DIGITAL SIGNING INFORMATION — T35C1
+
+────────────────────────────────────────────
+WORK IDENTIFICATION
+────────────────────────────────────────────
+
+Work title: T35C1
+Format: EPUB & PDF (commercial editions)
+Author: TRAN KHAC CUONG
+Pen name: TKC-VH
+
+────────────────────────────────────────────
+DIGITAL SIGNATURE DETAILS
+────────────────────────────────────────────
+
+Signature standard: OpenPGP (GPG)
+Key algorithm: RSA
+Key size: 4096 bits
+Key ID: 26281F7A
+Signer: TRAN KHAC CUONG (TKC-VH)
+Signing date: 23 December 2025
+
+────────────────────────────────────────────
+SIGNING SCOPE
+────────────────────────────────────────────
+
+The following elements are cryptographically protected:
+
+• SHA-256 hashes of all official release files
+• Detached signatures (.asc) of each release
+• Detached signature of the hash manifest
+• Detached signature of the legal certificate image
+• Detached signature of the legal archive ZIP
+
+Any alteration to the signed data will invalidate the signature.
+
+────────────────────────────────────────────
+VERIFICATION AND PUBLIC RECORD
+────────────────────────────────────────────
+
+The public key and all detached signatures are published in the
+TKC-VH Legal Library (GitHub repository), serving as an independent,
+third-party timestamp and verification source.
+
+This allows any party to verify authenticity without access to
+the original commercial files.
+
+────────────────────────────────────────────
+DECLARATION
+────────────────────────────────────────────
+
+This signing confirms that the referenced data existed in its stated
+form at the time of signing and was explicitly authorized by the author.
+
+© 2025 TRAN KHAC CUONG (TKC-VH)
