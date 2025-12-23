@@ -208,6 +208,23 @@
       table.hash{ min-width: 740px; }
       .copybtn{ padding: 7px 9px; }
     }
+ /* FIX: chống tràn khối kiểm tra trên mobile */
+@media (max-width: 600px) {
+  .cmd {
+    white-space: pre-wrap;      /* cho phép xuống dòng */
+    word-break: break-word;     /* bẻ từ dài */
+    overflow-x: hidden;         /* không tràn ngang */
+    font-size: 0.85rem;         /* chữ nhỏ nhẹ hơn */
+    line-height: 1.5;
+    }
+   .panel {
+    padding: 12px 10px;
+  }
+}
+
+   
+
+  
   </style>
 </head>
 
