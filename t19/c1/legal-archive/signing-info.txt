@@ -1,0 +1,38 @@
+SIGNING INFORMATION
+
+Work: T19C1
+Author / Signer: Tran Khac Cuong (TKC-VH)
+
+--------------------------------------------
+SIGNING KEY DETAILS
+
+Standard: OpenPGP (GPG)
+Algorithm: RSA 4096-bit
+Key ID: 26281F7A
+Key Owner: Tran Khac Cuong (TKC-VH)
+
+--------------------------------------------
+SIGNING DATE
+
+Signing date: 22 December 2025
+
+--------------------------------------------
+SCOPE OF SIGNATURES
+
+The following items were signed using detached GPG signatures (.asc):
+
+• SHA-256 hash manifest
+• Digital authenticity certificate
+• Cover image signature references
+• This legal archive (ZIP), where applicable
+
+--------------------------------------------
+LEGAL NOTE
+
+Any modification to the signed content after the signing date
+will invalidate the digital signature and prove that the content
+is not the original version signed by the author.
+
+--------------------------------------------
+This file is part of the T19C1 Legal Archive.
+© 2025 Tran Khac Cuong (TKC-VH)
