@@ -45,7 +45,7 @@ They are commercially distributed through authorized platforms such as:
 - **Key algorithm:** RSA 4096-bit  
 - **Signing Key ID:** `26281F7A`  
 - **Signer:** Tran Khac Cuong (TKC-VH)  
-- **Signing date:** 22 December 2025  
+- **Signing date:** 23 December 2025  
 
 All signatures are **detached signatures (.asc)**, allowing independent
 verification without modifying the original files.
