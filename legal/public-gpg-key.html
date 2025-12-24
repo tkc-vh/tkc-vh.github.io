@@ -22,13 +22,16 @@
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
   
-<link rel="stylesheet" href="./legal.css">
+<!-- Dùng đúng cấu trúc giống trang T42C2 (đang chạy tốt) -->
+  <link rel="stylesheet" href="../legal/legal.css">
+  <script src="../legal/legal.js" defer></script>
 
 <meta name="robots" content="index,follow" />
   
 
   
   <script src="./legal.js" defer></script>
+
 </head>
 
 <body>
@@ -75,11 +78,11 @@
 
         <h1>Public GPG Key</h1>
         <div class="subtitle">
-          Official key for <span class="pill">signed</span> (and  <span class="pill">encrypted</span> option) correspondence
+          Official key for <span class="pill">signed</span> (và tuỳ chọn <span class="pill">encrypted</span>) correspondence
         </div>
 
         
- <hr />
+
         <!-- NAV: Global + Legal (2 tầng tap) -->
         <nav class="navdock" aria-label="Điều hướng nhanh">
         
@@ -93,7 +96,7 @@
         
         </nav>
 
-  <hr />
+       <hr />
 
        <div class="note">
  
@@ -116,7 +119,7 @@
     <span class="small">(anti-bot)</span>
   </p>
 
-  
+  <hr/>
 
   <p><strong>OpenPGP Identity</strong></p>
 
@@ -143,14 +146,14 @@
     <strong>Key Created:</strong> 2025-12-13
   </p>
 
- 
+  <hr/>
 
   <p><strong>SSH (GitHub Infrastructure)</strong></p>
 
   <p>
     <strong>SSH Public Key Fingerprint (SHA256):</strong><br/>
-    <code id="SHA256">
-	SHA256:uu91Aw6/jbLFdXJwbhRbvFi69fHJn2NCyZ+fKK1vbQo
+    <code>
+      SHA256:uu91Aw6/jbLFdXJwbhRbvFi69fHJn2NCyZ+fKK1vbQo
     </code>
   </p>
 
@@ -159,7 +162,7 @@
     and infrastructure access (e.g. GitHub).
   </p>
 
-  
+  <hr/>
 
   <p class="small">
     Authoritative public keys, signed statements, and verification
@@ -173,14 +176,10 @@
 
 
         <div class="btns">
-          <button type="button" data-copy="#fp">Copy GPG fingerprint</button>
-		<button type="button" data-copy="#SHA256">Copy SSH fingerprint</button>
-
-          <button type="button" data-copy="#kidShort">Copy key ID (short)</button>
-		<button type="button" data-copy="#kidLong">Copy key ID (long)</button>
-
+          <button type="button" data-copy="#fp">Copy fingerprint</button>
+          <button type="button" data-copy="#kidShort">Copy key ID</button>
           <button type="button" data-copy="#pubkey">Copy public key block</button>
- </div>
+        </div>
 
         <pre id="pubkey">-----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -219,42 +218,115 @@ dLeMvakWtK4tL0phjqh9hX3wGJ7qcrT+FpM25WXu
 -----END PGP PUBLIC KEY BLOCK-----</pre>
 
    
-<div style="display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap;">
 
-  <div style="flex:0 0 auto;">
-    <img
-      src="../assets/PUBLIC-GPG-KEY.png"
-      alt="Public GPG Key QR"
-      style="width:160px; height:auto; display:block;"
+   
+<!-- ===============================
+     AUTHENTICITY CERTIFICATES (CARDS)
+     Insert under the "⚜︎ AUTHENTICITY CERTIFICATES ⚜︎" line
+================================ -->
+<div class="rowline"></div>
+
+<section id="auth-certificates" aria-label="Authenticity Certificates">
+  <h2 class="gold-title" style="text-align:center; font-size: 18px; letter-spacing:.08em;">
+    ⚜︎ AUTHENTICITY CERTIFICATES ⚜︎
+  </h2>
+  <p class="mini" style="text-align:center; margin: 6px 0 10px;">
+    Chọn chứng thư để xem <span class="pill">SHA-256</span> &amp; chữ ký số <span class="pill">GPG/PGP</span>.
+  </p>
+
+  <div class="gate-grid" role="list">
+    <a
+      id="cert-t19c1"
+      class="gate"
+      role="listitem"
+      href="https://tkc-vh.github.io/t19/T19-SHA-256.html"
+      target="_blank"
+      rel="noopener"
+      aria-label="Open T19C1 Authenticity Certificate"
     >
+      <h3>T19C1 - Certificate | Chứng Thư</h3>
+      <p>SHA-256 Hash Manifest + GPG/PGP Digital Signatures</p>
+      <div style="margin-top:10px;">
+        <span class="pill">T19C1</span>
+        <span class="pill">SHA-256</span>
+        <span class="pill">GPG/PGP</span>
+      </div>
+    </a>
+
+    <a
+      id="cert-t35c1"
+      class="gate"
+      role="listitem"
+      href="https://tkc-vh.github.io/t35/T35-SHA-256.html"
+      target="_blank"
+      rel="noopener"
+      aria-label="Open T35C1 Authenticity Certificate"
+    >
+      <h3>T35C1 - Certificate | Chứng Thư</h3>
+      <p>SHA-256 Hash Manifest + GPG/PGP Digital Signatures</p>
+      <div style="margin-top:10px;">
+        <span class="pill">T35C1</span>
+        <span class="pill">SHA-256</span>
+        <span class="pill">GPG/PGP</span>
+      </div>
+    </a>
+
+    <a
+      id="cert-t42c2"
+      class="gate"
+      role="listitem"
+      href="https://tkc-vh.github.io/t42/T42-SHA-256.html"
+      target="_blank"
+      rel="noopener"
+      aria-label="Open T42C2 Authenticity Certificate"
+    >
+
+<h3 class="gate-title">T42C2 - Certificate | Chứng Thư</h3>
+
+<style>
+.gate-title{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+
+
+
+      <p>SHA-256 Hash Manifest + GPG/PGP Digital Signatures</p>
+      <div style="margin-top:10px;">
+        <span class="pill">T42C2</span>
+        <span class="pill">SHA-256</span>
+        <span class="pill">GPG/PGP</span>
+      </div>
+    </a>
   </div>
+</section>
 
-  <div style="flex:1; min-width:260px;">
-    <div class="note">
-      Tip: Đã nhận khóa thì nhớ nhìn qua Fingerprint cho quen mặt trước khi tin nhé.
-      Khi cần gửi email mã hoá, public key này luôn sẵn sàng để được nhập vào các ứng dụng email hỗ trợ OpenPGP.
-    </div>
+<hr>
 
-    <div class="note" style="margin-top:8px;">
-      Legal Page:
-      <a href="https://tkc-vh.github.io/legal">
-        tkc-vh.github.io/legal
-      </a>
-    </div>
-    
-     <div class="note" style="margin-top:8px;">
-      Website:
-      <a href="https://tkc-vh.github.io">
-        tkc-vh.github.io
-      </a>
-    </div>
-    
-  </div>
-
+<div class="footer">
+   “Dấu Vân Tay Là Lời Thề - Chữ Ký Là Lời Chứng.”
 </div>
 
 <div class="footer">
-  © TKC-VH • “Dấu vân tay là lời thề; chữ ký là lời chứng.”
+<h3>⚜︎ TRAN KHAC CUONG ⚜︎</h3>
 </div>
+
+
+
+
+
+ 
+    
+  </div>
+
+</div>
+
+
+<div class="footer">
+© 2025 TKC-VH • All rights reserved
+</div>
+
 </body>
 </html>
