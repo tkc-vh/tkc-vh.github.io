@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Public GPG Key | TKC-VH</title>
+
   <!-- === TKC-VH | Security Header (FINAL • no inline scripts) === -->
   <meta http-equiv="Content-Security-Policy"
   content="
@@ -21,17 +22,91 @@
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
-  
-<!-- Dùng đúng cấu trúc giống trang T42C2 (đang chạy tốt) -->
-  <link rel="stylesheet" href="../legal/legal.css">
-  <script src="../legal/legal.js" defer></script>
 
-<meta name="robots" content="index,follow" />
-  
-
-  
+  <link rel="stylesheet" href="./legal.css">
+  <meta name="robots" content="index,follow" />
   <script src="./legal.js" defer></script>
 
+  <!-- Page-only micro refinements (legal.css stays unchanged) -->
+  <style>
+    /* Make all card titles single-line + elegant */
+    .gate h3{
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Compact hero spacing */
+    .hero-mini{
+      text-align:center;
+      margin-top: 8px;
+      margin-bottom: 12px;
+    }
+    .hero-mini .subtitle{
+      margin-top: 6px;
+    }
+
+    /* Collapsible technical area */
+    .tech{
+      margin-top: 14px;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      background: rgba(255,255,255,.02);
+      padding: 12px 12px 10px;
+      box-shadow: inset 0 0 0 1px rgba(255,211,119,.07);
+    }
+    .tech details{
+      border-radius: 14px;
+    }
+    .tech summary{
+      cursor: pointer;
+      list-style: none;
+      font-size: 14px;
+      letter-spacing: .04em;
+      color: rgba(255,240,210,.92);
+      padding: 10px 10px;
+      border-radius: 12px;
+      background: rgba(255,211,119,.06);
+      border: 1px solid rgba(255,211,119,.16);
+      user-select: none;
+    }
+    .tech summary::-webkit-details-marker{display:none;}
+    .tech details[open] summary{
+      background: rgba(255,211,119,.09);
+      border-color: rgba(255,211,119,.22);
+      margin-bottom: 10px;
+    }
+
+    /* Small label rows */
+    .kv{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      align-items:center;
+      margin: 8px 0 8px;
+    }
+    .kv .k{
+      opacity:.86;
+      font-size: 12.5px;
+      letter-spacing: .03em;
+    }
+    .kv code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.35);
+      border: 1px solid rgba(255,211,119,.15);
+      color: rgba(255,240,210,.95);
+    }
+
+    /* Optional: tighten bottom signature */
+    .sigline{
+      text-align:center;
+      margin-top: 16px;
+      opacity: .90;
+    }
+  </style>
 </head>
 
 <body>
@@ -41,147 +116,154 @@
       <!-- Vân mây 4 góc -->
       <div class="orn tl" aria-hidden="true">
         <svg viewBox="0 0 260 180">
-          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138" />
+          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C40,38 28,58 24,82 C20,108 40,138 76,146 C114,154 132,132 144,118 C156,104 186,106 206,92 C226,78 232,56 218,40 C204,24 176,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138" />
           <path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84" />
           <path class="mist" d="M34,98 C58,84 74,92 90,82" />
         </svg>
       </div>
       <div class="orn tr" aria-hidden="true">
         <svg viewBox="0 0 260 180">
-          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138" />
+          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C40,38 28,58 24,82 C20,108 40,138 76,146 C114,154 132,132 144,118 C156,104 186,106 206,92 C226,78 232,56 218,40 C204,24 176,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138" />
           <path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84" />
           <path class="mist" d="M34,98 C58,84 74,92 90,82" />
         </svg>
       </div>
       <div class="orn bl" aria-hidden="true">
         <svg viewBox="0 0 260 180">
-          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138" />
+          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C40,38 28,58 24,82 C20,108 40,138 76,146 C114,154 132,132 144,118 C156,104 186,106 206,92 C226,78 232,56 218,40 C204,24 176,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138" />
           <path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84" />
           <path class="mist" d="M34,98 C58,84 74,92 90,82" />
         </svg>
       </div>
       <div class="orn br" aria-hidden="true">
         <svg viewBox="0 0 260 180">
-          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C98,10 144,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138" />
+          <path d="M20,120 C40,82 78,92 92,72 C106,52 92,34 66,36 C40,38 28,58 24,82 C20,108 40,138 76,146 C114,154 132,132 144,118 C156,104 186,106 206,92 C226,78 232,56 218,40 C204,24 176,26 150,58 C156,90 120,94 110,112 C98,134 126,150 162,138" />
           <path class="mist" d="M22,138 C60,120 82,138 108,126 C134,114 136,94 122,84" />
           <path class="mist" d="M34,98 C58,84 74,92 90,82" />
         </svg>
       </div>
 
       <div class="gold-frame">
+
+        <!-- Emblem -->
         <div class="moon-wrap">
           <div class="moon" title="TKC-VH Moon Emblem">
-            <img alt="TKC-VH Moon Emblem"
-                 src="../assets/moon-diamond.jpg" />
+            <img alt="TKC-VH Moon Emblem" src="../assets/moon-diamond.jpg" />
           </div>
         </div>
 
-        <h1>Public GPG Key</h1>
-        <div class="subtitle">
-          Official key for <span class="pill">signed</span> (và tuỳ chọn <span class="pill">encrypted</span>) correspondence
+        <!-- Compact hero -->
+        <div class="hero-mini">
+          <h1>SHA-256 & PUBLIC GPG KEY  </h1>
+          <div class="subtitle">
+            Cổng Xác Thực Cho <span class="pill">SHA-256</span> &amp; Chữ Ký Số <span class="pill">GPG/PGP</span>
+          </div>
         </div>
 
-        
-
-        <!-- NAV: Global + Legal (2 tầng tap) -->
-        <nav class="navdock" aria-label="Điều hướng nhanh">
-        
-          <div class="tabs tabs-global" role="navigation" aria-label="Global">
-            <a class="tab" href="../index.html">Trang Chủ</a><a class="tab" href="../works.html">Works</a><a class="tab is-active" href="./index.html" aria-current="page">Legal</a><a class="tab" href="../series.html">Series</a>
+        <!-- Keep nav (same class names to match legal.css) -->
+        <nav aria-label="TKC-VH Legal Navigation">
+          <div class="tabs" role="navigation">
+            <a class="tab" href="../index.html">Trang Chủ</a>
+            <a class="tab" href="../works.html">Works</a>
+            <a class="tab active" href="./public-gpg-key.html">GPG Key</a>
+            <a class="tab" href="./legal.html">Legal</a>
+            <a class="tab" href="./disclaimer.html">Disclaimer</a>
+            <a class="tab" href="./ngon-anh.html">Ngôn Ảnh</a>
+            <a class="tab" href="./danh-xung.html">Danh xưng</a>
+            <a class="tab" href="./vo-dieu-tam.html">Vợ Diệu Tâm</a>
+            <a class="tab" href="./author.html">Author</a>
           </div>
-        
-          <div class="tabs tabs-legal" role="navigation" aria-label="Legal">
-            <a class="tab" href="./index.html">Legal Home</a><a class="tab" href="./copyright.html">Bản quyền</a><a class="tab" href="./disclaimer.html">Disclaimer</a><a class="tab" href="./nguon-anh-va-tu-lieu.html">Nguồn ảnh</a><a class="tab is-active" href="./public-gpg-key.html" aria-current="page">GPG Key</a><a class="tab" href="./logo.html">Logo • Slogan</a><a class="tab" href="./tkc-vh-glossary.html">Thuật ngữ</a><a class="tab" href="./quyen-so-huu-danh-xung.html">Danh xưng</a><a class="tab" href="./vo-dieu-tam.html">Vợ Diệu Tâm</a><a class="tab" href="./author.html">Author</a>
-          </div>
-        
         </nav>
 
-       <hr />
+        <hr />
 
-       <div class="note">
- 
-         
-         
-       
+        <!-- ===============================
+             AUTHENTICITY CERTIFICATES (CARDS) — Primary focus
+        ================================ -->
+        <section id="auth-certificates" aria-label="Authenticity Certificates">
+          <h2 class="gold-title" style="text-align:center; font-size: 18px; letter-spacing:.08em;">
+            ⚜︎ AUTHENTICITY CERTIFICATES ⚜︎
+          </h2>
 
-  <h2>Digital Identity &amp; Verification</h2>
+          <p class="mini" style="text-align:center; margin: 6px 0 10px;">
+            Chọn chứng thư để xem <span class="pill">SHA-256</span> &amp; chữ ký số <span class="pill">GPG/PGP</span>.
+          </p>
 
-  <p>
-    This website represents the official digital identity of
-    <strong>Tran Khac Cuong</strong> (pen name: <strong>TKC-VH</strong>),
-    and provides cryptographic references for independent verification
-    of authorship, integrity, and source authenticity.
-  </p>
+          <div class="gate-grid" role="list">
+            <a id="cert-t19c1" class="gate" role="listitem"
+               href="https://tkc-vh.github.io/t19/T19-SHA-256.html"
+               target="_blank" rel="noopener"
+               aria-label="Open T19C1 Authenticity Certificate">
+              <h3>T19C1 — Certificate | Chứng Thư</h3>
+              <p>SHA-256 Hash Manifest + GPG/PGP Digital Signatures</p>
+              <div style="margin-top:10px;">
+                <span class="pill">T19C1</span>
+                <span class="pill">SHA-256</span>
+                <span class="pill">GPG/PGP</span>
+              </div>
+            </a>
 
-  <p>
-    <strong>Contact Email:</strong>
-    <span id="emailText">mr.tkc99999 [at] gmail [dot] com</span>
-    <span class="small">(anti-bot)</span>
-  </p>
+            <a id="cert-t35c1" class="gate" role="listitem"
+               href="https://tkc-vh.github.io/t35/T35-SHA-256.html"
+               target="_blank" rel="noopener"
+               aria-label="Open T35C1 Authenticity Certificate">
+              <h3>T35C1 — Certificate | Chứng Thư</h3>
+              <p>SHA-256 Hash Manifest + GPG/PGP Digital Signatures</p>
+              <div style="margin-top:10px;">
+                <span class="pill">T35C1</span>
+                <span class="pill">SHA-256</span>
+                <span class="pill">GPG/PGP</span>
+              </div>
+            </a>
 
-  <hr/>
+            <a id="cert-t42c2" class="gate" role="listitem"
+               href="https://tkc-vh.github.io/t42/T42-SHA-256.html"
+               target="_blank" rel="noopener"
+               aria-label="Open T42C2 Authenticity Certificate">
+              <h3>T42C2 — Certificate | Chứng Thư</h3>
+              <p>SHA-256 Hash Manifest + GPG/PGP Digital Signatures</p>
+              <div style="margin-top:10px;">
+                <span class="pill">T42C2</span>
+                <span class="pill">SHA-256</span>
+                <span class="pill">GPG/PGP</span>
+              </div>
+            </a>
+          </div>
+        </section>
 
-  <p><strong>OpenPGP Identity</strong></p>
+        <div class="rowline"></div>
 
-  <p>
-    <strong>Key ID (short):</strong>
-    <code id="kidShort">26281F7A</code>
-  </p>
+        <!-- ===============================
+             TECHNICAL (COLLAPSIBLE) — keep proof, but hidden by default
+        ================================ -->
+        <section class="tech" aria-label="Technical GPG Key Details">
+          <details>
+            <summary>Technical Proof (Fingerprint + Public Key Block)</summary>
 
-  <p>
-    <strong>Key ID (long):</strong>
-    <code id="kidLong">5196E6B6<wbr>26281F7A</code>
-  </p>
+            <p class="mini" style="margin:10px 6px 10px; text-align:center;">
+              Phần này dùng cho xác minh độc lập. Bạn có thể <span class="pill">Copy</span> fingerprint hoặc key block.
+            </p>
 
-  <p>
-    <strong>OpenPGP Fingerprint:</strong><br/>
-    <code id="fp">
-      8509 DBA6<wbr> 32D2 7AAC<wbr>
-      E79A C507<wbr> 5196 E6B6<wbr>
-      2628 1F7A
-    </code>
-  </p>
+            <div class="kv" aria-label="Key identity">
+              <span class="k">Signer:</span> <code>TRAN KHAC CUONG (TKC-VH)</code>
+              <span class="k">Standard:</span> <code>OpenPGP</code>
+              <span class="k">Algo:</span> <code>RSA 4096</code>
+              <span class="k">Key ID:</span> <code>26281F7A</code>
+            </div>
 
-  <p>
-    <strong>Key Created:</strong> 2025-12-13
-  </p>
+            <div class="btns" style="justify-content:center;">
+              <button type="button" data-copy="#fp">Copy fingerprint</button>
+              <button type="button" data-copy="#keyblock">Copy public key block</button>
+            </div>
 
-  <hr/>
+            <p class="mini" style="margin:10px 0 6px;"><b>PGP Fingerprint</b></p>
+            <pre id="fp">4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A</pre>
 
-  <p><strong>SSH (GitHub Infrastructure)</strong></p>
+            <p class="mini" style="margin:10px 0 6px;"><b>ASCII-armored Public Key</b></p>
+            
+<pre id="keyblock">
 
-  <p>
-    <strong>SSH Public Key Fingerprint (SHA256):</strong><br/>
-    <code>
-      SHA256:uu91Aw6/jbLFdXJwbhRbvFi69fHJn2NCyZ+fKK1vbQo
-    </code>
-  </p>
-
-  <p class="small">
-    This SSH key is used exclusively for authenticated Git operations
-    and infrastructure access (e.g. GitHub).
-  </p>
-
-  <hr/>
-
-  <p class="small">
-    Authoritative public keys, signed statements, and verification
-    references are published only via this website and the author’s
-    official repositories.
-  </p>
-
-
-
-</div>
-
-
-        <div class="btns">
-          <button type="button" data-copy="#fp">Copy fingerprint</button>
-          <button type="button" data-copy="#kidShort">Copy key ID</button>
-          <button type="button" data-copy="#pubkey">Copy public key block</button>
-        </div>
-
-        <pre id="pubkey">-----BEGIN PGP PUBLIC KEY BLOCK-----
+-----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGk9DeABEACtnbrxeBFRThtaTGFmpsIBVooAqg7Yg2L93Q/mAPgxk2loccrY
 fEW/hLsj6NxgRrPNtWG+Bze12njjO6hI/xJhEjiY5ImckvmIzRKkXkBvwwsKVDCV
@@ -215,107 +297,24 @@ XvYfqNmI9AL5j7YSkTWHEmDiwbY82pvT74pKkZ7g+1usiPmgqDtCl2rRg1qjfjUe
 f/EHEACUAJWylkdmvvLjK4l17b7v89CCyt3hOk6cxEruzhZBq+a4iSG0e/lSzMmT
 dLeMvakWtK4tL0phjqh9hX3wGJ7qcrT+FpM25WXu
 =NrRO
------END PGP PUBLIC KEY BLOCK-----</pre>
+-----END PGP PUBLIC KEY BLOCK-----
+</pre>
 
-   
+            <p class="mini" style="margin:10px 6px 2px; text-align:center;">
+              Authoritative public keys, signed statements, and verification references are published only via this website and the author’s official repositories.
+            </p>
+          </details>
+        </section>
 
-   
-<!-- ===============================
-     AUTHENTICITY CERTIFICATES (CARDS)
-     Insert under the "⚜︎ AUTHENTICITY CERTIFICATES ⚜︎" line
-================================ -->
-<div class="rowline"></div>
+        <div class="sigline">
+          <div class="footer">“Dấu Vân Tay Là Lời Thề - Chữ Ký Là Lời Chứng.”
+		<h3>⚜︎ TRAN KHAC CUONG ⚜︎</h3></div>
+        </div>
 
-<section id="auth-certificates" aria-label="Authenticity Certificates">
-  <h2 class="gold-title" style="text-align:center; font-size: 18px; letter-spacing:.08em;">
-    ⚜︎ AUTHENTICITY CERTIFICATES ⚜︎
-  </h2>
-  <p class="mini" style="text-align:center; margin: 6px 0 10px;">
-    Chọn chứng thư để xem <span class="pill">SHA-256</span> &amp; chữ ký số <span class="pill">GPG/PGP</span>.
-  </p>
+      </div><!-- /gold-frame -->
 
-  <div class="gate-grid" role="list">
-    <a
-      id="cert-t19c1"
-      class="gate"
-      role="listitem"
-      href="https://tkc-vh.github.io/t19/T19-SHA-256.html"
-      target="_blank"
-      rel="noopener"
-      aria-label="Open T19C1 Authenticity Certificate"
-    >
-      <h3>T19C1 - Certificate | Chứng Thư</h3>
-      <p>SHA-256 Hash Manifest + GPG/PGP Digital Signatures</p>
-      <div style="margin-top:10px;">
-        <span class="pill">T19C1</span>
-        <span class="pill">SHA-256</span>
-        <span class="pill">GPG/PGP</span>
-      </div>
-    </a>
-
-    <a
-      id="cert-t35c1"
-      class="gate"
-      role="listitem"
-      href="https://tkc-vh.github.io/t35/T35-SHA-256.html"
-      target="_blank"
-      rel="noopener"
-      aria-label="Open T35C1 Authenticity Certificate"
-    >
-      <h3>T35C1 - Certificate | Chứng Thư</h3>
-      <p>SHA-256 Hash Manifest + GPG/PGP Digital Signatures</p>
-      <div style="margin-top:10px;">
-        <span class="pill">T35C1</span>
-        <span class="pill">SHA-256</span>
-        <span class="pill">GPG/PGP</span>
-      </div>
-    </a>
-
-    <a
-      id="cert-t42c2"
-      class="gate"
-      role="listitem"
-      href="https://tkc-vh.github.io/t42/T42-SHA-256.html"
-      target="_blank"
-      rel="noopener"
-      aria-label="Open T42C2 Authenticity Certificate"
-    >
-
-	<h3>T42C2 - Certificate | Chứng Thư</h3>
-      <p>SHA-256 Hash Manifest + GPG/PGP Digital Signatures</p>
-      <div style="margin-top:10px;">
-        <span class="pill">T42C2</span>
-        <span class="pill">SHA-256</span>
-        <span class="pill">GPG/PGP</span>
-      </div>
-    </a>
-  </div>
-</section>
-
-<hr>
-
-<div class="footer">
-   “Dấu Vân Tay Là Lời Thề - Chữ Ký Là Lời Chứng.”
-</div>
-
-<div class="footer">
-<h3>⚜︎ TRAN KHAC CUONG ⚜︎</h3>
-</div>
-
-
-
-
-
- 
-    
-  </div>
-
-</div>
-
-
-<div class="footer">
-© 2025 TKC-VH • All rights reserved
-</div>
-
+      <div class="footer">© 2025 TKC-VH • All rights reserved</div>
+    </div><!-- /card -->
+  </div><!-- /page -->
 </body>
 </html>
