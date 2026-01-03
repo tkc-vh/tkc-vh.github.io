@@ -1,0 +1,41 @@
+/* TEAM */
+Author & Maintainer:
+  Name: Tran Khac Cuong
+  Pen name: TKC-VH (Orion DiyaTam)
+  Contact: orionel.diyatam@gmail.com
+  Location: Japan
+
+/* SITE */
+Site name: TKC-VH Archive
+Purpose: Academic, literary, and archival publication
+Type: Static website (GitHub Pages)
+Domain: https://tkc-vh.github.io
+Languages: vi, en, fr, ja, zh, ko
+Accessibility: Text-first, standards-compliant
+
+/* TECHNOLOGY */
+Hosting: GitHub Pages
+Stack: HTML5, CSS3
+No server-side code
+No client-side tracking
+No analytics
+No advertising
+
+/* LEGAL */
+Copyright: © Tran Khac Cuong
+Rights: All rights reserved
+Policy: https://tkc-vh.github.io/legal/
+
+/* SECURITY */
+Security contact: orionel.diyatam@gmail.com
+Security policy: https://tkc-vh.github.io/SECURITY.md
+Security file: https://tkc-vh.github.io/.well-known/security.txt
+
+/* PHILOSOPHY */
+This project values:
+- Academic integrity
+- Intellectual transparency
+- Long-term preservation
+- Respect for readers' privacy
+
+Last updated: 2026-01-03
