@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Security & Transparency — TKC-VH</title>
+
+  <!-- === TKC-VH | Security Header (no inline scripts) === -->
+  <meta http-equiv="Content-Security-Policy"
+  content="
+  default-src 'self';
+  img-src 'self' https://tkc-vh.github.io data:;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  script-src 'self';
+  frame-ancestors 'none';
+  base-uri 'self';
+  form-action 'self';
+  upgrade-insecure-requests;
+  ">
+
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+
+  <link rel="icon" href="assets/TKC-VH-Favi.jpg" />
+  <link rel="stylesheet" href="legal/legal.css" />
+
+  <meta name="description" content="Security & Transparency disclosure for TKC-VH GitHub Pages (static site). Contacts, policies, and verification references." />
+  <meta property="og:title" content="Security & Transparency — TKC-VH" />
+  <meta property="og:description" content="Security contacts, policy, and transparency statements for a static GitHub Pages site." />
+  <meta property="og:image" content="assets/moon-diamond.jpg" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    .sec-title{ margin-top: 8px; }
+    .sec-grid{
+      display:grid;
+      grid-template-columns: 190px 1fr;
+      gap: 8px 14px;
+      margin: 12px 0 14px;
+      font-size: 15px;
+    }
+    .k{ color: rgba(255,211,119,.90); letter-spacing:.05em; }
+    .v{ color: rgba(244,236,223,.92); overflow-wrap:anywhere; }
+    .links{ display:flex; flex-wrap:wrap; gap:10px; margin: 10px 0 8px; }
+    .links a{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.02);
+      text-decoration:none;
+      box-shadow:0 10px 22px rgba(0,0,0,.18);
+      font-size:.95rem;
+    }
+    .links a:hover{ transform:translateY(-1px); transition:.2s ease; }
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12.5px;
+      line-height: 1.55;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(0,0,0,.55);
+      border: 1px solid rgba(255,240,210,.18);
+      box-shadow: inset 0 0 0 1px rgba(255,211,119,.08);
+      overflow:auto;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="card">
+
+      <div class="orn tl" aria-hidden="true">
+        <svg viewBox="0 0 260 180"><path d="M20,130 C60,40 140,40 180,80 C210,110 230,120 248,120" /><path class="mist" d="M18,140 C70,88 120,88 165,112 C195,130 220,140 250,140" /></svg>
+      </div>
+      <div class="orn tr" aria-hidden="true">
+        <svg viewBox="0 0 260 180"><path d="M20,130 C60,40 140,40 180,80 C210,110 230,120 248,120" /><path class="mist" d="M18,140 C70,88 120,88 165,112 C195,130 220,140 250,140" /></svg>
+      </div>
+      <div class="orn bl" aria-hidden="true">
+        <svg viewBox="0 0 260 180"><path d="M20,130 C60,40 140,40 180,80 C210,110 230,120 248,120" /><path class="mist" d="M18,140 C70,88 120,88 165,112 C195,130 220,140 250,140" /></svg>
+      </div>
+      <div class="orn br" aria-hidden="true">
+        <svg viewBox="0 0 260 180"><path d="M20,130 C60,40 140,40 180,80 C210,110 230,120 248,120" /><path class="mist" d="M18,140 C70,88 120,88 165,112 C195,130 220,140 250,140" /></svg>
+      </div>
+
+      <div class="moon-wrap">
+        <div class="moon" aria-label="Moon–Diamond Emblem">
+          <img src="assets/moon-diamond.jpg" alt="Moon–Diamond Emblem" draggable="false" />
+        </div>
+      </div>
+
+      <h1 class="sec-title">Security &amp; Transparency</h1>
+      <p class="subtitle">TKC-VH — Public Gateway (GitHub Pages / Static Site)</p>
+      <hr />
+
+      <div class="gold-frame">
+        <p class="prose">
+          Trang này công bố các thông tin bảo mật và minh bạch cho hệ thống website TKC-VH (host trên GitHub Pages).
+          Website là dạng tĩnh (HTML/CSS/asset), không chạy code phía máy chủ.
+        </p>
+
+        <div class="rowline"></div>
+
+        <h3 class="gold-title">1) Website model</h3>
+        <div class="sec-grid" role="list">
+          <div class="k" role="listitem">Hosting</div>
+          <div class="v">GitHub Pages (static hosting)</div>
+
+          <div class="k" role="listitem">Server-side code</div>
+          <div class="v">None (no backend execution)</div>
+
+          <div class="k" role="listitem">User accounts</div>
+          <div class="v">None</div>
+
+          <div class="k" role="listitem">Data collection</div>
+          <div class="v">None (no forms, no analytics/ads scripts)</div>
+
+          <div class="k" role="listitem">Primary domain</div>
+          <div class="v"><a href="https://tkc-vh.github.io/">https://tkc-vh.github.io/</a></div>
+        </div>
+
+        <div class="rowline"></div>
+
+        <h3 class="gold-title">2) Security reporting</h3>
+        <p class="mini">
+          Nếu bạn phát hiện vấn đề bảo mật (liên kết độc hại, nội dung bị chèn, file bị thay đổi trái phép…),
+          vui lòng liên hệ theo các kênh dưới đây.
+        </p>
+
+        <div class="sec-grid" role="list">
+          <div class="k" role="listitem">Primary contact</div>
+          <div class="v"><a href="mailto:mr.tkc99999@gmail.com">mr.tkc99999@gmail.com</a></div>
+
+          <div class="k" role="listitem">Secondary contact</div>
+          <div class="v"><a href="mailto:orionel.diyatam@gmail.com">orionel.diyatam@gmail.com</a></div>
+
+          <div class="k" role="listitem">security.txt</div>
+          <div class="v"><a href="/.well-known/security.txt">/.well-known/security.txt</a></div>
+
+          <div class="k" role="listitem">Security policy</div>
+          <div class="v"><a href="/SECURITY.md">/SECURITY.md</a></div>
+        </div>
+
+        <div class="links" aria-label="Quick links">
+          <a href="/.well-known/security.txt">security.txt</a>
+          <a href="/SECURITY.md">SECURITY.md</a>
+          <a href="/robots.txt">robots.txt</a>
+          <a href="/humans.txt">humans.txt</a>
+          <a href="/AUTHORS.md">AUTHORS.md</a>
+          <a href="/CITATION.cff">CITATION.cff</a>
+        </div>
+
+        <div class="rowline"></div>
+
+        <h3 class="gold-title">3) Integrity &amp; verification references</h3>
+        <p class="mini">
+          Các tham chiếu dưới đây hỗ trợ việc xác nhận tính chính thống của kho nguồn và nhận diện tác giả.
+        </p>
+
+        <div class="sec-grid" role="list">
+          <div class="k" role="listitem">Repository</div>
+          <div class="v"><a href="https://github.com/tkc-vh/tkc-vh.github.io">https://github.com/tkc-vh/tkc-vh.github.io</a></div>
+
+          <div class="k" role="listitem">OpenPGP Fingerprint</div>
+          <div class="v"><span class="pill">Public reference</span></div>
+        </div>
+
+        <div class="mono" aria-label="OpenPGP fingerprint">
+8509 DBA6 32D2 7AAC E79A C507 5196 E6B6 2628 1F7A
+        </div>
+
+        <div class="rowline"></div>
+
+        <h3 class="gold-title">4) Transparency statement</h3>
+        <p class="prose">
+          (i) Website không thu thập dữ liệu người dùng. (ii) Không có đăng nhập, không có form gửi dữ liệu,
+          không có chạy mã phía máy chủ. (iii) Nội dung phục vụ mục đích học thuật/lưu trữ tác phẩm và công bố tham chiếu.
+        </p>
+
+        <div class="note2">
+          Mọi báo cáo sai (false positive) từ công cụ bảo mật/antivirus có thể được đối chiếu bằng các tài liệu công bố:
+          security.txt, SECURITY.md, AUTHORS.md, CITATION.cff và kho GitHub.
+        </div>
+
+        <div class="nav-row" style="margin-top:14px;">
+          <a class="navbtn" href="/">← Temple</a>
+          <a class="navbtn" href="/works.html">Works</a>
+          <a class="navbtn" href="/legal/">Legal Hall →</a>
+        </div>
+
+        <div class="footer" style="margin-top:14px;">
+          © TKC-VH • Security &amp; Transparency Disclosure
+        </div>
+      </div>
+
+    </section>
+  </main>
+</body>
+</html>
