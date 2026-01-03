@@ -1,0 +1,10 @@
+Contact: mailto:orionel.diyatam@gmail.com
+Expires: 2026-12-31T23:59:59Z
+Preferred-Languages: vi, en, fr, ja
+Canonical: https://tkc-vh.github.io/.well-known/security.txt
+Policy: https://tkc-vh.github.io/legal/
+Acknowledgments: https://tkc-vh.github.io/
+
+# This site is a static GitHub Pages website.
+# No user data collection, no server-side execution.
+# Security reports are welcome and appreciated.
