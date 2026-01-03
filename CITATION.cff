@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use or reference this project, please cite it as below."
+
+title: "TKC-VH Archive"
+type: website
+
+authors:
+  - family-names: Tran
+    given-names: Khac Cuong
+    name-particle: ""
+    affiliation: "Independent researcher and author"
+    email: mr.tkc99999@gmail.com
+    orcid: ""
+
+preferred-citation:
+  type: website
+  title: "TKC-VH Archive"
+  authors:
+    - family-names: Tran
+      given-names: Khac Cuong
+  year: 2026
+  url: "https://tkc-vh.github.io"
+
+url: "https://tkc-vh.github.io"
+repository-code: "https://github.com/tkc-vh/tkc-vh.github.io"
+
+abstract: >
+  TKC-VH Archive is a personal academic and literary archive
+  curated and maintained by Tran Khac Cuong (pen name: TKC-VH).
+  The project publishes original works, research-oriented writings,
+  and long-term archival materials through a static GitHub Pages website.
+
+keywords:
+  - academic archive
+  - literary archive
+  - personal scholarship
+  - digital humanities
+  - authorship
+  - long-term preservation
+
+license: "All rights reserved"
+
+date-released: 2026-01-03
