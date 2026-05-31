@@ -1,0 +1,25 @@
+SHA256_Fingerprints.txt: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+TKCVH2025_C08.epub: 33936002fc32a068dfcb867321e5b58f7834869ba62b3eef25f4ba18eef7c3ab
+TKCVH2025_C08.epub.gpg: 3226c2ba7af6cba47779a8c7f6fd05307bb722f3ada6711a37e90e41d40069c7
+TKCVH2025_C08.epub.gpg.sig: b37cabc50bd272ba7bbef6d47fbbae83effef5d15f47f46e113deb61b70355b3
+TKCVH2025_C08.epub.sig: 2980a09d7753930e0f04f21049321d9a35f9a855cfc6b0e2b902f990980d9d68
+TKCVH2025_C08.pdf: 9de016339c28c5e4e5ac5db3ad7083174f0b1ca75d4e8c641d1763116aeb1998
+TKCVH2025_C08.pdf.gpg: f69e1490ccc3aad6895f2286390da0e6b632672abe92a85e6e6ee36e1c715d9f
+TKCVH2025_C08.pdf.gpg.sig: d680fc0994352596bc04d4316c4a4d7bbd05aabe6e72a96d798225768af4fa7a
+TKCVH2025_C08.pdf.sig: 60f5fef5e7f06d1f2045254ce3ad6474f370e2f42b15d9b611e9b4c3de1524af
+TKCVH2025_C08_Cover0.psd: dcfc23f04d3fbc9d1a094af0021880afe096f921631ff0ef6ca7d5e076b93000
+TKCVH2025_C08_Cover0.psd.gpg: 515a1a8cd8689dd03125f576b33072e9c23a2d9388c3a4d5d2ac1205cfa0b099
+TKCVH2025_C08_Cover0.psd.gpg.sig: dda9dd3b25761018b24cc1188e1734a729e9acc53174128f1e5ea306afb7512f
+TKCVH2025_C08_Cover0.psd.sig: 420a8a9370b92afccd0fb9e4d7feef6b8a62568efe8c987239526d7db79653aa
+TKCVH2025_C08_Cover1.png: 7bab73222301c2f7d31620ea95b282e3da8bc099fa44a310ab2d13cce13c00c0
+TKCVH2025_C08_Cover1.png.gpg: c3d0779564f8af8dfcee0663f809f7a92e3f7b965c74f8e79451f770f3df18e5
+TKCVH2025_C08_Cover1.png.gpg.sig: 0fa30eb74114d5dbbcb37c86ce21dbabb1fa5afbc9d04910be863a0e4efec79b
+TKCVH2025_C08_Cover1.png.sig: 4164fa8527be2472422e31324826ef9b47bb054994482f50493d3622db731504
+◈ TKC*VH {C8, Feb2025} Thiên Quang Long Hổ Kiếm - Bát Quái Kiếm Trận TKC-VH.odt: 013924f3097759c734abb802994c7f34ebd61084702f40be5e535cb4b7420d1a
+◈ TKC*VH {C8, Feb2025} Thiên Quang Long Hổ Kiếm - Bát Quái Kiếm Trận TKC-VH.odt.gpg: bcaa480990d69a5ed9d37e1126f01adf70fff6aae1cd3c8146aee52d1d98adc6
+◈ TKC*VH {C8, Feb2025} Thiên Quang Long Hổ Kiếm - Bát Quái Kiếm Trận TKC-VH.odt.gpg.sig: 5dfc47525e798c8bbf78e96b6691f61d804a3760228ed327f90112f32df6412b
+◈ TKC*VH {C8, Feb2025} Thiên Quang Long Hổ Kiếm - Bát Quái Kiếm Trận TKC-VH.odt.sig: b2ca9f534b89601d0e391b46c1333558327afccb7d8cfe6092dd24f9ba459c6c
+◈ TKC*VH {C8, Feb2025} Thiên Quang Long Hổ Kiếm - Bát Quái Kiếm Trận TKC-VH.pdf: 3916a80f3880905733b7a1c141f36edb5d00ade2e8c1f63eb946680fbbfaa82e
+◈ TKC*VH {C8, Feb2025} Thiên Quang Long Hổ Kiếm - Bát Quái Kiếm Trận TKC-VH.pdf.gpg: 8c15ad77689f221e13d07ef0c05c2f54bad00d60e2c6ccdb7a439ca72ab2c8c1
+◈ TKC*VH {C8, Feb2025} Thiên Quang Long Hổ Kiếm - Bát Quái Kiếm Trận TKC-VH.pdf.gpg.sig: ce91e5dfd8aeda8b5179ae64ec90c9f2ae74164c52c40b9d989a70a426eebef3
+◈ TKC*VH {C8, Feb2025} Thiên Quang Long Hổ Kiếm - Bát Quái Kiếm Trận TKC-VH.pdf.sig: 35026c105b5ac9ae9b38b1b7b4951474be51d36bbea01e84e679e5555cd785b0
