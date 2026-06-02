@@ -25,13 +25,21 @@ They are commercially distributed through authorized platforms.
 
 | File Name | SHA-256 Hash |
 
+
 C10_Cover_vi0.psd: 0bf034bbdcc7e25d96fd82031d09d847bd9a6d65ff017ba0781bf0604bf0552b
+
 C10_Cover_vi0.psd.gpg: 6839670eb3d17b43efedbd89605b59d95d33113d7f74ccceaa214a866ab62513
+
 C10_Cover_vi0.psd.gpg.sig: 1596a7e73b2dec9eb9afd982f6d1fb7d0160cf3ba8d7304251f1928dc519d4e0
+
 C10_Cover_vi0.psd.sig: bef68a366731953e552fa6d3c98dac77aaa05a88e1e3066500fcb1d22ed4d1d6
+
 C10_Cover_vi1.png: ed10d2da18d3f472035db81f927e4dc842d54cfe4a597320ec5c8f3904ecded9
+
 C10_Cover_vi1.png.gpg: 2de43530bdbfa678c995a617257cd7e5e99de025d9ede580fd0d4eb796d8d797
+
 C10_Cover_vi1.png.gpg.sig: 1e30b2bff975e424df8fb2d5b7ee2e38b1a1f85372e4a1bf9f1b772f81a13264
+
 C10_Cover_vi1.png.sig: cb33a235eb60332160a306e98b011a289dfbf853db2eadc6630fc4441585277a
 
 SHA256_Fingerprints.txt: c9682797446361a37d226c2f33496274fdc29dc9918c846bbefa7f406538772f
