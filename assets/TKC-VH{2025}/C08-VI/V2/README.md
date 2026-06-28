@@ -30,7 +30,7 @@ They are commercially distributed through authorized platforms.
 
 | `TKCVH2025-C08-vi_V2.epub.gpg:` | `c7565ea8b7b4704b93a7dc8b99de0b7d81f4b893f271147a41d3b26a1041b467` |
 
-| `TKCVH2025-C08-vi_V2.epub.gpg.sig:` | `3d3589eea1f772260891b29d926c43d9e87609812f8f4dd60235b14e1946468d
+| `TKCVH2025-C08-vi_V2.epub.gpg.sig:` | `3d3589eea1f772260891b29d926c43d9e87609812f8f4dd60235b14e1946468d` |
 
 | `TKCVH2025-C08-vi_V2.epub.sig:` | `94dd83ddae26c1e854ba4bafeff3c1d08f54334884da2c80b9b93ca17a682e88` |
 
