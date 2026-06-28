@@ -26,13 +26,13 @@ They are commercially distributed through authorized platforms.
 | File Name | SHA-256 Hash |
 | :--- | :--- |
 
-| `TKCVH2025_C09_vi_V2.epub:` |369016c3eca85b3ee1dd7622b0ea62d3dcd5111f0592b23fba189da27333deac` |
+| `TKCVH2025_C09_vi_V2.epub:` |`369016c3eca85b3ee1dd7622b0ea62d3dcd5111f0592b23fba189da27333deac` |
 
-| `TKCVH2025_C09_vi_V2.epub.gpg:` |547130e9c07f606afb0dca1d0233b6248fae9853fc14fbc0c05d68a4a5815957` |
+| `TKCVH2025_C09_vi_V2.epub.gpg:` |`547130e9c07f606afb0dca1d0233b6248fae9853fc14fbc0c05d68a4a5815957` |
 
-| `TKCVH2025_C09_vi_V2.epub.gpg.sig:` |f2be0d2467ec9278eb76b1f1b5afe4dd4177c36fedd4bf34d1f080b2b4be766b` |
+| `TKCVH2025_C09_vi_V2.epub.gpg.sig:` |`f2be0d2467ec9278eb76b1f1b5afe4dd4177c36fedd4bf34d1f080b2b4be766b` |
 
-| `TKCVH2025_C09_vi_V2.epub.sig:` |6ab02eebd8fad5f773ec5eed2432e0b4a7bad94745b4b66b1efa51042f1582e9` |
+| `TKCVH2025_C09_vi_V2.epub.sig:` |`6ab02eebd8fad5f773ec5eed2432e0b4a7bad94745b4b66b1efa51042f1582e9` |
 
 ---
 
