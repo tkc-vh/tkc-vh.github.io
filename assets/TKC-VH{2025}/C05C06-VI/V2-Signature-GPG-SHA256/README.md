@@ -1,9 +1,9 @@
-# TKCVH2026-C1-VI-V3 – Legal Archive
+# TKCVH2025_C05C06-VI-V2 – Legal Archive
 
 **Digital Copyright & Authenticity Record**
 
 This directory contains a sealed legal and technical archive used to
-authenticate the authorship and integrity of the literary work **TKCVH2026-C1-VI-V3**.
+authenticate the authorship and integrity of the literary work **TKCVH2025_C05C06-VI-V2**.
 
 The archive is part of the **TKC-VH Legal Library** and is intended to serve
 as independent verification material for legal, technical, and archival purposes.
@@ -12,7 +12,7 @@ as independent verification material for legal, technical, and archival purposes
 
 ## 📘 Work Information
 
-- **Work:** TKCVH2026-C1-VI-V3 (Complete EPUB & PDF editions)
+- **Work:** TKCVH2025_C05C06-VI-V2 (Complete EPUB & PDF editions)
 - **Author:** Tran Khac Cuong (Pen name: TKC-VH)
 - **Effective date:** 19 July 2026
 
