@@ -1,9 +1,9 @@
-# TKCVH2025_C05C06-VI-V3 – Legal Archive
+## TKCVH2025_C09_VI_V4– Legal Archive
 
 **Digital Copyright & Authenticity Record**
 
 This directory contains a sealed legal and technical archive used to
-authenticate the authorship and integrity of the literary work **TKCVH2025_C05C06-VI-V3**.
+authenticate the authorship and integrity of the literary work **TKCVH2025_C09_VI_V4**.
 
 The archive is part of the **TKC-VH Legal Library** and is intended to serve
 as independent verification material for legal, technical, and archival purposes.
@@ -12,7 +12,7 @@ as independent verification material for legal, technical, and archival purposes
 
 ## 📘 Work Information
 
-- **Work:** TKCVH2025_C05C06-VI-V3 (Complete EPUB & PDF editions)
+- **Work:** TKCVH2025_C09_VI_V4 ( EPUB & PDF  editions)
 - **Author:** Tran Khac Cuong (Pen name: TKC-VH)
 - **Effective date:** 24 July 2026
 
@@ -26,23 +26,21 @@ They are commercially distributed through authorized platforms.
 | File Name : SHA-256 Hash |
 
 
-TKCVH2025_C05C06-VI-V3.epub: 594602f42673449e84207271ca111886b72aa521d49ef173e9dbd94d8c15a659
+TKCVH2025_C09_VI_V4.epub: dfde7903126ab13b6d34de30aa6421c623c6d344811beb5995fb9553e7ca3dd4
 
-TKCVH2025_C05C06-VI-V3.epub.gpg: e4251ef30376e7e818b60897763ec8f4377976d590364ccae40c417c5664e5a0
+TKCVH2025_C09_VI_V4.epub.gpg: 40314960847509f18f3ef70f420d6a6a807240e83795b5e360a987049a26bd25
 
-TKCVH2025_C05C06-VI-V3.epub.gpg.sig: a07c4112450e6bd672ff62ac12c0218918b4ec2b6734d346ea001c9cbd56d87a
+TKCVH2025_C09_VI_V4.epub.gpg.sig: 3f78b8c3fa46a0b5367dbe29ecc97142315b602902294ee1396ae6a0ef7801b0
 
-TKCVH2025_C05C06-VI-V3.epub.sig: 0211f8148c82a3a1466d4f792beb49a95cd3a0fbe42d9be5a86761bc4865046a
+TKCVH2025_C09_VI_V4.epub.sig: 73d051a757e53f0a91699851aa499814a655614fa19bb87e70bf5542287f04b1
 
-TKCVH2025_C05C06-VI-V3.pdf: 3cf04ae9b58470fc62087d2c65da7f627c82a26c38752810987cec0e7cb37fc2
+TKCVH2025_C09_VI_V4.pdf: 3f727f51321ad352de7b81ea8c2d2a668149220036ee2582a3d46639c5af8867
 
-TKCVH2025_C05C06-VI-V3.pdf.gpg: 1bbae2e5663607c8b4a51f76cc9c5082d9ed2170fb40fa46896183a481ce0b2a
+TKCVH2025_C09_VI_V4.pdf.gpg: 7d89e950251961a8fb618121f17b7221d002a09bc34aa9faf5a4d5af4d98c108
 
-TKCVH2025_C05C06-VI-V3.pdf.gpg.sig: 761fdebf4b273b39b5c95b33006c7a9da296b537a7a6ea6cb9e3a3af8280aa9b
+TKCVH2025_C09_VI_V4.pdf.gpg.sig: d772e63642420df8466330220094ec9295c3d383453cfa51835fff7c57d3187a
 
-TKCVH2025_C05C06-VI-V3.pdf.sig: eba517bf0d965ce462975696c54026b0bb5ff91d0c1a0eed01873e80c6aacdda
-
-
+TKCVH2025_C09_VI_V4.pdf.sig: 1d1a74512b6ba14abc048e2a20b11e28264cc6d7a1a1069c65134ee6c5d3c898
 
 
 
