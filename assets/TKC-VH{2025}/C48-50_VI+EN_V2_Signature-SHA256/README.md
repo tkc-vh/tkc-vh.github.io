@@ -16,12 +16,17 @@ They are commercially distributed through authorized platforms.
 - **Signer:** Tran Khac Cuong (Pen name: TKC-VH)
 - **Effective date:** 26 July 2026
 - **Signing date:** 26 July 2026
+
 ---
+
 
 ## 🔐 Cryptographic Methods Used
 
-- **Hash algorithm:** SHA-256
+- **Hash algorithm:** SHA-256 (Algo: RSA 4096)
 - **Digital signature:** OpenPGP (GPG)
+- **Signer:** Tran Khac Cuong (TKC-VH)
+- **Signing date:** 26 June 2026
+- **PGP Fingerprint:** 4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A
 - All signatures are **detached signatures (.sig)**, allowing independent
 verification without modifying the original files.
 
@@ -96,17 +101,11 @@ _ TKC_VH {C48-50, Sep-Dec2025} Pillar of t - TRAN KHAC CUONG.txt: 88ac7b2aa266b7
 _ TKC_VH {C48-50, Sep-Dec2025} Pillar of t - TRAN KHAC CUONG.txt.sig: 1d3a68c40fc7a1572678dd7588bbba55e286ce7d03ba7adced7c720917b7df29
 
 
-## 🔐 Cryptographic Methods Used
 
-- **Hash algorithm:** SHA-256 (Algo: RSA 4096)
-- **Digital signature:** OpenPGP (GPG)
-- **Signer:** Tran Khac Cuong (TKC-VH)
-- **Signing date:** 26 June 2026
-- **PGP Fingerprint:** 4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A
-All signatures are **detached signatures (.sig)**, allowing independent
-verification without modifying the original files.
 
 ---
+
+
 
 ## ✅ Verification Overview
 
