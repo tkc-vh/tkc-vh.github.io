@@ -122,11 +122,11 @@ Windows (PowerShell):
 Get-FileHash "your_book_file.epub" -Algorithm SHA256
 
 Compare the computed hash with the matching row above. Exact match = the file matches the official release.
-- Step 2 — Verify GPG signature (.asc)
+- Step 2 — Verify GPG signature (.asc,  .sig)
 1) Import the public key (one time only):
-gpg --import "signatures/TKC-VH-public-key.asc, .sig"
+gpg --import "signatures/TKC-VH-public-key.asc"
 2) Verify the signature (example for EPUB):
-gpg --verify "your_book_file.epub.asc" "your_book_file.epub"
+gpg --verify "your_book_file.epub.sig" "your_book_file.epub"
 
 If you see something like “Good signature from … (TKC-VH)”, it means the file is the signed version and has not been modified since signing.
 
