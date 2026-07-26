@@ -96,6 +96,17 @@ _ TKC_VH {C48-50, Sep-Dec2025} Pillar of t - TRAN KHAC CUONG.txt: 88ac7b2aa266b7
 _ TKC_VH {C48-50, Sep-Dec2025} Pillar of t - TRAN KHAC CUONG.txt.sig: 1d3a68c40fc7a1572678dd7588bbba55e286ce7d03ba7adced7c720917b7df29
 
 
+## 🔐 Cryptographic Methods Used
+
+- **Hash algorithm:** SHA-256 (Algo: RSA 4096)
+- **Digital signature:** OpenPGP (GPG)
+- **Signer:** Tran Khac Cuong (TKC-VH)
+- **Signing date:** 26 June 2026
+- **PGP Fingerprint:** 4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A
+All signatures are **detached signatures (.sig)**, allowing independent
+verification without modifying the original files.
+
+---
 
 ## ✅ Verification Overview
 
@@ -103,6 +114,25 @@ Third parties may independently verify this archive by:
 
 1. Checking the SHA-256 checksum of the files.
 2. Verifying the GPG signature of the corresponding files.
+
+
+- Step 1 — Check SHA-256
+macOS / Linux (Terminal):
+shasum -a 256 "your_book_file.epub"
+Windows (PowerShell):
+Get-FileHash "your_book_file.epub" -Algorithm SHA256
+
+Compare the computed hash with the matching row above. Exact match = the file matches the official release.
+- Step 2 — Verify GPG signature (.asc)
+1) Import the public key (one time only):
+gpg --import "signatures/TKC-VH-public-key.asc, .sig"
+2) Verify the signature (example for EPUB):
+gpg --verify "your_book_file.epub.asc" "your_book_file.epub"
+
+If you see something like “Good signature from … (TKC-VH)”, it means the file is the signed version and has not been modified since signing.
+
+✔️ SHA-256 match   +   ✔️ Valid GPG signature ⇒ Author-verified original release.
+
 
 If both the checksum and digital signature are valid, the archive can be
 considered an authentic record issued by the author.
@@ -126,6 +156,7 @@ will result in a different SHA-256 hash and invalidate the signatures.
 This archive does **not** grant redistribution rights for the original work.
 It exists solely for authentication, verification, and legal reference.
 
+---
 
 
 # ⚜︎ © 2026 Tran Khac Cuong & Dieu Tam (TKC&VH)⚜︎
