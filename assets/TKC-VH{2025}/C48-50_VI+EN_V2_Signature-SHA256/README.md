@@ -1,5 +1,9 @@
-# 🐢 Digital Copyright & Authenticity Record – Legal Archive
+#  © 2026 Tran Khac Cuong & Dieu Tam (TKC&VH)
+- All rights reserved.
 
+---
+
+## 🔐 Digital Copyright & Authenticity Record – Legal Archive
 
 - This directory contains a sealed legal and technical archive used to
 authenticate the authorship and integrity of the TKC-VH Diary Worrks. 
@@ -17,24 +21,71 @@ They are commercially distributed through authorized platforms.
 - **Effective date:** 26 July 2026
 - **Signing date:** 26 July 2026
 
----
-
-
 ## 🔐 Cryptographic Methods Used
 
 - **Hash algorithm:** SHA-256 (Algo: RSA 4096)
 - **Digital signature:** OpenPGP (GPG)
-- **Signer:** Tran Khac Cuong (TKC-VH)
-- **Signing date:** 26 June 2026
+
+
 - **PGP Fingerprint:** 4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A
 - All signatures are **detached signatures (.sig)**, allowing independent
 verification without modifying the original files.
 
+
+
+## ✅ Verification Overview
+
+Third parties may independently verify this archive by:
+
+1. Checking the SHA-256 checksum of the files.
+2. Verifying the GPG signature of the corresponding files.
+
+
+- Step 1 — Check SHA-256
+macOS / Linux (Terminal):
+shasum -a 256 "your_book_file.epub"
+Windows (PowerShell):
+Get-FileHash "your_book_file.epub" -Algorithm SHA256
+
+Compare the computed hash with the matching row above. Exact match = the file matches the official release.
+- Step 2 — Verify GPG signature (.asc)
+1) Import the public key (one time only):
+gpg --import "signatures/TKC-VH-public-key.asc, .sig"
+2) Verify the signature (example for EPUB):
+gpg --verify "your_book_file.epub.asc" "your_book_file.epub"
+
+If you see something like “Good signature from … (TKC-VH)”, it means the file is the signed version and has not been modified since signing.
+
+✔️ SHA-256 match   +   ✔️ Valid GPG signature ⇒ Author-verified original release.
+
+
+If both the checksum and digital signature are valid, the archive can be
+considered an authentic record issued by the author.
+
+
+## 🏛 Public Archive & Timestamp
+
+This directory is publicly hosted on GitHub.
+
+The GitHub commit history serves as an **independent third-party timestamp**,
+providing additional evidentiary weight for authorship and integrity claims.
+
+
+## ⚖️ Legal Notice
+
+Any modification to the original content, even a single character,
+will result in a different SHA-256 hash and invalidate the signatures.
+
+This archive does **not** grant redistribution rights for the original work.
+It exists solely for authentication, verification, and legal reference.
+
 ---
 
-## 📦 File Fingerprints (SHA-256)
 
-| File Name : SHA-256 Hash |
+# 📦 File Fingerprints (SHA-256)
+
+| File Name | Fingerprint (SHA-256) |
+| :--- | :--- |
 | `C48-50_OverLook.pdf` | `929f5393a85384cb0fa41f278cfbc8b1a2c8101166036539f8d88ceb1c246080` |
 | `C48-50_OverLook.pdf.sig` | `67581b5d42e59009e09be490064274d4a6f34b9b4c13aafb9d3fa7d5fec2a583` |
 | `C48-50_OverLook.pptx` | `d8b6ceaf8ba56c56963acf89d509208adfc947e1b9f3a12af1b26b71f512bb5f` |
@@ -66,65 +117,3 @@ verification without modifying the original files.
 | `_ TKC_VH {C48-50, Sep-Dec2025} Pillar of t - TRAN KHAC CUONG.docx.sig` | `497797c3966b5bb05342440304956fb2758b7e2324e6542940134e6c35cb12c1` |
 | `_ TKC_VH {C48-50, Sep-Dec2025} Pillar of t - TRAN KHAC CUONG.txt` | `88ac7b2aa266b745141d70224e2501dff8f1619a5a56ba87319259848ff6d65a` |
 | `_ TKC_VH {C48-50, Sep-Dec2025} Pillar of t - TRAN KHAC CUONG.txt.sig` | `1d3a68c40fc7a1572678dd7588bbba55e286ce7d03ba7adced7c720917b7df29` |
-
-
-
-
----
-
-
-
-## ✅ Verification Overview
-
-Third parties may independently verify this archive by:
-
-1. Checking the SHA-256 checksum of the files.
-2. Verifying the GPG signature of the corresponding files.
-
-
-- Step 1 — Check SHA-256
-macOS / Linux (Terminal):
-shasum -a 256 "your_book_file.epub"
-Windows (PowerShell):
-Get-FileHash "your_book_file.epub" -Algorithm SHA256
-
-Compare the computed hash with the matching row above. Exact match = the file matches the official release.
-- Step 2 — Verify GPG signature (.asc,  .sig)
-1) Import the public key (one time only):
-gpg --import "signatures/TKC-VH-public-key.asc"
-2) Verify the signature (example for EPUB):
-gpg --verify "your_book_file.epub.sig" "your_book_file.epub"
-
-If you see something like “Good signature from … (TKC-VH)”, it means the file is the signed version and has not been modified since signing.
-
-✔️ SHA-256 match   +   ✔️ Valid GPG signature ⇒ Author-verified original release.
-
-
-If both the checksum and digital signature are valid, the archive can be
-considered an authentic record issued by the author.
-
----
-
-## 🏛 Public Archive & Timestamp
-
-This directory is publicly hosted on GitHub.
-
-The GitHub commit history serves as an **independent third-party timestamp**,
-providing additional evidentiary weight for authorship and integrity claims.
-
----
-
-## ⚖️ Legal Notice
-
-Any modification to the original content, even a single character,
-will result in a different SHA-256 hash and invalidate the signatures.
-
-This archive does **not** grant redistribution rights for the original work.
-It exists solely for authentication, verification, and legal reference.
-
----
-
-
-# ⚜︎ © 2026 Tran Khac Cuong & Dieu Tam (TKC&VH)⚜︎
-- All rights reserved.
-
