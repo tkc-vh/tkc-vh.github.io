@@ -9,10 +9,7 @@
 authenticate the authorship and integrity of the TKC-VH Diary Worrks. 
 
 - The archive is part of the **TKC-VH Legal Library** and is intended to serve
-as independent verification material for legal, technical, and archival purposes.
-
-- The original EPUB and PDF files are **not included** in this repository.
-They are commercially distributed through authorized platforms.
+as independent verification material for legal, technical, They are commercially distributed through authorized platforms.
 
 
 ## 📘 Effective date & Signing date: 
@@ -84,26 +81,28 @@ It exists solely for authentication, verification, and legal reference.
 
 # 📦 File Fingerprints (SHA-256)
 
-| File Name : SHA-256 Hash |
-
-SHA256_Fingerprints.txt: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-
-TKCVH2026_C20_EN_V2.epub: 6f701be9c8607ae39b7a35065c7673f0f69c86c25856d5cace57fd3c84bf560f
-
-TKCVH2026_C20_EN_V2.epub.sig: 2c41c23c648def7215f1eba49541e8dc74a83f9aa1016bf8f51c38032fc95161
-
-TKCVH2026_C20_EN_V2.pdf: 40264b3572a199c64f800dc63b63f7360de39e22a1c607e107c34ca42b45de93
-
-TKCVH2026_C20_EN_V2.pdf.sig: dcb62fa9d1eff551d77cfab7b9e7670746513f9fc150856c396a18b6a079810f
-
-TKCVH2026_C20_EN_V2_KDP.pdf: c6659d2dd8263d28bb3a0f20ce78c9c2595a885d4aad5291d4c7b90f2a77019d
-
-TKCVH2026_C20_EN_V2_KDP.pdf.sig: 78e9a731e7c76896ab7b0141dcff93cfc4020a37b203e9616f43bf90cc8981ba
-
-TKCVH2026_C20_Vi_V2.epub: 2d2e2e870daea259b0629545d4a16385f54ff63dda98691329049d0efd78238a
-
-TKCVH2026_C20_Vi_V2.epub.sig: 0d7c4872a1282543fb109227e71a9ba865651bb6ecdc786da1fef6d97f9bca33
-
-TKCVH2026_C20_Vi_V2.pdf: 6d9e352eacee903fb894af2c53c485c0fdc6670078ffbb1e6765767e70694579
-
-TKCVH2026_C20_Vi_V2.pdf.sig: 2e2806fc169f1bbdecdae04b413c6d9ffd9c220c50e51c9d140ec69bb2244d29
+| File Name | Fingerprint (SHA-256) |
+| :--- | :--- |
+| `C20_Coverr_EN (APLE).jpg` | `ffc354abfb3986e6d78314283954c02da43a8b2bbeb7ad6acf2656d3e7afc3bb` |
+| `C20_Coverr_EN (APLE).jpg.sig` | `66ae157384da2a30dfeaa358f1a98194d59f7d75f364af8d29b68bf89d6c0588` |
+| `C20_Coverr_EN (KDP).jpg` | `55487089b5d2e4cb847304bafc3fb9ea3a99350db1ef4f6692e1f37f8002bffd` |
+| `C20_Coverr_EN (KDP).jpg.sig` | `4a8a018b68a2cd5a0c7751e9cdc6e47ab8eb17c3a6ba0ec1e7229cc4032cc27c` |
+| `C20_Coverr_EN.jpg` | `accb461b1d7fdada93f5e4f0b6e420008e63c21f6ca7817a9b2888e34b8f89d0` |
+| `C20_Coverr_EN.jpg.sig` | `a36504eaf66d95c6d114e0738bde1863ef876a2909ffc3f7edfea109c888c796` |
+| `C20_Coverr_vi.jpg` | `80ea207812fd7d2cdf2f8d7ab9ee0d96bfe5966d6abb4bf953f542896ff248ff` |
+| `C20_Coverr_vi.jpg.sig` | `7428dae40d689b5eb6d2933f1200b8b07b8e113d2de68d0aecb1960c90418153` |
+| `C20_Coverr_vi_APLE.jpg` | `8877e6b5e30da64c1c887013902c4e8002c790802288cc71aa2ec5ef040dc5f2` |
+| `C20_Coverr_vi_APLE.jpg.sig` | `ad3cd914d0ac98d9c9ef1474f77826f46d998b1a9030a094706fde5694c388e1` |
+| `Cover.png` | `a7615f77e8b7c029e0c680e9ad29224d4192cf8ac37180823906c61e7c61263d` |
+| `Cover.png.sig` | `0c5b50220575aeba8d2d9603aa9bb93cfa72cfc85a3f1f2be872d13be6877578` |
+| `SHA256_Fingerprints.txt` | `8c342b1721d145858569994a77080c51616fd81dd5bdc57cdf86fcb967998134` |
+| `TKCVH2026_C20_EN.epub` | `6b844657a1d67edbed61cb86b008fc31f07d4fc55d3adea1803b4e694013f985` |
+| `TKCVH2026_C20_EN.epub.sig` | `a0b4baed03731e7166b6b75bd713d7f52c951b05eb38b722d0f9fc42fc967dbb` |
+| `TKCVH2026_C20_EN.pdf` | `45cd99659d5b02f75eecc4d5c7f7bdaacfbc78acc46d5de498f8db1288517e3e` |
+| `TKCVH2026_C20_EN.pdf.sig` | `ab9a9c8575ea44f07b049ea029ff6f8b44579681f12568ab6320ec221294d3a0` |
+| `TKCVH2026_C20_EN_KDP.pdf` | `9965ad90c4cf38ab44106109648047b00533d0f5ff0fb8ef2a61b953418d19ad` |
+| `TKCVH2026_C20_EN_KDP.pdf.sig` | `97d4eb95b30c46898e50ef4d40932b278ffd171d9813a35e33dc08abc394d258` |
+| `TKCVH2026_C20_Vi.epub` | `46334f86b7ddefe512d2a60b022647ad6e2223f61204d02d6ff5d478c8f6ceab` |
+| `TKCVH2026_C20_Vi.epub.sig` | `0effc754ba50d7694ae198d04477c5f3c08ca9e3e19056939bc6d38f94653e1f` |
+| `TKCVH2026_C20_Vi.pdf` | `a7bed23adf7622ab19ad41072816bedd23286441c6b026b748e1f9a2b315221a` |
+| `TKCVH2026_C20_Vi.pdf.sig` | `2a0a9b00b68a521cd1fdf626d921b13fa7d8f13403a2c4551158195507d8a6b6` |
