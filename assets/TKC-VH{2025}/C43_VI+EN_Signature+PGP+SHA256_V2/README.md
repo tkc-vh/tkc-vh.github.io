@@ -18,8 +18,8 @@
 | :--- | :--- |
 | **Author** | Tran Khac Cuong *(Pen name: TKC-VH)* |
 | **Signer** | Tran Khac Cuong *(Pen name: TKC-VH)* |
-| **Effective Date** | 27 July 2026 |
-| **Signing Date** | 27 July 2026 |
+| **Effective Date** | 01 August 2026 |
+| **Signing Date** | 01 August 2026 |
 
 ---
 
