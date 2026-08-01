@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Public GPG Key | TKC-VH</title>
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/favicon-64.png">
 	
-  <!-- === TKC-VH | Security Header === -->
+  <!-- === TKC-VH | Security Header (FINAL • no inline scripts) === -->
   <meta http-equiv="Content-Security-Policy"
   content="
   default-src 'self';
@@ -19,7 +19,7 @@
   script-src 'self';
   frame-ancestors 'none';
   base-uri 'self';
-  form-action 'self' https://github.com;
+  form-action 'self';
   upgrade-insecure-requests;
   ">
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
@@ -31,6 +31,7 @@
   <meta name="robots" content="index,follow" />
   <script src="./legal.js" defer></script>
 
+  <!-- Page-only micro refinements (legal.css stays unchanged) -->
   <style>
     /* Make all card titles single-line + elegant */
     .gate h3{
@@ -80,6 +81,7 @@
       margin-bottom: 10px;
     }
 
+    /* Small label rows */
     .kv{
       display:flex;
       flex-wrap:wrap;
@@ -102,46 +104,20 @@
       color: rgba(255,240,210,.95);
     }
 
+    /* Optional: tighten bottom signature */
     .sigline{
       text-align:center;
       margin-top: 16px;
       opacity: .90;
     }
   
-    /* =========================================================
-       TKC-VH NO-LOGIN SEARCH ENGINE & DIRECT FILE NAVIGATION
+  /* =========================================================
+       TKC-VH ROYAL SEARCH ENGINE (Lunr.js Style)
        ========================================================= */
-    .royal-search-section {
-      margin: 24px auto;
+       .royal-search-section {
+      margin: 20px auto;
       max-width: 680px;
-      text-align: center;
-    }
-
-    .royal-btn-direct {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 14px 24px;
-      margin-bottom: 16px;
-      background: linear-gradient(135deg, rgba(255, 211, 119, 0.25), rgba(212, 175, 55, 0.15));
-      border: 1px solid rgba(255, 211, 119, 0.5);
-      border-radius: 50px;
-      color: rgba(255, 245, 220, 0.98);
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 211, 119, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .royal-btn-direct:hover {
-      background: rgba(255, 211, 119, 0.35);
-      border-color: rgba(255, 215, 0, 0.9);
-      box-shadow: 0 0 25px rgba(255, 211, 119, 0.4);
-      transform: translateY(-2px);
+      position: relative;
     }
 
     .royal-search-box {
@@ -201,8 +177,71 @@
       background: rgba(255, 211, 119, 0.4);
       border-color: rgba(255, 215, 0, 0.8);
       color: #fff;
+      box-shadow: 0 0 10px rgba(255, 211, 119, 0.4);
     }
+
+    /* Hiển thị kết quả tìm kiếm */
+    .royal-search-results {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 380px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    .royal-result-item {
+      background: rgba(18, 14, 10, 0.7);
+      border: 1px solid rgba(255, 211, 119, 0.18);
+      border-radius: 12px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: block;
+    }
+
+    .royal-result-item:hover {
+      background: rgba(255, 211, 119, 0.08);
+      border-color: rgba(255, 211, 119, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .royal-result-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255, 220, 150, 0.95);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .royal-result-hash {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      font-size: 11.5px;
+      color: rgba(255, 240, 210, 0.7);
+      word-break: break-all;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 211, 119, 0.1);
+      margin-top: 6px;
+    }
+
+    .royal-no-result {
+      text-align: center;
+      color: rgba(255, 211, 119, 0.6);
+      font-size: 13px;
+      font-style: italic;
+      padding: 12px;
+    }
+  
+  
   </style>
+
+
+
 </head>
 
 <body>
@@ -250,34 +289,39 @@
 
         <!-- Compact hero -->
         <div class="hero-mini">
-          <h1>SHA-256 & PUBLIC GPG KEY</h1>
+          <h1>SHA-256 & PUBLIC GPG KEY  </h1>
           <div class="subtitle">
             Cổng Xác Thực Cho <span class="pill">SHA-256</span> &amp; Chữ Ký Số <span class="pill">GPG/PGP</span>
           </div>
         </div>
 
-        <!-- Navigation -->
+        <!-- Keep nav (same class names to match legal.css) -->
         <nav aria-label="TKC-VH Legal Navigation">
           <div class="tabs" role="navigation">
             <a class="tab" href="../index.html">Trang Chủ</a>
             <a class="tab" href="../works.html">Works</a>
-            <a class="tab" href="../series.html">Series</a>
-            <a class="tab active" href="./public-gpg-key.html">GPG Key</a>
+		    <a class="tab" href="../series.html">Series</a>
+
+			<a class="tab active" href="./public-gpg-key.html">GPG Key</a>
+
+			  
             <a class="tab" href="./index.html">Legal</a>
-            <a class="tab" href="./copyright.html">Bản quyền</a>
+       		<a class="tab" href="./copyright.html">Bản quyền</a>
             <a class="tab" href="./disclaimer.html">Disclaimer</a>
             <a class="tab" href="./nguon-anh-va-tu-lieu.html">Nguồn tư liệu</a>
             <a class="tab" href="./quyen-so-huu-danh-xung.html">Danh xưng</a>
             <a class="tab" href="./vo-dieu-tam.html">Vợ Diệu Tâm</a>
             <a class="tab" href="./author.html">Author</a>
-            <a class="tab" href="./logo.html">Logo</a>
+			<a class="tab" href="./logo.html">Logo</a>
+
           </div>
         </nav>
 
+  
         <hr />
 
         <!-- ===============================
-             AUTHENTICITY CERTIFICATES
+             AUTHENTICITY CERTIFICATES (CARDS) — Primary focus
         ================================ -->
         <section id="auth-certificates" aria-label="Authenticity Certificates">
           <h2 class="gold-title" style="text-align:center; font-size: 18px; letter-spacing:.08em;">
@@ -333,7 +377,7 @@
         <div class="rowline"></div>
 
         <!-- ===============================
-             TECHNICAL DETAILS
+             TECHNICAL (COLLAPSIBLE) — keep proof, but hidden by default
         ================================ -->
         <section class="tech" aria-label="Technical GPG Key Details">
           <details>
@@ -361,6 +405,7 @@
             <p class="mini" style="margin:10px 0 6px;"><b>ASCII-armored Public Key</b></p>
             
 <pre id="keyblock">
+
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGk9DeABEACtnbrxeBFRThtaTGFmpsIBVooAqg7Yg2L93Q/mAPgxk2loccrY
@@ -397,64 +442,84 @@ dLeMvakWtK4tL0phjqh9hX3wGJ7qcrT+FpM25WXu
 =NrRO
 -----END PGP PUBLIC KEY BLOCK-----
 </pre>
-          </details>
-        </section>
 
-        <div class="rowline"></div>
-
-        <section class="tech" aria-label="SSH Fingerprint - SHA256">
-          <details>
-            <summary>◈TKC-VH • 2025 🐢 Kho chữ ký số & SSH Fingerprint - SHA256: </summary>
-            <p class="mini" style="margin:10px 6px 10px; text-align:center;">
-              <a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2025}" target="_blank" rel="noopener">
-                <br>
-                <span class="pill">github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2025}</span>
-              </a>
+            <p class="mini" style="margin:10px 6px 2px; text-align:center;">
+              Authoritative public keys, signed statements, and verification references are published only via this website and the author’s official repositories.
             </p>
-            <br>
           </details>
         </section>
 
-        <div class="rowline"></div>
-
-        <section class="tech" aria-label="SSH Fingerprint - SHA256">
-          <details>
-            <summary>◈TKC-VH • 2026 🐢 Kho chữ ký số & SSH Fingerprint - SHA256: </summary>
-            <p class="mini" style="margin:10px 6px 10px; text-align:center;">
-              <a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2026}" target="_blank" rel="noopener">
-                <br>
-                <span class="pill">github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2026}</span>
-              </a>
-            </p>
-            <br>
-          </details>
-        </section>
+<div class="rowline"></div>
 
         <!-- ===============================
-             TKC-VH DIRECT SEARCH & GO TO FILE (NO LOGIN REQUIRED)
+             TECHNICAL (COLLAPSIBLE) — keep proof, but hidden by default
+        ================================ -->
+        <section class="tech" aria-label="SSH Fingerprint - SHA256">
+          <details>
+            <summary>◈TKC-VH • 2025 🐢  Kho chữ ký số & SSH
+Fingerprint - SHA256: </summary>
+
+            <p class="mini" style="margin:10px 6px 10px; text-align:center;">
+
+<a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2025}"
+target="_blank" rel="noopener">
+ <br>
+<span class="pill">
+	github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2025} </span> </a>
+
+   </p>
+
+ <br>
+
+			    </details>
+        </section>
+		  
+
+<div class="rowline"></div>
+
+        <!-- ===============================
+             TECHNICAL (COLLAPSIBLE) — keep proof, but hidden by default
+        ================================ -->
+        <section class="tech" aria-label="SSH Fingerprint - SHA256">
+          <details>
+            <summary>◈TKC-VH • 2026 🐢  Kho chữ ký số & SSH
+Fingerprint - SHA256: </summary>
+
+            <p class="mini" style="margin:10px 6px 10px; text-align:center;">
+
+<a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2026}"
+target="_blank" rel="noopener">
+ <br>
+<span class="pill">
+	github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2026} </span> </a>
+
+   </p>
+
+ <br>
+
+  </details>
+        </section>
+		  
+<!-- ===============================
+             TKC-VH ROYAL LUNR SEARCH ENGINE
         ================================ -->
         <section class="royal-search-section" aria-label="Tra cứu chữ ký số & SHA-256">
-          
-          <!-- Lựa chọn 1: Nút mở thẳng cây thư mục GitHub -->
-          <a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets" target="_blank" rel="noopener" class="royal-btn-direct">
-            <span>⚜︎ Mở Cây Tìm File Trên GitHub (Không Cần Đăng Nhập)</span>
-          </a>
+          <div class="royal-search-box">
+            <span class="royal-search-icon">⚜︎</span>
+            <input type="text" id="tkcSearchInput" class="royal-search-input" 
+                   placeholder="Tra cứu tên tệp, chứng thư hoặc mã SHA-256..." 
+                   autocomplete="off" />
+            <button type="button" id="tkcSearchBtn" class="royal-search-btn">Tìm Kiếm</button>
+          </div>
 
-          <!-- Lựa chọn 2: Ô tìm kiếm cho phép nhập từ khóa -->
-          <form action="https://github.com/tkc-vh/tkc-vh.github.io/find/main" method="get" target="_blank" class="royal-search-box">
-            <span class="royal-search-icon">🔍</span>
-            <input type="text" name="q" class="royal-search-input" 
-                   placeholder="Nhập tên tệp hoặc thư mục (ví dụ: C44, TKC-VH{2025})..." 
-                   required autocomplete="off" />
-            <button type="submit" class="royal-search-btn">Duyệt File</button>
-          </form>
-
+          <!-- Nơi hiển thị kết quả -->
+          <div id="tkcSearchResults" class="royal-search-results"></div>
         </section>
-
+        
+        
         <div class="sigline">
           <div class="footer">“Dấu Vân Tay Là Lời Thề - Chữ Ký Là Lời Chứng.”
-            <h3>⚜︎ TRAN KHAC CUONG ⚜︎</h3>
-          </div>
+		<h3>⚜︎ TRAN KHAC CUONG ⚜︎</h3></div>
         </div>
 
       </div><!-- /gold-frame -->
@@ -462,5 +527,52 @@ dLeMvakWtK4tL0phjqh9hX3wGJ7qcrT+FpM25WXu
       <div class="footer">© 2025 TKC-VH • All rights reserved</div>
     </div><!-- /card -->
   </div><!-- /page -->
+
+  <!-- ===============================
+             TKC-VH ROYAL SEARCH ENGINE (GitHub Integration)
+        ================================ -->
+        
+          
+
+
+        <section class="royal-search-section" aria-label="Tra cứu chữ ký số & SHA-256">
+
+           <!-- Lựa chọn 1: Mở thẳng trình Go To File trên GitHub không cần đăng nhập -->
+           <a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets" target="_blank" rel="noopener" class="royal-btn-direct">
+            <span>⚜︎ Mở Cây Tìm File Trên GitHub (Không Cần Đăng Nhập)</span>
+          </a>
+          
+          <form id="tkcGithubSearchForm" class="royal-search-box">
+            <span class="royal-search-icon">⚜︎</span>
+            <input type="text" id="tkcSearchInput" class="royal-search-input" 
+                   placeholder="Nhập tên tệp chữ ký số (ví dụ: C44, pdf.sig, SHA256)..." 
+                   required autocomplete="off" />
+            <button type="submit" class="royal-search-btn">Tìm Kiếm</button>
+          </form>
+        </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const searchForm = document.getElementById('tkcGithubSearchForm');
+      const searchInput = document.getElementById('tkcSearchInput');
+
+      // Tên Repository GitHub của bạn
+      const repoPath = "tkc-vh/tkc-vh.github.io";
+
+      searchForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Ngăn trang reload
+        const query = searchInput.value.trim();
+
+        if (query) {
+          // Chuyển hướng trực tiếp tới giao diện Search/Go to file của GitHub Repository
+          const githubSearchUrl = `https://github.com/${repoPath}/search?q=${encodeURIComponent(query)}`;
+          
+          // Mở kết quả tìm kiếm trong tab mới
+          window.open(githubSearchUrl, '_blank', 'noopener');
+        }
+      });
+    });
+  </script>
+
 </body>
 </html>
