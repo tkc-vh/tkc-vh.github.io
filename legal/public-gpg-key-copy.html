@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/favicon-64.png">
 	
-  <!-- === TKC-VH | Security Header (FINAL • no inline scripts) === -->
+  <!-- === TKC-VH | Security Header === -->
   <meta http-equiv="Content-Security-Policy"
   content="
   default-src 'self';
@@ -31,7 +31,6 @@
   <meta name="robots" content="index,follow" />
   <script src="./legal.js" defer></script>
 
-  <!-- Page-only micro refinements (legal.css stays unchanged) -->
   <style>
     /* Make all card titles single-line + elegant */
     .gate h3{
@@ -81,7 +80,6 @@
       margin-bottom: 10px;
     }
 
-    /* Small label rows */
     .kv{
       display:flex;
       flex-wrap:wrap;
@@ -104,7 +102,6 @@
       color: rgba(255,240,210,.95);
     }
 
-    /* Optional: tighten bottom signature */
     .sigline{
       text-align:center;
       margin-top: 16px;
@@ -112,12 +109,39 @@
     }
   
     /* =========================================================
-       TKC-VH ROYAL SEARCH ENGINE (GitHub Integration)
+       TKC-VH NO-LOGIN SEARCH ENGINE & DIRECT FILE NAVIGATION
        ========================================================= */
     .royal-search-section {
-      margin: 20px auto;
+      margin: 24px auto;
       max-width: 680px;
-      position: relative;
+      text-align: center;
+    }
+
+    .royal-btn-direct {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 24px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(255, 211, 119, 0.25), rgba(212, 175, 55, 0.15));
+      border: 1px solid rgba(255, 211, 119, 0.5);
+      border-radius: 50px;
+      color: rgba(255, 245, 220, 0.98);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 211, 119, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .royal-btn-direct:hover {
+      background: rgba(255, 211, 119, 0.35);
+      border-color: rgba(255, 215, 0, 0.9);
+      box-shadow: 0 0 25px rgba(255, 211, 119, 0.4);
+      transform: translateY(-2px);
     }
 
     .royal-search-box {
@@ -177,7 +201,6 @@
       background: rgba(255, 211, 119, 0.4);
       border-color: rgba(255, 215, 0, 0.8);
       color: #fff;
-      box-shadow: 0 0 10px rgba(255, 211, 119, 0.4);
     }
   </style>
 </head>
@@ -227,13 +250,13 @@
 
         <!-- Compact hero -->
         <div class="hero-mini">
-          <h1>SHA-256 & PUBLIC GPG KEY  </h1>
+          <h1>SHA-256 & PUBLIC GPG KEY</h1>
           <div class="subtitle">
             Cổng Xác Thực Cho <span class="pill">SHA-256</span> &amp; Chữ Ký Số <span class="pill">GPG/PGP</span>
           </div>
         </div>
 
-        <!-- Keep nav (same class names to match legal.css) -->
+        <!-- Navigation -->
         <nav aria-label="TKC-VH Legal Navigation">
           <div class="tabs" role="navigation">
             <a class="tab" href="../index.html">Trang Chủ</a>
@@ -254,7 +277,7 @@
         <hr />
 
         <!-- ===============================
-             AUTHENTICITY CERTIFICATES (CARDS)
+             AUTHENTICITY CERTIFICATES
         ================================ -->
         <section id="auth-certificates" aria-label="Authenticity Certificates">
           <h2 class="gold-title" style="text-align:center; font-size: 18px; letter-spacing:.08em;">
@@ -310,7 +333,7 @@
         <div class="rowline"></div>
 
         <!-- ===============================
-             TECHNICAL (COLLAPSIBLE)
+             TECHNICAL DETAILS
         ================================ -->
         <section class="tech" aria-label="Technical GPG Key Details">
           <details>
@@ -374,10 +397,6 @@ dLeMvakWtK4tL0phjqh9hX3wGJ7qcrT+FpM25WXu
 =NrRO
 -----END PGP PUBLIC KEY BLOCK-----
 </pre>
-
-            <p class="mini" style="margin:10px 6px 2px; text-align:center;">
-              Authoritative public keys, signed statements, and verification references are published only via this website and the author’s official repositories.
-            </p>
           </details>
         </section>
 
@@ -412,22 +431,23 @@ dLeMvakWtK4tL0phjqh9hX3wGJ7qcrT+FpM25WXu
         </section>
 
         <!-- ===============================
-     TKC-VH ROYAL SEARCH ENGINE (Sửa lại đường dẫn chuẩn Code)
-================================ -->
-<section class="royal-search-section" aria-label="Tra cứu chữ ký số & SHA-256">
-  <form action="https://github.com/tkc-vh/tkc-vh.github.io/search" method="get" target="_blank" class="royal-search-box">
-    <span class="royal-search-icon">⚜︎</span>
-    
-    <!-- Giá trị ẩn bắt buộc GitHub phải tìm trong CODE chứ không tìm trong Issues -->
-    <input type="hidden" name="type" value="code" />
-    
-    <input type="text" name="q" class="royal-search-input" 
-           placeholder="Nhập tên tệp chữ ký số (ví dụ: TKCVH2025-C44-VI_V2.epub.sig, TKCVH2025-C44-VI_V2.pdf)..." 
-           required autocomplete="off" />
-    <button type="submit" class="royal-search-btn">Tìm Kiếm</button>
-  </form>
-</section>
+             TKC-VH DIRECT SEARCH & GO TO FILE (NO LOGIN REQUIRED)
+        ================================ -->
+        <section class="royal-search-section" aria-label="Tra cứu chữ ký số & SHA-256">
+          
+          <!-- Lựa chọn 1: Mở thẳng trình Go To File trên GitHub không cần đăng nhập -->
+          <a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets" target="_blank" rel="noopener" class="royal-btn-direct">
+            <span>⚜︎ Mở Cây Tìm File Trên GitHub (Không Cần Đăng Nhập)</span>
+          </a>
 
+          <!-- Lựa chọn 2: Đi thẳng vào kho thư mục theo năm -->
+          <form action="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets" method="get" target="_blank" class="royal-search-box">
+            <span class="royal-search-icon">🔍</span>
+            <input type="text" class="royal-search-input" placeholder="Mở nhanh thư mục tệp (Ví dụ gõ: TKC-VH{2025} hoặc TKC-VH{2026})..." required readonly onclick="window.open('https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets', '_blank')" />
+            <button type="button" class="royal-search-btn" onclick="window.open('https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets', '_blank')">Duyệt File</button>
+          </form>
+
+        </section>
 
         <div class="sigline">
           <div class="footer">“Dấu Vân Tay Là Lời Thề - Chữ Ký Là Lời Chứng.”
