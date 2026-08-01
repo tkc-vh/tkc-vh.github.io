@@ -240,8 +240,6 @@
   
   </style>
 
-<!-- Lunr.js cho tính năng tìm kiếm nội bộ -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" defer></script>
 
 
 </head>
@@ -530,99 +528,39 @@ target="_blank" rel="noopener">
     </div><!-- /card -->
   </div><!-- /page -->
 
+  <!-- ===============================
+             TKC-VH ROYAL SEARCH ENGINE (GitHub Integration)
+        ================================ -->
+        <section class="royal-search-section" aria-label="Tra cứu chữ ký số & SHA-256">
+          <form id="tkcGithubSearchForm" class="royal-search-box">
+            <span class="royal-search-icon">⚜︎</span>
+            <input type="text" id="tkcSearchInput" class="royal-search-input" 
+                   placeholder="Nhập tên tệp chữ ký số (ví dụ: C44, pdf.sig, SHA256)..." 
+                   required autocomplete="off" />
+            <button type="submit" class="royal-search-btn">Tìm Kiếm</button>
+          </form>
+        </section>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // 1. Kho dữ liệu mẫu Chữ Ký Số & Mã SHA-256 (Bạn có thể bổ sung thêm danh sách tệp)
-      const documentsData = [
-        {
-          id: "T19C1",
-          title: "T19C1 — Certificate | Chứng Thư",
-          file: "T19-SHA-256.html",
-          sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-          url: "https://tkc-vh.github.io/t19/T19-SHA-256.html"
-        },
-        {
-          id: "T35C1",
-          title: "T35C1 — Certificate | Chứng Thư",
-          file: "T35-SHA-256.html",
-          sha256: "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
-          url: "https://tkc-vh.github.io/t35/T35-SHA-256.html"
-        },
-        {
-          id: "T42C2",
-          title: "T42C2 — Certificate | Chứng Thư",
-          file: "T42-SHA-256.html",
-          sha256: "811c9dc5ebd14811f18172960628e9323da76231a47df607d7c1817e923e13d3",
-          url: "https://tkc-vh.github.io/t42/T42-SHA-256.html"
-        },
-        {
-          id: "Cosmic_Heart",
-          title: "Cosmic Heart Alchemy Digital Signature",
-          file: "Cosmic_Heart_Alchemy.pdf.sig",
-          sha256: "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
-          url: "https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2025}"
-        },
-        {
-          id: "Song_Tam_Kim_Cuong",
-          title: "Song Tâm Kim Cương Digital Signature",
-          file: "Song_Tam_Kim_Cuong.pdf.sig",
-          sha256: "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
-          url: "https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2025}"
-        }
-      ];
-
-      // 2. Khởi tạo chỉ mục Lunr.js
-      let idx = lunr(function () {
-        this.ref('id');
-        this.field('title');
-        this.field('file');
-        this.field('sha256');
-
-        documentsData.forEach(function (doc) {
-          this.add(doc);
-        }, this);
-      });
-
-      // 3. Xử lý sự kiện tìm kiếm
+      const searchForm = document.getElementById('tkcGithubSearchForm');
       const searchInput = document.getElementById('tkcSearchInput');
-      const searchBtn = document.getElementById('tkcSearchBtn');
-      const resultsContainer = document.getElementById('tkcSearchResults');
 
-      function performSearch() {
+      // Tên Repository GitHub của bạn
+      const repoPath = "tkc-vh/tkc-vh.github.io";
+
+      searchForm.addEventListener('submit', function (e) {
+        e.preventDefault(); // Ngăn trang reload
         const query = searchInput.value.trim();
-        resultsContainer.innerHTML = '';
 
-        if (!query) return;
-
-        // Tìm kiếm linh hoạt với wildcard (*)
-        const results = idx.search(`*${query}*`);
-
-        if (results.length === 0) {
-          resultsContainer.innerHTML = '<div class="royal-no-result">Không tìm thấy mã SHA-256 hoặc tệp tương ứng trong kho lưu trữ...</div>';
-          return;
+        if (query) {
+          // Chuyển hướng trực tiếp tới giao diện Search/Go to file của GitHub Repository
+          const githubSearchUrl = `https://github.com/${repoPath}/search?q=${encodeURIComponent(query)}`;
+          
+          // Mở kết quả tìm kiếm trong tab mới
+          window.open(githubSearchUrl, '_blank', 'noopener');
         }
-
-        results.forEach(result => {
-          const item = documentsData.find(d => d.id === result.ref);
-          if (item) {
-            const html = `
-              <a class="royal-result-item" href="${item.url}" target="_blank" rel="noopener">
-                <div class="royal-result-title">
-                  <span>⚜︎ ${item.title}</span>
-                  <span class="pill" style="font-size:11px;">Mở Tệp</span>
-                </div>
-                <div style="font-size: 12px; color: rgba(255,211,119,0.8);">Tệp: <i>${item.file}</i></div>
-                <div class="royal-result-hash">SHA-256: ${item.sha256}</div>
-              </a>
-            `;
-            resultsContainer.innerHTML += html;
-          }
-        });
-      }
-
-      // Lắng nghe sự kiện gõ phím & bấm nút
-      searchInput.addEventListener('input', performSearch);
-      searchBtn.addEventListener('click', performSearch);
+      });
     });
   </script>
 
