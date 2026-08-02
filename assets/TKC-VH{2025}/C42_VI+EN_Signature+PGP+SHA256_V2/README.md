@@ -18,8 +18,8 @@
 | :--- | :--- |
 | **Author** | Tran Khac Cuong *(Pen name: TKC-VH)* |
 | **Signer** | Tran Khac Cuong *(Pen name: TKC-VH)* |
-| **Effective Date** | 02 AUgust 2026 |
-| **Signing Date** | 02 AUgust 2026 |
+| **Effective Date** | 02 August 2026 |
+| **Signing Date** | 02 August 2026 |
 
 ---
 
@@ -88,31 +88,31 @@ This directory is publicly hosted on GitHub. The GitHub commit history serves as
 | File Name | Fingerprint (SHA-256) |
 | :--- | :--- |
 | `Orion_Grimoire.pdf` | `439c50c79d2f757adb7919864c928d8e4d445913ff0a02cde987421bad675fbc` |
-| `Orion_Grimoire.pdf.sig` | `6165964f29b3e8193bb09f14506dc5803d5277328f77eb4a19bd32d86c098b7a` |
+| `Orion_Grimoire.pdf.sig` | `8a256327a9640728012a111c17807b0a4de0766ecf1630240b74fa40dcb3ec8e` |
 | `Orion_Grimoire.pptx` | `e8bd4f4e40f76b6b67334c16026dd3d10f9e713039ae7fc9119ebdf65b6256f7` |
-| `Orion_Grimoire.pptx.sig` | `4baaf85e7b73330332034091a05ef11172352cb19c2ee18a2dacbeb4e369ea09` |
+| `Orion_Grimoire.pptx.sig` | `356d5dcf9368282edf6ce3565b527515295bad9e217b4c7ae3031e26edacd4d1` |
 | `Orion_Luminous_Scroll.pdf` | `2fd012ca76eea0e58c30739f0a9bbb45de5e30c2eef18c7c37a45e35c035296a` |
-| `Orion_Luminous_Scroll.pdf.sig` | `2d4a35f92733887327ac2453f3cd4ee108665af7236c440ab642397556115711` |
+| `Orion_Luminous_Scroll.pdf.sig` | `d87605c2f0f790be38d011f5bfbcae13bec0bd83e0b099cfbb753069433ac1b7` |
 | `Orion_Luminous_Scroll.pptx` | `0418607db0027bc4ca1409e9fa4922ba5db4bbd8b416ad3ec1189269c3b72c9b` |
-| `Orion_Luminous_Scroll.pptx.sig` | `44a28de02d71f68662d340f97100bcda078d657767ab943f930e96f47df7833e` |
-| `SHA256_Fingerprints.txt` | `ec9907223ad89215017770732b6cce066c6cb6cf035237c38702f41b3c9126f8` |
+| `Orion_Luminous_Scroll.pptx.sig` | `9c7c332ea99d48eda03c1bb217c718a320a88beb66df901d10a1f23285a7392b` |
+| `SHA256_Fingerprints.txt` | `3ffcc4706c83e9ddca06404d0bb1c9c7887b193528f8cd2baee3e19fae25bdce` |
 | `TKCVH2025-C42-Corver_EN.jpg` | `b0b9bf78e98bbd547d08dd993b51e8bdc71af7c08c5952fd2ec178de45953189` |
-| `TKCVH2025-C42-Corver_EN.jpg.sig` | `a2c5e8ee66dbade4eb2bbf010a040346903b9c9dc2f8818ba4fd7139bf8a086b` |
+| `TKCVH2025-C42-Corver_EN.jpg.sig` | `1664628100d92f88b3ec48205d59b5d8a24ffe34ef739fd1e77ed703fb19dc0a` |
 | `TKCVH2025-C42-Corver_EN.psd` | `532bf315474ce078ca3a853382f2f83282b528a0c1754f72145d2aa98ce7c1a1` |
-| `TKCVH2025-C42-Corver_EN.psd.sig` | `9509d5d9851d3cce160075a5d22314d92d825f7b1a3f2daf48cdc35abdadee88` |
+| `TKCVH2025-C42-Corver_EN.psd.sig` | `b3ebf67a479809db3dd9b22ff6be7e0c605137fc18c663cb7bd18f116ac0e5d2` |
 | `TKCVH2025-C42-Corver_EN_APLE.jpg` | `d55815a133b85f447faa188a0f63a100970f46ce287c7fd56e691c9bc0d18f2a` |
-| `TKCVH2025-C42-Corver_EN_APLE.jpg.sig` | `90aa7bc1146bbe7505527a888a2f68dc96426c6aaf47e4f813fb978710258359` |
+| `TKCVH2025-C42-Corver_EN_APLE.jpg.sig` | `a9e5b7feff7fdb5c70a0520b307091a2a8a2a8912dcaa8d9e04d2babdcfc8d3b` |
 | `TKCVH2025-C42-EN.epub` | `3134a149999af39c7ff48fd97475593882e781aa20bd48b564e26d247ec6f366` |
-| `TKCVH2025-C42-EN.epub.sig` | `9e4fc1b1584d89b6f68180e31b2ee071288cff3b7396f872f4aeb73460b26963` |
+| `TKCVH2025-C42-EN.epub.sig` | `528e033429a02716933b5c6000a8c342c1952cbd6d33fcd59b24913fd85513ee` |
 | `TKCVH2025-C42-EN.pdf` | `adbe2191b6724a02fbbaf86e6ae2a9e7856a7713809c0783b785354f8e0ef21c` |
-| `TKCVH2025-C42-EN.pdf.sig` | `e4b365feb9ddb8d83a14d6a8ef96c4ee5f3e26b23b3dbd657fac901e67ea7445` |
+| `TKCVH2025-C42-EN.pdf.sig` | `bfbe9fc06f3b4b368d731e925a12a2ad950d8db05fa0d58f18e83166ffc88d05` |
 | `TKCVH2025-C42-EN_KDP.pdf` | `5b1787b96a7cf2902fbcf631da220cab616c10f2bf9de0504eb675add31ebda1` |
-| `TKCVH2025-C42-EN_KDP.pdf.sig` | `cd3c556b417544a91f3030ceedaff7f31d7aeb62210bfd3f3b6d268342401683` |
-| `TKCVH2025-C42-VI_V2.epub` | `b1d44ac22523e687a82d54defda092c4e446dfa6e0f97b7cdb8a20148d232043` |
-| `TKCVH2025-C42-VI_V2.epub.sig` | `33321a998a9c74c378312e1fb26e528623624432b7db5f564735339b653bdc63` |
+| `TKCVH2025-C42-EN_KDP.pdf.sig` | `b0b45a4ca0e8aaae17b4c0a6f61a0fe9c11a5fc6663ef8aaa46e476aae238c84` |
+| `TKCVH2025-C42-VI_V2.epub` | `18031524c0639467555c14f7d8e73a48242cc6c8db7e2746d85547d24204f280` |
+| `TKCVH2025-C42-VI_V2.epub.sig` | `8aaa92c923e5d928eb2a334eedd67c647174f35d3a3d4fe9e8d40f0de881f025` |
 | `TKCVH2025-C42-VI_V2.pdf` | `033158c6678490ecbfbce334366944b2f17ff77c0f0f8fb2d768f54545efbaa5` |
-| `TKCVH2025-C42-VI_V2.pdf.sig` | `bc2d1212ba4750e0fb2508f1319198aea8ad65b2ae460e9c6cabda64eb62a850` |
+| `TKCVH2025-C42-VI_V2.pdf.sig` | `4f3113a8970e21c9ce5fe79a3d280483338e31d20d4ca7cc3aed3c049964803a` |
 | `_ TKC_VH {C42, Sep2025} Soai Ham Orion TKC - TRAN KHAC CUONG.txt` | `9c2f722d5f7059ce3b84459ee2e74990ef960a930a28b129cf04dbf67431f287` |
-| `_ TKC_VH {C42, Sep2025} Soai Ham Orion TKC - TRAN KHAC CUONG.txt.sig` | `d9e4d4dc42f2a03c5eaa4cccbd98ed184dcc39f1e43b51b3234ea9dab1362f70` |
-| `_ TKC_VH {C42, Sep2025} The Flagship Orion - Tran Khac Cuong.txt` | `d31429faa8ca4c1a583adde1cfcca536594b27a553ab9250d695c32f207b81ac` |
-| `_ TKC_VH {C42, Sep2025} The Flagship Orion - Tran Khac Cuong.txt.sig` | `f582b00cfaa50f3432f5a7ad14aea0340db5e09352fba31660c994045bffbee0` |
+| `_ TKC_VH {C42, Sep2025} Soai Ham Orion TKC - TRAN KHAC CUONG.txt.sig` | `7568905ad9c0a6084908b4c0d51ecf11e9ba6449013084db5fe2e8bb57b5621a` |
+| `_ TKC_VH {C42, Sep2025} The Flagship Orion - Tran Khac Cuong.txt` | `13d78d657c95a2845e21ba57e48a6f737403ff93afc82558b45974471b8cdd3a` |
+| `_ TKC_VH {C42, Sep2025} The Flagship Orion - Tran Khac Cuong.txt.sig` | `eb7bdb365ccd9fc2bf7483db5d80752ac9ca6cf5617dfa0e511cc8e82f7de2fc` |
