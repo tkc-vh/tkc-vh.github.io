@@ -18,8 +18,8 @@
 | :--- | :--- |
 | **Author** | Tran Khac Cuong *(Pen name: TKC-VH)* |
 | **Signer** | Tran Khac Cuong *(Pen name: TKC-VH)* |
-| **Effective Date** | 05 August 2026 |
-| **Signing Date** | 05s August 2026 |
+| **Effective Date** | 06 August 2026 |
+| **Signing Date** | 06 August 2026 |
 
 ---
 
@@ -87,32 +87,36 @@ This directory is publicly hosted on GitHub. The GitHub commit history serves as
 
 | File Name | Fingerprint (SHA-256) |
 | :--- | :--- |
-| `SHA256_Fingerprints.txt` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
+| `CoverKDP.jpg` | `7c3ba1714d85e234aa94e3771a085d87069adcc2701a25da765734087cae236e` |
+| `CoverKDP.jpg.sig` | `64066fc5154f8778851e94c9694f0d61df533b9b8f525453a8c4f9296d275d55` |
+| `CoverKDP.psd` | `20517bc385f0ef7ab13d72ce2fd138005706dadefab9763c4725e48e31acaa85` |
+| `CoverKDP.psd.sig` | `2621ae21bc246fa14854c5504e7cddab934f3400f33c9bbfefa2217ea67c2980` |
+| `SHA256_Fingerprints.txt` | `b9052741386a219f844169ebe8b957c7d61dc34ed3407ffdc2b8783bf516320b` |
 | `TKCCVH2025-C36-COVER-EN_APle.jpg` | `a0b32b974a03ea42bf36d73044f5ed8e9c8f099b13209d7d5d3480bc2c6f1742` |
-| `TKCCVH2025-C36-COVER-EN_APle.jpg.sig` | `62a94a5cd71fc0620074220d12a98b1a453d63b2338aae5347047a82dd67b5c6` |
+| `TKCCVH2025-C36-COVER-EN_APle.jpg.sig` | `9458bca7285beca4165f6caa70d02bb19536159a232557b54b9f9be9395c9089` |
 | `TKCCVH2025-C36-COVER-En.jpg` | `8aec3637747823a2cfc694cbccd81fe54d003d880d829925e5187791175a77ed` |
-| `TKCCVH2025-C36-COVER-En.jpg.sig` | `c7bba6a846116eb8f839c6c3805ff988a01956fdf2cd89f8858b66ffafb5f03b` |
+| `TKCCVH2025-C36-COVER-En.jpg.sig` | `9dce97d93dc5cbd785e1558f1cf98a81fd8ae4de723da35860ad960e9b095894` |
 | `TKCCVH2025-C36-COVER-En.psd` | `20517bc385f0ef7ab13d72ce2fd138005706dadefab9763c4725e48e31acaa85` |
-| `TKCCVH2025-C36-COVER-En.psd.sig` | `da6f2e1b31d5a473ccef6c23a9b644443be90e2efd45ce3ed6da8ade8fec86ee` |
-| `TKCVH2025-C36-EN.epub` | `0a6456ea3772e9acaf73bf32fcc4581a92e98c5fc2111225e8ee10bb5ab3e29e` |
-| `TKCVH2025-C36-EN.epub.sig` | `ecb0e259248636e98cb676656c308c65983ef625e5e0de75ba4448d472855028` |
+| `TKCCVH2025-C36-COVER-En.psd.sig` | `41e429eafa741328b83c8aeef2ac0f8ae4e649504f8d912931115c225a138482` |
+| `TKCVH2025-C36-EN.epub` | `4ac493b9291cbb8dcc469ef077d997e75d00d203144f1b02f93b9fb04c5bf65f` |
+| `TKCVH2025-C36-EN.epub.sig` | `0519b200fce6895ce225764d80dc19720c92aa943ff5ac783a5251b58ea14b47` |
 | `TKCVH2025-C36-EN.pdf` | `f14f9eb334ce0c9dd02973d456f884d42a8ae9c766798da1fda9a86be4056149` |
-| `TKCVH2025-C36-EN.pdf.sig` | `0a61264c0825990227ae8be9e5f4d1a2e7c432da37d27c389a7288a80a2ba0c3` |
-| `TKCVH2025-C36-EN.txt` | `e5daaa34d415edf4db82ce4da73a1f3bbc39b71d1b8f1bb4c960677f80f147ba` |
-| `TKCVH2025-C36-EN.txt.sig` | `b56a8970c5920fc64d6fb6a0d9095c6d7c6d5342814b895f58cf6bf30ab13c7f` |
+| `TKCVH2025-C36-EN.pdf.sig` | `0e0acf749b439ec7e159575385d4668f4a29c4976a00876b8ec013f7f0122dc9` |
+| `TKCVH2025-C36-EN.txt` | `b73cddbd9f2de12357bd7b1c9fd89f4769a2c933e9f8ea1e614fc54210a1ca46` |
+| `TKCVH2025-C36-EN.txt.sig` | `76be364cd809d7dc894b1b350659830bea16fb4d12d0a8362973d95031bfa6c5` |
 | `TKCVH2025-C36-EN_KDP.pdf` | `6f7906e44e4bacca9540692f9a9385d101dab8a75658b9d862ffafa295f8562e` |
-| `TKCVH2025-C36-EN_KDP.pdf.sig` | `78dd5e10966920928f3ef10a67b8a17e7d7419f02be79f1c42dd720d45fa2e68` |
+| `TKCVH2025-C36-EN_KDP.pdf.sig` | `77c2b8e0fffda8c211ba718de39d532afdc0220713693f42bb0f554058596d73` |
 | `TKCVH2025-C36-VI_V2.epub` | `53088a3638e0d9f7c79f064196fa7d9573e8e907f1426a2d57368eda2cd6d93d` |
-| `TKCVH2025-C36-VI_V2.epub.sig` | `a5795e62ec60340361715ef88ab3611559b0a01d34ab89d50f2cca36655a191a` |
+| `TKCVH2025-C36-VI_V2.epub.sig` | `310e3d8dae6d3e6a470ad8354ac28381dcf77f08a71a2c8aa435afc71a09ab6d` |
 | `TKCVH2025-C36-VI_V2.pdf` | `b9f03c71448671c1c84254f7b79266dbd65cb046b3a496f55b86f747c46b1ba4` |
-| `TKCVH2025-C36-VI_V2.pdf.sig` | `87dbc4f2cae859fe9133a898adc3bea024f778a1a6c1abddb4047294adbeeba5` |
+| `TKCVH2025-C36-VI_V2.pdf.sig` | `f9d9356749b03f624b9f42cc4a1862dd6c09552be436d5a947e84a23011d0771` |
 | `TKCVH2025-C36-VI_V2.txt` | `8372f579e4e455ea29a92161be9510e062d1843d5e1cb434bfcf7c41f118edfa` |
-| `TKCVH2025-C36-VI_V2.txt.sig` | `bf0cd70194111790aed9ad40f322f414ea7719c9c81277073cb90a3e0e5acaf1` |
+| `TKCVH2025-C36-VI_V2.txt.sig` | `d0caa247a5fec86b195e5e62384956acb28d6f4091037a61c3d937120b325975` |
 | `The_Diamond_Silk_Symphony.pdf` | `a2ccb2b2b396fa114338b22727a42ca4e594aafc426bab5c96df0dc132525f1c` |
-| `The_Diamond_Silk_Symphony.pdf.sig` | `efe6057628085ec47ddf38bd982fb5f84ed43f9718c5b836574847d293a43aee` |
+| `The_Diamond_Silk_Symphony.pdf.sig` | `be2271ccae70179fc9d7c2e402b41209950f8bbc5072aee2688456cc5b48d715` |
 | `The_Diamond_Silk_Symphony.pptx` | `2bd99b2aadeefaf3125e9b163b80f62070f0a397bb07f89684640f80fcf5342e` |
-| `The_Diamond_Silk_Symphony.pptx.sig` | `0414ac0f2ce657f97d6cce4c6f1e0c96552e71d1c9269913c0cab437c4661e33` |
+| `The_Diamond_Silk_Symphony.pptx.sig` | `02734909057de327292b3fd8a7ae39ea98839e18510fd95d478012aa004605a9` |
 | `Twin_Heart_Alchemy.pdf` | `0891838974f86eb9a8bb6f71f08e95b7009dab5ecd2fcbeab0e9944587b886e5` |
-| `Twin_Heart_Alchemy.pdf.sig` | `6ba2aedb16787e7435b4fa9c3bd8b12945c649bea5abb7625966f3c621565ac9` |
+| `Twin_Heart_Alchemy.pdf.sig` | `8368a54b3272d4de5d82ec3dc763a9cd2feeb77ec24f9dc25f58be490104e3f3` |
 | `Twin_Heart_Alchemy.pptx` | `ca0e49ec2c443c183b186e493f35e4e413daf8c774b8dc2dd414311bf843cf99` |
-| `Twin_Heart_Alchemy.pptx.sig` | `550c1da1f802bc48eaf338dec8d47530dc586c88b1bf0a61a6595b984a6f8672` |
+| `Twin_Heart_Alchemy.pptx.sig` | `12ebe7e31ed95432a854b4530eda9d465b7b3aeca41399a7bf9718cf88393be5` |
