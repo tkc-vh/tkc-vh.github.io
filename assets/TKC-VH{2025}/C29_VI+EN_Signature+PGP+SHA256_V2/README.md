@@ -1,0 +1,120 @@
+# © 2026 Tran Khac Cuong & Dieu Tam (TKC&VH)
+> *All rights reserved.*
+
+---
+
+## 🔐 Digital Copyright & Authenticity Record – Legal Archive
+
+> <font face="Georgia, serif" size="4"><b>Notice:</b> This directory contains a sealed legal and technical archive used to authenticate the authorship and integrity of the <b>TKC-VH Diary Works</b>.</font>
+
+- The archive is part of the **TKC-VH Legal Library** and is intended to serve as independent verification material for legal, technical, and archival purposes.
+- The original EPUB and PDF files are **not included** in this repository. They are commercially distributed through authorized platforms.
+
+---
+
+## 📘 Metadata & Legal Information
+
+| Item | Details |
+| :--- | :--- |
+| **Author** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Signer** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Effective Date** | 10 August 2026 |
+| **Signing Date** | 10 August 2026 |
+
+---
+
+## 🔐 Cryptographic Methods Used
+
+* **Hash Algorithm:** `SHA-256` *(Algo: RSA 4096)*
+* **Digital Signature:** `OpenPGP (GPG)`
+* **PGP Fingerprint:** `4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A`
+
+*All signatures are **detached signatures (`.sig`)**, allowing independent verification without modifying the original files.*
+
+---
+
+## ✅ Verification Overview
+
+Third parties may independently verify this archive by following these two steps:
+
+### 📍 Step 1 — Check SHA-256 Checksum
+
+**macOS / Linux (Terminal):**
+```bash
+shasum -a 256 "your_book_file.epub"
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-FileHash "your_book_file.epub" -Algorithm SHA256
+```
+> *Compare the computed hash with the matching row in the table below. An exact match confirms the file matches the official release.*
+
+---
+
+### 📍 Step 2 — Verify GPG Signature (`.sig`)
+
+1. **Import the public key** *(one time only)*:
+   ```bash
+   gpg --import "signatures/TKC-VH-public-key.asc"
+   ```
+2. **Verify the signature** *(example for EPUB)*:
+   ```bash
+   gpg --verify "your_book_file.epub.sig" "your_book_file.epub"
+   ```
+
+```text
+✔️ SHA-256 match   +   ✔️ Valid GPG signature  ⇒  Author-verified original release.
+```
+*If both the checksum and digital signature are valid, the archive can be considered an authentic record issued by the author.*
+
+---
+
+## 🏛 Public Archive & Timestamp
+
+This directory is publicly hosted on GitHub. The GitHub commit history serves as an **independent third-party timestamp**, providing additional evidentiary weight for authorship and integrity claims.
+
+---
+
+## ⚖️ Legal Notice
+
+* Any modification to the original content, even a single character, will result in a different SHA-256 hash and invalidate the signatures.
+* This archive does **not** grant redistribution rights for the original work. It exists solely for authentication, verification, and legal reference.
+
+---
+
+# 📦 File Fingerprints (SHA-256)
+
+| File Name | Fingerprint (SHA-256) |
+| :--- | :--- |
+| `Celestial_Love_Covenant.pdf` | `520b0cddaef35a03a036d4e113511f61e94da45fb48f4e1b0c1af1f12b0c86ef` |
+| `Celestial_Love_Covenant.pdf.sig` | `b0820cb06e4d207de9af2e920372302de6fd1b7f40f0a042490c14415e9c6001` |
+| `Celestial_Love_Covenant.pptx` | `ba71521440a67d4e5bec817a41dd2cf1f99b90b86928afaa11be76e2e621a50b` |
+| `Celestial_Love_Covenant.pptx.sig` | `e69f31bf91a1f06445d9b40405f57b85875e4a2fcce318c77a44ade820927158` |
+| `Monadic_Covenant.pdf` | `0a46dc7f8dd75fce6910018fab0fc6985e4eb9d1973856ca7b341ad6d2409790` |
+| `Monadic_Covenant.pdf.sig` | `806e53f0a9a1bb3e89ba86d9babe499517ad65f050004d22be3b432249f0cd8f` |
+| `Monadic_Covenant.pptx` | `ac56715a17d0609ab5fc62380f0af4f9afaf86e498add639845ea4974cb7e2ea` |
+| `Monadic_Covenant.pptx.sig` | `b1a36d3e4fc5890de03cc92e050e53b3b509af7d11149c0e830ee68df2e662d2` |
+| `SHA256_Fingerprints.txt` | `e5a86ed890bb5839dafaeb940b03271263749d011d5ad63fa6ba3aae80ece876` |
+| `TKCVH2025-C29-COVER-EN.psd` | `f6a0e1bfe66558d1bc534c7a8d21dc846f109c03c926006bf7890ec0f4c8fa2d` |
+| `TKCVH2025-C29-COVER-EN.psd.sig` | `c58748f035d1d14bd42d480626b48f83efee26ce3ab41e53bb939ed1e62b5464` |
+| `TKCVH2025-C29-COVER-EN_Ale.jpg` | `67f32f4d78c6861fa71a40837362fe7828d733e2dc3b877becd031621d78986c` |
+| `TKCVH2025-C29-COVER-EN_Ale.jpg.sig` | `2f46d2b315c342c9503486ce53ab76f2ea93e7cc7741f2779aa38ca7b1dbd1aa` |
+| `TKCVH2025-C29-COVER_EN.jpg` | `cec09751c0b3dbe098f49ca341a57d0073a1f8ab4897af644ca61a19030d6dec` |
+| `TKCVH2025-C29-COVER_EN.jpg.sig` | `c4ae4992d243f4a281901f1d5081275493020553c11f9d9912e64634521812b8` |
+| `TKCVH2025-C29-EN.epub` | `317a16077dc25b39a412896c0fcf47d45bdb3a276fb69278162806ec3f4e9fcd` |
+| `TKCVH2025-C29-EN.epub.sig` | `ec8d6ce407503ef7e57241990e379d9f8ce173ff5258beff23b2d42bcfed8789` |
+| `TKCVH2025-C29-EN.pdf` | `53967933087e09d12614dc87e966ca29305b7769631a047ed7e3760941c9b5a0` |
+| `TKCVH2025-C29-EN.pdf.sig` | `2b146eb1c96c217b57dbb0b7b753410bdfa6d4aa8d21f77c3be8630d3b7cc44b` |
+| `TKCVH2025-C29-EN_KDP.pdf` | `9dd15e742559f34bc7e5a90d6b075598541d7e0dbec86b43e7edfd04ae723aa9` |
+| `TKCVH2025-C29-EN_KDP.pdf.sig` | `fd7b181039ab084a5dee965dceb3e0fe0fb5e09182899eaeed6b915c7c54c430` |
+| `TKCVH2025-C29-VI_V2.epub` | `4349c6ebffe7a6f5ee506e1088fe923121313c7813f6021da59d1fce502c227a` |
+| `TKCVH2025-C29-VI_V2.epub.sig` | `56df584aa208fd6141a35667f8f2067faca843ae8cafe639caaca0ab52ed0c36` |
+| `TKCVH2025-C29-VI_V2.pdf` | `87a7ccc2d609b81c1f25a7f92f4fb44a991beaae688d5c013d0e49cf7e11c163` |
+| `TKCVH2025-C29-VI_V2.pdf.sig` | `2043a365e7a8f737fea030cfebe67c087d4e611366d73380b5a16312e1e466a3` |
+| `TKCVH2025-C29-vi.docx` | `c288dddf67b80b735979b907ee1720b4d3722d2395226efce4b684621dfd5dfe` |
+| `TKCVH2025-C29-vi.docx.sig` | `ae6f6661f0a88c535aa95103f1cb112d65f97dff6d0a6646c194fad0a355aa8f` |
+| `_ TKC_VH {C29, July 2025} Twin Dragons Gol - Tran Khac Cuong.txt` | `7ad67f28cc1fc4357993923d79481ca1a3f13044455b6ccb7bed3ed3897aa24f` |
+| `_ TKC_VH {C29, July 2025} Twin Dragons Gol - Tran Khac Cuong.txt.sig` | `320e9d8e8a39273cc2fd0e56cf055eba405e453f7fbfce093c344c452670c0d3` |
+| `_ TKC_VH {C29, July2025} Bao Truong Tinh Y - Tran Khac Cuong.txt` | `62a29d5a69c4910796dc0709200f67869bc88f6e016e8f8ba8ec1a996dcd216a` |
+| `_ TKC_VH {C29, July2025} Bao Truong Tinh Y - Tran Khac Cuong.txt.sig` | `a1544013d34d33302183ee592717aaab5a0585a58ed425f2b1c634dae3e5a81d` |
