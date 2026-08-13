@@ -1,0 +1,124 @@
+# © 2026 Tran Khac Cuong & Dieu Tam (TKC&VH)
+> *All rights reserved.*
+
+---
+
+## 🔐 Digital Copyright & Authenticity Record – Legal Archive
+
+> <font face="Georgia, serif" size="4"><b>Notice:</b> This directory contains a sealed legal and technical archive used to authenticate the authorship and integrity of the <b>TKC-VH Diary Works</b>.</font>
+
+- The archive is part of the **TKC-VH Legal Library** and is intended to serve as independent verification material for legal, technical, and archival purposes.
+- The original EPUB and PDF files are **not included** in this repository. They are commercially distributed through authorized platforms.
+
+---
+
+## 📘 Metadata & Legal Information
+
+| Item | Details |
+| :--- | :--- |
+| **Author** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Signer** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Effective Date** | 13 August 2026 |
+| **Signing Date** | 13 August 2026 |
+
+---
+
+## 🔐 Cryptographic Methods Used
+
+* **Hash Algorithm:** `SHA-256` *(Algo: RSA 4096)*
+* **Digital Signature:** `OpenPGP (GPG)`
+* **PGP Fingerprint:** `4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A`
+
+*All signatures are **detached signatures (`.sig`)**, allowing independent verification without modifying the original files.*
+
+---
+
+## ✅ Verification Overview
+
+Third parties may independently verify this archive by following these two steps:
+
+### 📍 Step 1 — Check SHA-256 Checksum
+
+**macOS / Linux (Terminal):**
+```bash
+shasum -a 256 "your_book_file.epub"
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-FileHash "your_book_file.epub" -Algorithm SHA256
+```
+> *Compare the computed hash with the matching row in the table below. An exact match confirms the file matches the official release.*
+
+---
+
+### 📍 Step 2 — Verify GPG Signature (`.sig`)
+
+1. **Import the public key** *(one time only)*:
+   ```bash
+   gpg --import "signatures/TKC-VH-public-key.asc"
+   ```
+2. **Verify the signature** *(example for EPUB)*:
+   ```bash
+   gpg --verify "your_book_file.epub.sig" "your_book_file.epub"
+   ```
+
+```text
+✔️ SHA-256 match   +   ✔️ Valid GPG signature  ⇒  Author-verified original release.
+```
+*If both the checksum and digital signature are valid, the archive can be considered an authentic record issued by the author.*
+
+---
+
+## 🏛 Public Archive & Timestamp
+
+This directory is publicly hosted on GitHub. The GitHub commit history serves as an **independent third-party timestamp**, providing additional evidentiary weight for authorship and integrity claims.
+
+---
+
+## ⚖️ Legal Notice
+
+* Any modification to the original content, even a single character, will result in a different SHA-256 hash and invalidate the signatures.
+* This archive does **not** grant redistribution rights for the original work. It exists solely for authentication, verification, and legal reference.
+
+---
+
+# 📦 File Fingerprints (SHA-256)
+
+| File Name | Fingerprint (SHA-256) |
+| :--- | :--- |
+| `SHA256_Fingerprints.txt` | `13f230752a4bc84e32997705eba6578a59124c39fa9332145111153b11325742` |
+| `TKCVH2025-C26-Corver_EN.jpg` | `e8621a48a3ddaf8a95421a41b8ec22f7a1cb7ed9ab082bcb4986796f2bf7c219` |
+| `TKCVH2025-C26-Corver_EN.jpg.sig` | `917a9af5186a3ece9c1d5a4492dded647d1d1794577b0805461373443d9f1b57` |
+| `TKCVH2025-C26-Corver_EN.psd` | `d544697e5f6d4ef136d1a8754e18cdd091b68a54a12f962932a21dc8c90988b8` |
+| `TKCVH2025-C26-Corver_EN.psd.sig` | `c165fd84004492204927c12b5527ef5498e29bcf39a85718e5484bc86279e49e` |
+| `TKCVH2025-C26-Corver_EN_Aple.jpg` | `7c2b4882b435510c920c6e2937df584bda915032ab3c797796c48ac510b6f10e` |
+| `TKCVH2025-C26-Corver_EN_Aple.jpg.sig` | `2f5ab48e55f4b4a52cb4d201a0d14bd3d0ebe7c0d3fdf33ec82af8b9cce37803` |
+| `TKCVH2025-C26-Corver_vi.jpg` | `4f5291c7ce8cb5f4d2f002488ff10e34cc8b850af7a25813d996c314f415044f` |
+| `TKCVH2025-C26-Corver_vi.jpg.sig` | `ec016b8e84720e4bc5b260ca1e52ba0fa271ef0e5e70ff11f5e01d192a66d333` |
+| `TKCVH2025-C26-Corver_vi.psd` | `bcd0056d89bd6697a62f87ceb7eed7468bcf33ac674be0afb36f67c2ad9a8be6` |
+| `TKCVH2025-C26-Corver_vi.psd.sig` | `665f640cd932e58cb828489a71a37473357e6338e6733cff6d445b74f5dcc4dc` |
+| `TKCVH2025-C26-Corver_vi_V2_Aple.jpg` | `36319a6f1d3a9a4221162b716092c77841a6ea74cf43ac0897778393ee9291ee` |
+| `TKCVH2025-C26-Corver_vi_V2_Aple.jpg.sig` | `7b108e9c2e609acabe9c5ceb44560064cde80312563e1ab1a6634a8dffd76651` |
+| `TKCVH2025-C26-EN.epub` | `57dcf0b019c677a01d9bc124ffa329e930779e4b20c32f424644f5e14e59b34f` |
+| `TKCVH2025-C26-EN.epub.sig` | `28a565ee2be985b6b668098577723bae2973198458bec59243da6f197e3c6d23` |
+| `TKCVH2025-C26-EN.pdf` | `fd9f2a291d43d783ea3d23f23115e1e6ee4b743eaaa34b07ed297a3ef20983a6` |
+| `TKCVH2025-C26-EN.pdf.sig` | `53410df61b9478c2296604fe73c4dd50f4976d2efe5babf4abed5fc9316afbc2` |
+| `TKCVH2025-C26-EN_KDP.pdf` | `4f2b8f13b801f91340c80379f4dad9b9053d0775915a3fe72c2b7e29317f7c22` |
+| `TKCVH2025-C26-EN_KDP.pdf.sig` | `2e72bda3a398e5254d1fdfd19c2649783394a7bac6bf2d999e9c3eb6d81e9ad4` |
+| `TKCVH2025-C26-VI_V2.epub` | `04179d161b9d1b6ccdbfb66b72446083cfcc6c830a698c234b76575cbd2f4e09` |
+| `TKCVH2025-C26-VI_V2.epub.sig` | `cb7a295bc05c348290043a9e1f0d7a8a958b31ffc7a30133bb806cf0d88cf504` |
+| `TKCVH2025-C26-VI_V2.pdf` | `62da688936fee98d4164ee6349d702a062311b374e73056bff3d593bd3d468d0` |
+| `TKCVH2025-C26-VI_V2.pdf.sig` | `20c18b30a4c5e0344318efc07e923ff771b03f286353fcb6179e362a0a76e940` |
+| `The_Celestial_Scroll.pdf` | `9bdf62638e075dc5c192fa9a08fd15411d488d820867a37e2a36252353f19e63` |
+| `The_Celestial_Scroll.pdf.sig` | `6dc09800c631be3bfecdc14029581f3bcae53bf579582d7809426a24db798867` |
+| `The_Celestial_Scroll.pptx` | `d2e2975751ad5c88c0f484b1a8ba057d9669e4285ca8a3b5a89e7a0fb8125807` |
+| `The_Celestial_Scroll.pptx.sig` | `f1573e74ab7e2522f57a484289c17654eb8d378633abea9fb5b1853d032b1e2a` |
+| `Twin_Hearts_Alchemy.pdf` | `da33082b4c2c9744f6149408d55d02b4149061f5eb7b29696fb3adbe65fd6641` |
+| `Twin_Hearts_Alchemy.pdf.sig` | `4848e771b354894cdb2d88f7631919e4b3e2327d95a91fc48c1b47d164e8a477` |
+| `Twin_Hearts_Alchemy.pptx` | `5ef40a8967c8f393192d4697b39defd63a9f282488826d18ceaad4be14f30e1f` |
+| `Twin_Hearts_Alchemy.pptx.sig` | `538a8b23064dd25f84b31dc0cd62e86628f9c4068755b81bdebe7465b56bff52` |
+| `_ TKC-VH {C26, July2025} Divine Lord of th - Tran Khac Cuong.txt` | `e7d1a18dda7c4a4f926aabc74ff719bddaaf6c7addad54ba28cc5797df67b17e` |
+| `_ TKC-VH {C26, July2025} Divine Lord of th - Tran Khac Cuong.txt.sig` | `adfba94a001db590f88ca43a75aed5c9a42e52df7b9ed70df169fffd1ce6cc5f` |
+| `_ TKC_VH {C26, July2025} Nguu Lang Tinh Ba - Tran Khac Cuong.txt` | `93e7f21e923e457338a23b06de67340b2eb5859397e3ead83d6cd6bb56cc50a1` |
+| `_ TKC_VH {C26, July2025} Nguu Lang Tinh Ba - Tran Khac Cuong.txt.sig` | `ebdbbb2ad751cc6614433599640c84c07b2fc4c9f2cc966857a0a9b8c4883455` |
