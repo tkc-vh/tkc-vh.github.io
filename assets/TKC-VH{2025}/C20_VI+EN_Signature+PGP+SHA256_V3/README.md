@@ -1,0 +1,138 @@
+# © 2026 Tran Khac Cuong & Dieu Tam (TKC&VH)
+> *All rights reserved.*
+
+---
+
+## 🔐 Digital Copyright & Authenticity Record – Legal Archive
+
+> <font face="Georgia, serif" size="4"><b>Notice:</b> This directory contains a sealed legal and technical archive used to authenticate the authorship and integrity of the <b>TKC-VH Diary Works</b>.</font>
+
+- The archive is part of the **TKC-VH Legal Library** and is intended to serve as independent verification material for legal, technical, and archival purposes.
+- The original EPUB and PDF files are **not included** in this repository. They are commercially distributed through authorized platforms.
+
+---
+
+## 📘 Metadata & Legal Information
+
+| Item | Details |
+| :--- | :--- |
+| **Author** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Signer** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Effective Date** | 19 August 2026 |
+| **Signing Date** | 19 August 2026 |
+
+---
+
+## 🔐 Cryptographic Methods Used
+
+* **Hash Algorithm:** `SHA-256` *(Algo: RSA 4096)*
+* **Digital Signature:** `OpenPGP (GPG)`
+* **PGP Fingerprint:** `4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A`
+
+*All signatures are **detached signatures (`.sig`)**, allowing independent verification without modifying the original files.*
+
+---
+
+## ✅ Verification Overview
+
+Third parties may independently verify this archive by following these two steps:
+
+### 📍 Step 1 — Check SHA-256 Checksum
+
+**macOS / Linux (Terminal):**
+```bash
+shasum -a 256 "your_book_file.epub"
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-FileHash "your_book_file.epub" -Algorithm SHA256
+```
+> *Compare the computed hash with the matching row in the table below. An exact match confirms the file matches the official release.*
+
+---
+
+### 📍 Step 2 — Verify GPG Signature (`.sig`)
+
+1. **Import the public key** *(one time only)*:
+   ```bash
+   gpg --import "signatures/TKC-VH-public-key.asc"
+   ```
+2. **Verify the signature** *(example for EPUB)*:
+   ```bash
+   gpg --verify "your_book_file.epub.sig" "your_book_file.epub"
+   ```
+
+```text
+✔️ SHA-256 match   +   ✔️ Valid GPG signature  ⇒  Author-verified original release.
+```
+*If both the checksum and digital signature are valid, the archive can be considered an authentic record issued by the author.*
+
+---
+
+## 🏛 Public Archive & Timestamp
+
+This directory is publicly hosted on GitHub. The GitHub commit history serves as an **independent third-party timestamp**, providing additional evidentiary weight for authorship and integrity claims.
+
+---
+
+## ⚖️ Legal Notice
+
+* Any modification to the original content, even a single character, will result in a different SHA-256 hash and invalidate the signatures.
+* This archive does **not** grant redistribution rights for the original work. It exists solely for authentication, verification, and legal reference.
+
+---
+
+# 📦 File Fingerprints (SHA-256)
+
+| File Name | Fingerprint (SHA-256) |
+| :--- | :--- |
+| `C20-2025-EN.txt` | `4fa631cc9dfc4a43f17e69b04039a0c62e4997dc4a54f7265306193d62da21a4` |
+| `C20-2025-EN.txt.sig` | `6db6bddc22a4e6b359965ad7379de37ffa54d3805bc14514d699bdc145a71726` |
+| `C20-2025-VI.txt` | `42a430405a5497f333aea759937f8fa98cd8d634cac243f928dd55f594cc21c3` |
+| `C20-2025-VI.txt.sig` | `50abea2c2dfd1cbf41df3af7be36968b91b103a6b86b79aec51a579638d0498b` |
+| `C20-2025-VI_SUM.txt` | `f5474d947574a977bb81fb60c457834c9e6f186fddaf8bc044ccada634a4a76b` |
+| `C20-2025-VI_SUM.txt.sig` | `2efed8cc153661618f062dcb1ba12c6620c94732e01b617ceb9c93bdd6f7d969` |
+| `KỊCH BẢN HÌNH ẢNH — PRESENTATION 12 TRANG.docx` | `566793677f1eed1a718bbfed31e44084c89142b33e242d1ccf46fab788d29cda` |
+| `KỊCH BẢN HÌNH ẢNH — PRESENTATION 12 TRANG.docx.sig` | `e20e3b2cc4804ed0f2a589bb88cef71e1690b4d8a90b7e68c844a0ecf9686803` |
+| `SHA256_Fingerprints.txt` | `4f86bbee8c66281eac1640f479015d8ec0d0fee9da3584fa3a3a9a9a41db8e41` |
+| `Sacred_Soul_Union.pdf` | `9e46b6d8cd808187e07af219b9e5178001438762f7bcf589a1734d5ad9548a55` |
+| `Sacred_Soul_Union.pdf.sig` | `08a2044252244f28363c01a50815a88e9626a29f838ef5e0e078fa7ea4a9a486` |
+| `Sacred_Soul_Union.pptx` | `6e14651a81e8f1ff35489b89bd3c0be49d38f1f0ac79ef56bac045fcd160fdd4` |
+| `Sacred_Soul_Union.pptx.sig` | `c43f66661f7c5610f0a3d1902cd683d4a855f4077c44b6dafae1367b2aa75f33` |
+| `SumC20-VI.docx` | `65382b8ba6969a24856a1c2c9ec162de306db63fa856e127ed63032208c1b79c` |
+| `SumC20-VI.docx.sig` | `f9eeb9b68aa28a75da9de809b8b3c1d4e593ab4e01f8ddad90117937e8ce78eb` |
+| `TKCVH2025-C20-EN.epub` | `9909c16f32d6c4716fabaa5ba3bfdc3180e28add6393510196f5058832b5862d` |
+| `TKCVH2025-C20-EN.epub.sig` | `68c432b85a2ae4b6b30ce3f66b569b8de5c4af21575c7e6adba1918606e55481` |
+| `TKCVH2025-C20-EN.pdf` | `e59f9aab676b5adf1842ec51c5c69940d8910d305e1ee7b1e7baa3e97d8a8aa6` |
+| `TKCVH2025-C20-EN.pdf.sig` | `02a9937a0514cbb54bd12b8009763f98ec5bd49a72dcbd238882909f6531618a` |
+| `TKCVH2025-C20-EN_KDP.pdf` | `d370b051b2c704afbb030d0f7f9ef2d017c9add72b9cc4986060e7dc95fa4359` |
+| `TKCVH2025-C20-EN_KDP.pdf.sig` | `03d4fe4359a5fdaa3bdfe816a3bcbfeb66a3ad4c3bbc79e5ac3aaac046d1caba` |
+| `TKCVH2025-C20-VI-V2.psd` | `58571a850bd6c0c682555397b0b5d112a0fb0d586108aae855ca029fab211859` |
+| `TKCVH2025-C20-VI-V2.psd.sig` | `36fc5acfad6b76c37091cdcf7934f1bbe924157347ac0fe49b3509d60e7443a1` |
+| `TKCVH2025-C20-VI-V3.epub` | `95170b1435a5b2b0829b4b38beb3c56ba09a21b6db481b211f78d8c3e2835673` |
+| `TKCVH2025-C20-VI-V3.epub.sig` | `98a4f906458b63623ca5d4978ff446360a647c3d4b650a704f2106643e68e4ce` |
+| `TKCVH2025-C20-VI-V3.pdf` | `40d7f3c301f38432031443e2ef1d16438b55d8641dc0f330aacc62db000a26b9` |
+| `TKCVH2025-C20-VI-V3.pdf.sig` | `733fe69de2211c17ea86538824fbd1c6487c02cfd69a4d9b531b4e4578c37960` |
+| `TKCVH2025-C20-VI-V3_Aplee.jpg` | `ec141ed54b43ffabf8952b982c1fd2b242f0e7e9ac1e4982e513c2c09a486a20` |
+| `TKCVH2025-C20-VI-V3_Aplee.jpg.sig` | `a40ace74f86fbf1885b5c54944c3902356532e29057283e2b66d660488443ff0` |
+| `TKCVH2025-Cover_C20-EN.jpg` | `7f73e743687778bbf53e6fc6fe6792b99a530bc25a559034556ac7648f2d56f4` |
+| `TKCVH2025-Cover_C20-EN.jpg.sig` | `bb1b68682f4ae71ae305e56a13733c1a3306259fe210c30c7a8c4ce9316b99e2` |
+| `TKCVH2025-Cover_C20-EN.psd` | `7ab1a7abe126c49b0e67a851d84c2bcce25bc20fbd502beac2d2fb7335093780` |
+| `TKCVH2025-Cover_C20-EN.psd.sig` | `a8e0f25b501da2633d7f3b58c62ddfd4539ff57e681114af129b3671a3a0c2fc` |
+| `TKCVH2025-Cover_C20-EN_Aple.jpg` | `9efd30ff53a4570157d7817f1304c050c2db568525ba226a707407ec613358e7` |
+| `TKCVH2025-Cover_C20-EN_Aple.jpg.sig` | `f27e7b397600c2e5c43196406dc78042ecad9a4bd993d1adb378e77d59f46072` |
+| `TUYÊN_NGÔN_HỢP_NHẤT_VŨ_TRỤ.pdf` | `d34146f7e439f5b466bad585ca3ef6fedf61177c8815c01a4f69643326e5266e` |
+| `TUYÊN_NGÔN_HỢP_NHẤT_VŨ_TRỤ.pdf.sig` | `d56eac034eca5256288c5d3a8a9e1eb3396b3e4104b0eb5eb22c446dfb1781d2` |
+| `TUYÊN_NGÔN_HỢP_NHẤT_VŨ_TRỤ.pptx` | `4b4fbab5ca9cd86a91b8ba123c0facf39e9b287fb75c1f40966dcf2ddf4b796f` |
+| `TUYÊN_NGÔN_HỢP_NHẤT_VŨ_TRỤ.pptx.sig` | `07bbfa3df77419f89a03f023d9223db8d3b354235170feb1c89303687c794065` |
+| `_ TKC_VH {C20, Apr2025} Bach Ho Kim Dai An - Tran Khac Cuong.docx` | `a8d66f567365740d8f49b55031a80fd9bb36ee2590087dbde944e3f3e8742ada` |
+| `_ TKC_VH {C20, Apr2025} Bach Ho Kim Dai An - Tran Khac Cuong.docx.sig` | `7249ea9e04e9a0dc9c173c97e70f5be2131e6da00bcfcccb622f8e847c3f2a2b` |
+| `_ TKC_VH {C20, Apr2025} Bach Ho Kim Dai An - Tran Khac Cuong.txt` | `dfb99080cf8501c09bb7d78cce60e70b20080a2d1ac32543ba3c357faf7595e1` |
+| `_ TKC_VH {C20, Apr2025} Bach Ho Kim Dai An - Tran Khac Cuong.txt.sig` | `f33e6e9a212a0f736b45328cda257e74612862761c8b8f721a16c682575a26bc` |
+| `_ TKC_VH {C20, May 2025} White Tiger Golde - Tran Khac Cuong.docx` | `1810d5068da62f56cf15aa416c75f18445e222e5353899ceb2e73f687711aea8` |
+| `_ TKC_VH {C20, May 2025} White Tiger Golde - Tran Khac Cuong.docx.sig` | `c13895426c85d26bca50c28389d0450233c7e1496ea1913fadaf164d7349c966` |
+| `_ TKC_VH {C20, May 2025} White Tiger Golde - Tran Khac Cuong.txt` | `6c451f4f43109d8adc215ba0445185488f9b4cf9dc39169228ecc07c4c366187` |
+| `_ TKC_VH {C20, May 2025} White Tiger Golde - Tran Khac Cuong.txt.sig` | `7e370ce31c10065f9540c780f1087d77a7636e670c339aece270cfaaebaf49c2` |
+| `🌌 VISUAL ART BIBLE.docx` | `958d17ee74ceabc808f433d5a7b2e8f4cad5fb43bfe1cc6c587812ae49efd972` |
+| `🌌 VISUAL ART BIBLE.docx.sig` | `e93399a9f6fdee7304751e1059aea0f14dae9fda1b10d100b6b3f7908b11dd62` |
