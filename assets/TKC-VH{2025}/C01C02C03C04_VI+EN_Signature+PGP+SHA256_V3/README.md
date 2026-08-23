@@ -88,45 +88,43 @@ This directory is publicly hosted on GitHub. The GitHub commit history serves as
 | File Name | Fingerprint (SHA-256) |
 | :--- | :--- |
 | `C1-C4_2025_VI.txt` | `613ea235db4f930a944dc1bdc043802cfaec6615aaff169b2157a7aefbce5ad7` |
-| `C1-C4_2025_VI.txt.sig` | `46da5786386c525694be4a50e6a71f5bcd502828d97422e20ae2c8deeb5b68ae` |
+| `C1-C4_2025_VI.txt.sig` | `01b799a4f0ddbfeb2ec47cff2b77471325482a730ef5f5bc1ac75ebfe7ba7d98` |
 | `Cover_En.jpg` | `16781aecae9e9301353e03278a860b724e1455a929cd5feca29b5eba49424523` |
-| `Cover_En.jpg.sig` | `5b773777a828851e734c1bdb7a23145e885e68debc95afb90b35bf47cbbdf866` |
+| `Cover_En.jpg.sig` | `c111751c6a4ecddb9d447d0dd2ad873456f4bd71d42f89e9c883c28e22fbfb77` |
 | `Cover_En.psd` | `49704aa3e7999f93d56fc2b647d5cbe1ffd84243876d9f85d114b9f2908b7a51` |
-| `Cover_En.psd.sig` | `21bf08f94bff6662f88176e6e64661f7ea7f03ac34f1bd67814c95a9755f9343` |
+| `Cover_En.psd.sig` | `cad658b82cf1c88790b944efbc82eb9d5327650ca82d363f2c9c8c6479a7285a` |
 | `Cover_En_2400.jpg` | `eb1d7c18a00f9665c542558cf726d3dfd7c42a71b7906b4cfa450bdb32119bc7` |
-| `Cover_En_2400.jpg.sig` | `01366f890047b2a299b7373b3c85dbf16fa4a097df3cde7f5ed710386344d0ad` |
+| `Cover_En_2400.jpg.sig` | `12d0befabd18beb4c2603339110834f1da2b9e4d2569c7d626643a9df0e062f9` |
 | `Cover_VN-2400.jpg` | `d548c2c2c4ecaac5776f56da5b77ba0389536c0a910929cff8daa74296f8786b` |
-| `Cover_VN-2400.jpg.sig` | `a87046f8a5fece03da7950fbaf24b0b50b190580a307f316f0d62b2ac14ac614` |
+| `Cover_VN-2400.jpg.sig` | `8c7a766f48e3d3ec3649dd24e9456683ef9ba05e16a34ba6c155cc5d9d7d2528` |
 | `Cover_VN.jpg` | `341eda6115810621c1c647232111dfd967a6d2c0ac35a2d1162c63980975152a` |
-| `Cover_VN.jpg.sig` | `f4d6df4aa65d4e480689efeafe04297a220ce8bb2b7ac6485f8ae4c90c0c423c` |
+| `Cover_VN.jpg.sig` | `30b1d1036f2f3d8654b5775a675c7ede895fe54c2bc56bb580506376c39bf926` |
 | `Cover_VN.psd` | `87f5866ce37cc6aa6259e295abd11f1a07961fd55ec48a192b636232d1f7ded6` |
-| `Cover_VN.psd.sig` | `5953150327420412e6422fe2f58a8a8f432869750af19a3c71b674b25127cbac` |
+| `Cover_VN.psd.sig` | `e566765d61f9355bd25d66e4ec8e5d0e4928af21f7977bf2d7c0e72c3011354c` |
 | `Eternal_Primordial_Union.pdf` | `f467a57e461a6db24e840ea954217af051b3ce06c336b5d48291428d2ec30a7f` |
-| `Eternal_Primordial_Union.pdf.sig` | `b8f57b914b9bc8ef7ce87d4346f69b61d0f2269ff43c7f94ad20e7802a79fe6e` |
+| `Eternal_Primordial_Union.pdf.sig` | `88f1be2e405422e81693988e0a6884617ff15177e186d9f8899c7e6c91fe0cdc` |
 | `Eternal_Primordial_Union.pptx` | `bdf65c693e65f44240456228a51d366fe3de36e25c186368eb38091264ec9c03` |
-| `Eternal_Primordial_Union.pptx.sig` | `bee7ca51abbf62972afc6d8067ee484ef3c4f511a3e97a9ec5304e4844efaddf` |
-| `SHA256_Fingerprints.txt` | `14a110803669e7a51bbe77d9968a55b2862b996eb52ae0e3bc3c1ba5bacd3c27` |
+| `Eternal_Primordial_Union.pptx.sig` | `9ae17a54fe4aeb0762f0eeb672cc83c6c68f58f13d28cfb9fdb18f01fe121215` |
+| `SHA256_Fingerprints.txt` | `0c7eb8303beacb9bb8ab290c42a555609fdae686e1ef03d10a16003a2cba04c2` |
 | `TKCVH2025-C1-TONGQUAN0.pdf` | `d27f1322f32769e7179699cac3b3bf8037c1f69430976915e91cbf98bee109b6` |
-| `TKCVH2025-C1-TONGQUAN0.pdf.sig` | `eab1946f9edf14982c4e080caafd3a5427433b6fd2f53e64cad8e9bffa1fab37` |
+| `TKCVH2025-C1-TONGQUAN0.pdf.sig` | `9774ee3a9c3b61613e6bbe4966a6ed7be2374262ad1c2d7b8b91a7cb129a410b` |
 | `TKCVH2025-C1-TONGQUAN1.pptx` | `9c01aa60a4595e91b264c3fbb62866103ccdce617c00716c08351060498d427f` |
-| `TKCVH2025-C1-TONGQUAN1.pptx.sig` | `9b7d3b1a4ade71d2db571c607ca1e71d5ddc6d42f25b2ada6d26b4880b2fb9e3` |
-| `TKCVH2025-C1C2C3C4_VI_V2 copy.epub` | `72b491e2e512e53a0348e054185150b8e0720eaad38360754f9a0c048f8d513d` |
-| `TKCVH2025-C1C2C3C4_VI_V2 copy.epub.sig` | `7cb2b524f95504af7e8b08eaf2386aebea03a372d25283196e24e20a0143d2c7` |
+| `TKCVH2025-C1-TONGQUAN1.pptx.sig` | `9c5101b3d8c0baf0190f2de09fd004c19cfe5b1c6744a7faf4167632f12af322` |
 | `TKCVH2025-C1C2C3C4_VI_V2.epub` | `64b70bf2cf3379180f8d83048d0dffc237b832acbc2b6a1176e9469cd375fc6c` |
-| `TKCVH2025-C1C2C3C4_VI_V2.epub.sig` | `b42a847bc9a09c4c31fa1df67c1d4277adf8885dfe984d5fc2c646a6e025a8e2` |
+| `TKCVH2025-C1C2C3C4_VI_V2.epub.sig` | `f563912333fc9f4e2e4f7ff3413bf4f32465a336c1181fc2868ab0a96befaa9d` |
 | `TKCVH2025-C1C2C3C4_VI_V2.pdf` | `bc79f702bb9a416ab188e45d87f8860dcb99d41ce2bfb21d3cd0880db0d7e559` |
-| `TKCVH2025-C1C2C3C4_VI_V2.pdf.sig` | `453e4b41a4271c241dc238767af6e6dff98f7c462f4e16ad8dc8749f2584cef3` |
-| `TKCVH2025_C1-C4_EN.epub` | `9c1cb3d64f1bf9e7793b8700e4881468261f963c6a98bfc776e23408ecd012ff` |
-| `TKCVH2025_C1-C4_EN.epub.sig` | `1f41f06d0bc9ffea393ad07a6dd89eeba9e47aefbdbc5a4bdbac2309e29d6b5f` |
+| `TKCVH2025-C1C2C3C4_VI_V2.pdf.sig` | `e51d10f19f68e56fad2ba5ff456e71faa6f8d6eed24f220be424ffc5154bd5ee` |
+| `TKCVH2025_C1-C4_EN.epub` | `1961fcb11e1a985fa416f002800ad0fd40598c152c5da2278c4f98e1a766ed18` |
+| `TKCVH2025_C1-C4_EN.epub.sig` | `c2c6e3ffd478474aa9088155789811b248a53984e0c801393ede491e5bbba7a1` |
 | `TKCVH2025_C1-C4_EN.pdf` | `ba37a0717ba96a78458a52b527510259a7beef04ea0d19541b099ccb4e00e8c3` |
-| `TKCVH2025_C1-C4_EN.pdf.sig` | `f0972b939d1b951703d0894666ef7759287518fb9ae2bb102980cc2d3cc59c59` |
+| `TKCVH2025_C1-C4_EN.pdf.sig` | `98a530519b079f7226fdad339a671727ced23ec561c242aab82172a74897c554` |
 | `TKCVH2025_C1-C4_EN_KDP.pdf` | `e3cb4beba97323df3e5dc36be60b3663e9ed57b32cc9035f3bc8d270e86bdeef` |
-| `TKCVH2025_C1-C4_EN_KDP.pdf.sig` | `c503537bbee5c523d9bc0d0759e8009712a04b56abe7c959c82a25d56c5cdf84` |
+| `TKCVH2025_C1-C4_EN_KDP.pdf.sig` | `c5e90352d64629750d73eebbeb52744011b7be65094f3c57e5faa08a68267879` |
 | `The_Diamond_Marriage.pdf` | `2fd5b718b689ac3760297958df0474f75432296e993d0b2b30de05280db4db63` |
-| `The_Diamond_Marriage.pdf.sig` | `b76f0d3b6bb444c23bcfffea23ddb0ae77cbd158dd9342aa7150524f0f25341f` |
+| `The_Diamond_Marriage.pdf.sig` | `c74fc8a635290dee9cbc99daa4274171892b26ecf3925b55572e314a2dd2d774` |
 | `The_Diamond_Marriage.pptx` | `a6fa5b2a9c23e3ca73cf5f0b0d29c4ad791f22376a5d824cc49b1c2733ff5cbb` |
-| `The_Diamond_Marriage.pptx.sig` | `197535e3c160c0f09440bc2ac468949451e81ae55fe5689fd5dc33ce37c5ee58` |
+| `The_Diamond_Marriage.pptx.sig` | `89d17c4632d630bcd8cb865fb1da84342981f9cb1c5fd9bc12d31e810fce3e6b` |
 | `_ TKC_VH {C01-C4, Jan2025} Tinh Yeu Dinh M - Tran Khac Cuong.docx` | `b65e41e1c1cdfcc6a80155700110144ef422bd1393d802ce28cc947edefc0cff` |
-| `_ TKC_VH {C01-C4, Jan2025} Tinh Yeu Dinh M - Tran Khac Cuong.docx.sig` | `5b0714f7a67b4e6386bfaa896ad5d08e306372c0db3a9d152a310f1ef3090fd9` |
-| `_ TKC_VH {C01-C4, Jan2025} Tinh Yeu Dinh M - Tran Khac Cuong.txt` | `6675692d25536ec053e17c6bfbc6c639dcf074ea4c08624c394b15c00f31df99` |
-| `_ TKC_VH {C01-C4, Jan2025} Tinh Yeu Dinh M - Tran Khac Cuong.txt.sig` | `8b62ef1191f3763e631259c4e222ba4ee3923fe8e8722e5c86afe9141c855cd7` |
+| `_ TKC_VH {C01-C4, Jan2025} Tinh Yeu Dinh M - Tran Khac Cuong.docx.sig` | `e8c87cd504b3c4b4f0aa2a2611a17b96b05e380e8236e2140000743a3752c5a4` |
+| `_ TKC_VH {C01-C4, Jan2025} Tinh Yeu Dinh M - Tran Khac Cuong.txt` | `37d4338504e8abfe15324c45d0a05bde764ef185dbcc98b70183e2335f1d0915` |
+| `_ TKC_VH {C01-C4, Jan2025} Tinh Yeu Dinh M - Tran Khac Cuong.txt.sig` | `45625f2b16e6fedbfc64541d0c709a25190961f9a512c7fd93229c8e64dd95f8` |
