@@ -1,0 +1,120 @@
+# © 2026 Tran Khac Cuong & Dieu Tam (TKC&VH)
+> *All rights reserved.*
+
+---
+
+## 🔐 Digital Copyright & Authenticity Record – Legal Archive
+
+> <font face="Georgia, serif" size="4"><b>Notice:</b> This directory contains a sealed legal and technical archive used to authenticate the authorship and integrity of the <b>TKC-VH Diary Works</b>.</font>
+
+- The archive is part of the **TKC-VH Legal Library** and is intended to serve as independent verification material for legal, technical, and archival purposes.
+- The original EPUB and PDF files are **not included** in this repository. They are commercially distributed through authorized platforms.
+
+---
+
+## 📘 Metadata & Legal Information
+
+| Item | Details |
+| :--- | :--- |
+| **Author** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Signer** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Effective Date** | 03 September 2026 |
+| **Signing Date** | 03 September 2026 |
+
+---
+
+## 🔐 Cryptographic Methods Used
+
+* **Hash Algorithm:** `SHA-256` *(Algo: RSA 4096)*
+* **Digital Signature:** `OpenPGP (GPG)`
+* **PGP Fingerprint:** `4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A`
+
+*All signatures are **detached signatures (`.sig`)**, allowing independent verification without modifying the original files.*
+
+---
+
+## ✅ Verification Overview
+
+Third parties may independently verify this archive by following these two steps:
+
+### 📍 Step 1 — Check SHA-256 Checksum
+
+**macOS / Linux (Terminal):**
+```bash
+shasum -a 256 "your_book_file.epub"
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-FileHash "your_book_file.epub" -Algorithm SHA256
+```
+> *Compare the computed hash with the matching row in the table below. An exact match confirms the file matches the official release.*
+
+---
+
+### 📍 Step 2 — Verify GPG Signature (`.sig`)
+
+1. **Import the public key** *(one time only)*:
+   ```bash
+   gpg --import "signatures/TKC-VH-public-key.asc"
+   ```
+2. **Verify the signature** *(example for EPUB)*:
+   ```bash
+   gpg --verify "your_book_file.epub.sig" "your_book_file.epub"
+   ```
+
+```text
+✔️ SHA-256 match   +   ✔️ Valid GPG signature  ⇒  Author-verified original release.
+```
+*If both the checksum and digital signature are valid, the archive can be considered an authentic record issued by the author.*
+
+---
+
+## 🏛 Public Archive & Timestamp
+
+This directory is publicly hosted on GitHub. The GitHub commit history serves as an **independent third-party timestamp**, providing additional evidentiary weight for authorship and integrity claims.
+
+---
+
+## ⚖️ Legal Notice
+
+* Any modification to the original content, even a single character, will result in a different SHA-256 hash and invalidate the signatures.
+* This archive does **not** grant redistribution rights for the original work. It exists solely for authentication, verification, and legal reference.
+
+---
+
+# 📦 File Fingerprints (SHA-256)
+
+| File Name | Fingerprint (SHA-256) |
+| :--- | :--- |
+| `Cover-EN.jpg` | `d8021bfd90b30529bd954f2360c77248439397e26b47bd832c4c041b80fea6e0` |
+| `Cover-EN.jpg.sig` | `ee1a50ea424ce83349bd776f8edd7d1f880ff3d04183ed36709941c1ecf9af75` |
+| `Cover-EN.psd` | `1a4ee7487c7359c209aa50cde603d7995d1869f474b50811ead3db7013a6ba17` |
+| `Cover-EN.psd.sig` | `f16a06e3d1dc2daa7552d1ff0dfd4daab18365ab67efdedaf877e84ede110cce` |
+| `Cover-Enn-2400.jpg` | `8fa45d745ffec9b3c26c7fbc320a109c299158e4b209faac427588e9c2fa6be8` |
+| `Cover-Enn-2400.jpg.sig` | `d7bfc396a941a70332b062c5d2c044bd6a3379d892bcbe4c1a30678a1a61d1f0` |
+| `Cover-VI-2400.jpg` | `945ecdf129ba2f8f157449027042693797f5083928d618efe8e1a4ab1df00071` |
+| `Cover-VI-2400.jpg.sig` | `05b32037543752d6145ab074588e9d696015947db4a70307a2ff677fe64dae38` |
+| `Cover-VI.jpg` | `03c742e4d8d565456f41161113558bdbe698622a8cb06e72eefc56455d07f818` |
+| `Cover-VI.jpg.sig` | `a9c60d8d51cfed4b4a916a7ac6426033eae0cb7295bf4b64bc1dadbb339dce4c` |
+| `Cover-VI.psd` | `c905f1740409e2ee9f401a1754cd45947cfd51ba55408d61d9e6ec529631e3df` |
+| `Cover-VI.psd.sig` | `3a44fca78a3edc9f4fece91e45b546930e3759cc7e3eaa2850648f4a92f2c01a` |
+| `SHA256_Fingerprints.txt` | `eea79560d3a80aa713070c0bf34a2748cb4f0af3db9c123865fcfb551218fb88` |
+| `TKCVH2026-C1-EN-V4.epub` | `5fe8b54fa4d27c1eb2095a908081293e234389c8f888e7390666900c5bec9886` |
+| `TKCVH2026-C1-EN-V4.epub.sig` | `2a0ec861c8ef5f73d9083e8f88a529f2ae249deacc5c27f28dffb0c37ad9740c` |
+| `TKCVH2026-C1-EN-V4.pdf` | `15a426cc684d48f824d2065c5bf499c88901dec301655b100d0db2351a6c922c` |
+| `TKCVH2026-C1-EN-V4.pdf.sig` | `b72c4728456d3e933a8c62050c51de9cc7df906e217e412694def18abc96b1c6` |
+| `TKCVH2026-C1-EN-V4_KDP.pdf` | `ef1d15c0cc198b0b7a246126fc52e1d9047cde43eed724f89edb5e15bc2b3d70` |
+| `TKCVH2026-C1-EN-V4_KDP.pdf.sig` | `2ccac74253dd15ad7e5a1a5c6bf5e5516933e1c8fe4e25b1d7f4661e65600472` |
+| `TKCVH2026-C1-EN.txt` | `076a0d87956da1b4d82fdb04503f3e63cf99bf91bb026feeb40555503a74052c` |
+| `TKCVH2026-C1-EN.txt.sig` | `f5e63839ec5d6d9e1ec7125f5e0cee51626d7a55d921e8b1c7fa6b879df43d77` |
+| `TKCVH2026-C1-VI-V4.epub` | `15503cfe4ba92fa5355a7e1368f70d10ec1d0186ef8d6eb31b58d9fe3171f169` |
+| `TKCVH2026-C1-VI-V4.epub.sig` | `416b4aee4b5935903ef0703eca96bae9ee2709e69d982dd41f1cd4399c4582a0` |
+| `TKCVH2026-C1-VI-V4.pdf` | `3369e75afb3a03851e3b2da1271cbc3eeec9f5808ed4c3b686c47134f2d7a2c1` |
+| `TKCVH2026-C1-VI-V4.pdf.sig` | `da634ff4123362368993b478ed93c55ee81497d836ae7e5acc6bf4608c6994c0` |
+| `TKCVH2026-C1-VI.txt` | `5e0ce0f9171f295ada2b45c851eb2e165c5498e1935293aea79f1ee652ace4b9` |
+| `TKCVH2026-C1-VI.txt.sig` | `dcaaa98404bd9e6a5911eb72fc2f2a3d6b9cf66c1889bd563f849d226cd08058` |
+| `The_Crystal_Lotus_Private_Key.pdf` | `81e9ff8187d0aad791060078d74f11dc95669cf2d11ee72a226ad9c1c4448f79` |
+| `The_Crystal_Lotus_Private_Key.pdf.sig` | `efdb38582b8d522d5dabe1ff8bf0b5d86e80200871281fcd363a6f029b2a964d` |
+| `The_Crystal_Lotus_Private_Key.pptx` | `c6bb3f2ced3af2bca8b307b7034ec05bb4eb1cd272f69c3a88a4407f265a07cc` |
+| `The_Crystal_Lotus_Private_Key.pptx.sig` | `dbda1529b46b2e45560e338b523bc912bc6d1efb6175480798a48d5f459d1870` |
