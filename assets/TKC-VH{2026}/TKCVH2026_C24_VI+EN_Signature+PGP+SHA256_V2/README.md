@@ -1,0 +1,108 @@
+# © 2026 Tran Khac Cuong & Dieu Tam (TKC&VH)
+> *All rights reserved.*
+
+---
+
+## 🔐 Digital Copyright & Authenticity Record – Legal Archive
+
+> <font face="Georgia, serif" size="4"><b>Notice:</b> This directory contains a sealed legal and technical archive used to authenticate the authorship and integrity of the <b>TKC-VH Diary Works</b>.</font>
+
+- The archive is part of the **TKC-VH Legal Library** and is intended to serve as independent verification material for legal, technical, and archival purposes.
+- The original EPUB and PDF files are **not included** in this repository. They are commercially distributed through authorized platforms.
+
+---
+
+## 📘 Metadata & Legal Information
+
+| Item | Details |
+| :--- | :--- |
+| **Author** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Signer** | Tran Khac Cuong *(Pen name: TKC-VH)* |
+| **Effective Date** | 08 September 2026 |
+| **Signing Date** | 08 September 2026 |
+
+---
+
+## 🔐 Cryptographic Methods Used
+
+* **Hash Algorithm:** `SHA-256` *(Algo: RSA 4096)*
+* **Digital Signature:** `OpenPGP (GPG)`
+* **PGP Fingerprint:** `4099 DAAA 3202 7AAC E7BA C507 5165 E6B6 2628 1F7A`
+
+*All signatures are **detached signatures (`.sig`)**, allowing independent verification without modifying the original files.*
+
+---
+
+## ✅ Verification Overview
+
+Third parties may independently verify this archive by following these two steps:
+
+### 📍 Step 1 — Check SHA-256 Checksum
+
+**macOS / Linux (Terminal):**
+```bash
+shasum -a 256 "your_book_file.epub"
+```
+
+**Windows (PowerShell):**
+```powershell
+Get-FileHash "your_book_file.epub" -Algorithm SHA256
+```
+> *Compare the computed hash with the matching row in the table below. An exact match confirms the file matches the official release.*
+
+---
+
+### 📍 Step 2 — Verify GPG Signature (`.sig`)
+
+1. **Import the public key** *(one time only)*:
+   ```bash
+   gpg --import "signatures/TKC-VH-public-key.asc"
+   ```
+2. **Verify the signature** *(example for EPUB)*:
+   ```bash
+   gpg --verify "your_book_file.epub.sig" "your_book_file.epub"
+   ```
+
+```text
+✔️ SHA-256 match   +   ✔️ Valid GPG signature  ⇒  Author-verified original release.
+```
+*If both the checksum and digital signature are valid, the archive can be considered an authentic record issued by the author.*
+
+---
+
+## 🏛 Public Archive & Timestamp
+
+This directory is publicly hosted on GitHub. The GitHub commit history serves as an **independent third-party timestamp**, providing additional evidentiary weight for authorship and integrity claims.
+
+---
+
+## ⚖️ Legal Notice
+
+* Any modification to the original content, even a single character, will result in a different SHA-256 hash and invalidate the signatures.
+* This archive does **not** grant redistribution rights for the original work. It exists solely for authentication, verification, and legal reference.
+
+---
+
+# 📦 File Fingerprints (SHA-256)
+
+| File Name | Fingerprint (SHA-256) |
+| :--- | :--- |
+| `C24-2026-Cover-EN-2400.jpg` | `9a38e169b19d0bcf1c6ec3628bd9bceb4b09b0e339667e61ad7ad0e76d2377b7` |
+| `C24-2026-Cover-EN-2400.jpg.sig` | `01bc62dd3758a3b4db06d0f7142455ce6176a23539cd3a0b4842a4c2acc3b569` |
+| `C24-2026-Cover-VI-2400.jpg` | `cf12bd89953b03daccfeca9f15506be7a16411fe6ee0742a409854d69f2a2e4d` |
+| `C24-2026-Cover-VI-2400.jpg.sig` | `0ea7f5e75d6ce558fb8f8c8c185647754b40fee8857ae2cb710208799a49d95b` |
+| `SHA256_Fingerprints.txt` | `b86720e4ea5175a8535727d69eaa8f31706929ce369aeea266e31f0937d84a4e` |
+| `TKC-VH DIARY. C24-2026-EN.txt` | `a16e8fc9b8cf47b997469c4e12bc052735ae9acfdf13dc225711b395052d3cc5` |
+| `TKC-VH DIARY. C24-2026-EN.txt.sig` | `a0f571ee486f962afe8dd17fc11c8095d1bfe21267e3aab530a233306baaae52` |
+| `TKC-VH DIARY. C24-2026-VI.txt` | `51832144c90f9eea0ed206618dcdc73c24df3bb3976fa28470d3b536a54964e6` |
+| `TKC-VH DIARY. C24-2026-VI.txt.sig` | `76958838fdacf3d742567b18e19ed9bc36ee70e6513e1404511784504157854b` |
+| `TKC-VH DIARY_C24-2026-EN.epub` | `20082db32c71403bf98b7cd731dc0b8e11c44111f31645b7df3f764f974abc69` |
+| `TKC-VH DIARY_C24-2026-EN.epub.sig` | `0c7b3a7cc71a4613f7b24551ea70500f31225dbd357832a171a354c7daa4e2cb` |
+| `TKC-VH DIARY_C24-2026-EN.pdf` | `d42e6e1b384962f36c61a9b75a1b4e3df2f67744f5edd4f2d0d1e48d51453096` |
+| `TKC-VH DIARY_C24-2026-EN.pdf.sig` | `de06047ad6f50d8e7d2da464e219e68fc70c55a5e26d89565cf4fc5f4d2b2b31` |
+| `TKC-VH DIARY_C24-2026-EN_KDP.pdf` | `5337f8c7fd519092281c79d39218f05da6711c3562f5e4b9079a659cdde2601e` |
+| `TKC-VH DIARY_C24-2026-EN_KDP.pdf.sig` | `f8079fca2984bf4cc8324483cf0ad336363d2c5a507a803e13f9bcdd2ce7068a` |
+| `TKC-VH DIARY_C24-2026-VI.epub` | `81325992c1633a50669758b3005239996f4ca15a764a788064873852e98db995` |
+| `TKC-VH DIARY_C24-2026-VI.epub.sig` | `d3c63df424d7d39ed83aaa14f533e897b173883bb7e356e82c0fac95d0cb0a3c` |
+| `TKC-VH DIARY_C24-2026-VI.pdf` | `c4429f6ea95d5c6d63ef19eb5f624c852fbf0e7755abf2ebbd8e29079ca05083` |
+| `TKC-VH DIARY_C24-2026-VI.pdf.sig` | `93b419ed03ef7412e423e9b1a8ae25a9c9c3a1158c810394e017be780989d70f` |
