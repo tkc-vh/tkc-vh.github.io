@@ -6,39 +6,48 @@
    Compatible: Google • Apple • Kobo • Amazon • KDP PDF
    =========================================================== */
 
-/* ===========================================================
-  1. Chèn vào đầu sách:
+1. Chèn vào đầu sách: html/* ===========================================================
+  
 
 <body>
+
+
 <div style="page-break-after: always;"></div>
 <p class="start-page">
-<img src="images/image26.jpeg" alt="Nhật Ký TKC-VH T42-C2 BỒ ĐỀ SONG THỤ KIM CƯƠNG  Cội Mai Vàng Vĩnh Cửu Author Tran Khac Cuong"/>
+  <img src="images/C21-2026_Cover_EN.jpg" alt="TKC-VH Diary"/>
 </p>
+
 
    2. Ngắt trang: 
 
 <p style="page-break-before: always;"></p>
-   =========================================================== */
 
 
 
-
-
+ 2 =========================================================== 
 
 /* 1. THIẾT LẬP KHỔ GIẤY VÀ LỀ TỔNG THỂ (6x9 inch) */
 @page {
     size: 6in 9in;
-    /* Giữ nguyên lề của bạn, chỉ tăng lề dưới lên 1in để nâng số trang */
-    margin: 0.76in 0.625in 1in 0.625in; 
-
-    /* Đánh số trang ở giữa dưới cùng - ĐÃ NÂNG LÊN */
+    margin-top: 0.75in;
+    margin-bottom: 0.75in; /* Tạo khoảng trống an toàn cho số trang */
+    margin-left: 0.75in;
+    margin-right: 0.75in;
+    
     @bottom-center {
         content: counter(page);
-        font-family: serif;
-        font-size: 10pt;
-        margin-bottom: 0.5in; /* Nâng số trang lên cách mép 0.5in */
+        vertical-align: top; /* Đẩy số trang lên trên một chút nếu cần */
     }
 }
+
+/* Khống chế các ảnh trong nội dung không được tràn quá vùng an toàn */
+img {
+    max-width: 100%;
+    max-height: 100%; /* Prince tự hiểu là 100% của vùng page nội dung, không lấn vào margin */
+    object-fit: contain; /* Giữ nguyên tỷ lệ ảnh, không bị méo */
+    page-break-inside: avoid;
+}
+
 
 /* 2. THIẾT LẬP LỀ GÁY (MIRROR MARGINS) */
 @page :left {
@@ -72,15 +81,17 @@
     counter-reset: page 0;
 }
 
-/* 5. TỐI ƯU HÌNH ẢNH - ĐÃ TĂNG LÊN 96% */
-img {
-    display: block;
-    width: 96% !important; /* Tăng lên 96% theo ý bạn, vẫn an toàn */
-    max-width: 100% !important;
+/* 5. TỐI ƯU HÌNH ẢNH - SỬA LẠI ĐỂ ĐÈ BẢN STYLESHEET */
+body img {
+    display: block !important;
+    width: auto !important;
     height: auto !important;
+    max-width: 90% !important;     /* Co bớt chiều ngang lại một chút */
+    max-height: 6.9in !important;  /* KHỐNG CHẾ TUYỆT ĐỐI: Chiều cao ảnh không bao giờ vượt quá 6.9 inch */
+    object-fit: contain !important;
     margin: 1.5em auto !important;
     border-radius: 18px !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
     page-break-inside: avoid !important;
 }
 
@@ -106,4 +117,11 @@ p {
 }
 
 
+/* 7. Tắt toàn bộ tính năng tạo đường dẫn/hyperlink trong file PDF xuất ra (Dùng cho Amazone KDP)*/
+
+a {
+    prince-link: none !important;
+    color: inherit !important;
+    text-decoration: none !important;
+}
 
