@@ -1,11 +1,11 @@
-- Contact: mailto:orionel.diyatam@gmail.com
-+ Contact: mailto:mr.tkc99999@gmail.com
-Expires: 2026-12-31T23:59:59Z
-Preferred-Languages: vi, en, fr, ja
-Canonical: https://tkc-vh.github.io/.well-known/security.txt
-Policy: https://tkc-vh.github.io/legal/
-Acknowledgments: https://tkc-vh.github.io/
+# Security contact for tkc-vh.github.io (RFC 9116)
+# Static GitHub Pages site: no accounts, forms, or server-side code.
+# Please report issues in the site content, scripts, signatures, or published keys.
 
-# This site is a static GitHub Pages website.
-# No user data collection, no server-side execution.
-# Security reports are welcome and appreciated.
+Contact: mailto:mr.tkc99999@gmail.com
+Contact: mailto:orionel.diyatam@gmail.com
+Expires: 2027-06-30T23:59:59Z
+Encryption: https://tkc-vh.github.io/legal/TranKhacCuong-GPG.asc
+Preferred-Languages: vi, en
+Canonical: https://tkc-vh.github.io/.well-known/security.txt
+Policy: https://tkc-vh.github.io/SECURITY.md
