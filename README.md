@@ -1,4 +1,4 @@
-## Digital Identity & Verification
+# Digital Identity & Verification
 
 This work is authored by Tran Khac Cuong (pen name: TKC-VH) and is associated
 with a cryptographic identity for independent verification of authorship,

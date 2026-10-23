@@ -28,9 +28,8 @@ If you believe you have found a security issue, vulnerability, or suspicious beh
 
 ### Preferred Contact
 
-- **Email:** orionel.diyatam@gmail.com
-+ Email: mr.tkc99999@gmail.com
-
+- **Email:** mr.tkc99999@gmail.com
+- **Secondary Email:** orionel.diyatam@gmail.com
 - **Subject:** `Security Report – tkc-vh.github.io`
 
 Please include:

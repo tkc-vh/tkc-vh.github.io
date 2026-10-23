@@ -11,6 +11,12 @@ authors:
     affiliation: "Independent researcher and author"
     email: mr.tkc99999@gmail.com
     orcid: ""
+  - family-names: Tran
+    given-names: Khac Cuong
+    name-particle: ""
+    affiliation: "Independent researcher and author"
+    email: orionel.diyatam@gmail.com
+    orcid: ""
 
 preferred-citation:
   type: website
@@ -26,7 +32,7 @@ repository-code: "https://github.com/tkc-vh/tkc-vh.github.io"
 
 abstract: >
   TKC-VH Archive is a personal academic and literary archive
-  curated and maintained by Tran Khac Cuong (pen name: TKC-VH).
+  curated and maintained by Tran Khac Cuong (pen name: TKC-VH / Orion DiyaTam).
   The project publishes original works, research-oriented writings,
   and long-term archival materials through a static GitHub Pages website.
 
