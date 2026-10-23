@@ -23,6 +23,7 @@ Location:
 
 Contact:
 - Email: mr.tkc99999@gmail.com
+- Secondary Email: orionel.diyatam@gmail.com
 - GitHub: https://github.com/tkc-vh
 - Website: https://tkc-vh.github.io
 
@@ -69,4 +70,4 @@ When citing this project or its published materials, please use the following fo
 This document reflects the current authorship and maintenance status of the project.
 It may be updated if authorship roles or contact information change.
 
-Last updated: 2026-01-03
+Last updated: 2026-10-23
