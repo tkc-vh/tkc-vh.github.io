@@ -31,20 +31,25 @@
   <link rel="stylesheet" href="./legal.css">
   <script src="./legal.js" defer></script>
 
-  <!-- Page-only micro refinements & Royal Glassmorphic Style -->
+  <!-- Page-only micro refinements & Centered Royal Poem Box -->
   <style>
-    /* Khung nổi hoàng gia chứa bài thơ và lời đề từ */
+    /* Khung nổi hoàng gia chứa bài thơ và lời đề từ (Ép căn giữa tuyệt đối) */
     .tkc-royal-poem-box {
       max-width: 680px;
       margin: 24px auto;
       background: rgba(14, 12, 17, 0.82);
       border: 1px solid rgba(255, 211, 119, 0.28);
       border-radius: 20px;
-      padding: 30px 24px;
+      padding: 35px 28px;
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 119, 0.12);
       position: relative;
       overflow: hidden;
-      text-align: center;
+      
+      /* Ghi đè toàn bộ quy tắc căn lề trái từ file CSS chung */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center !important;
     }
 
     .tkc-royal-poem-box::before {
@@ -62,32 +67,44 @@
       pointer-events: none;
     }
 
+    .tkc-royal-poem-box .lang-block {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center !important;
+    }
+
     .tkc-royal-poem-box .poemtitle {
       color: #ffdf88;
       font-size: 17px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       font-weight: bold;
+      text-align: center !important;
     }
 
     .tkc-royal-poem-box .poemtext {
       white-space: pre-line;
-      line-height: 1.8;
+      line-height: 1.85;
       font-size: 15px;
       color: rgba(244, 236, 223, 0.95);
       margin-bottom: 24px;
       font-style: italic;
+      text-align: center !important;
+      display: inline-block;
     }
 
     .tkc-royal-poem-box .note2 {
       border-top: 1px solid rgba(255, 211, 119, 0.18);
       padding-top: 18px;
-      margin-top: 18px;
+      margin-top: 8px;
       font-size: 13.5px;
       line-height: 1.65;
       color: rgba(244, 236, 223, 0.82);
-      text-align: center;
+      text-align: center !important;
+      width: 100%;
     }
 
     /* Khu vực trưng bày ảnh triển lãm (Gallery Showcase) */
@@ -221,7 +238,7 @@
 
         <div class="swordline" aria-hidden="true"></div>
 
-        <!-- KHỐI BÀI THƠ VÀ LỜI ĐỀ TỪ TRONG HỘP KÍNH NỔI HOÀNG GIA -->
+        <!-- KHỐI BÀI THƠ VÀ LỜI ĐỀ TỪ TRONG HỘP KÍNH NỔI HOÀNG GIA (CĂN GIỮA TUYỆT ĐỐI) -->
         <div class="tkc-royal-poem-box">
 
           <!-- VI -->
