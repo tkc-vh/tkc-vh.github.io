@@ -31,25 +31,19 @@
   <link rel="stylesheet" href="./legal.css">
   <script src="./legal.js" defer></script>
 
-  <!-- Page-only micro refinements & Centered Royal Poem Box -->
+  <!-- Page-only micro refinements & Two-Column Bilingual Royal Box -->
   <style>
-    /* Khung nổi hoàng gia chứa bài thơ và lời đề từ (Ép căn giữa tuyệt đối) */
+    /* Khung nổi hoàng gia chứa song ngữ 2 cột */
     .tkc-royal-poem-box {
-      max-width: 680px;
+      max-width: 840px;
       margin: 24px auto;
-      background: rgba(14, 12, 17, 0.82);
+      background: rgba(14, 12, 17, 0.85);
       border: 1px solid rgba(255, 211, 119, 0.28);
       border-radius: 20px;
       padding: 35px 28px;
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 119, 0.12);
       position: relative;
       overflow: hidden;
-      
-      /* Ghi đè toàn bộ quy tắc căn lề trái từ file CSS chung */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center !important;
     }
 
     .tkc-royal-poem-box::before {
@@ -67,17 +61,33 @@
       pointer-events: none;
     }
 
-    .tkc-royal-poem-box .lang-block {
-      width: 100%;
+    /* Bố cục 2 cột song song */
+    .tkc-bilingual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .tkc-column {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center !important;
     }
 
+    .tkc-column:first-child {
+      border-right: 1px solid rgba(255, 211, 119, 0.18);
+      padding-right: 15px;
+    }
+
+    .tkc-column:last-child {
+      padding-left: 15px;
+    }
+
     .tkc-royal-poem-box .poemtitle {
       color: #ffdf88;
-      font-size: 17px;
+      font-size: 16px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 18px;
@@ -88,23 +98,39 @@
     .tkc-royal-poem-box .poemtext {
       white-space: pre-line;
       line-height: 1.85;
-      font-size: 15px;
+      font-size: 14.5px;
       color: rgba(244, 236, 223, 0.95);
       margin-bottom: 24px;
       font-style: italic;
       text-align: center !important;
-      display: inline-block;
     }
 
     .tkc-royal-poem-box .note2 {
       border-top: 1px solid rgba(255, 211, 119, 0.18);
       padding-top: 18px;
-      margin-top: 8px;
-      font-size: 13.5px;
+      margin-top: 15px;
+      font-size: 13px;
       line-height: 1.65;
       color: rgba(244, 236, 223, 0.82);
       text-align: center !important;
       width: 100%;
+    }
+
+    /* Responsive cho màn hình nhỏ */
+    @media (max-width: 768px) {
+      .tkc-bilingual-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .tkc-column:first-child {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: 1px solid rgba(255, 211, 119, 0.18);
+        padding-bottom: 24px;
+      }
+      .tkc-column:last-child {
+        padding-left: 0;
+      }
     }
 
     /* Khu vực trưng bày ảnh triển lãm (Gallery Showcase) */
@@ -230,21 +256,16 @@
 
         <hr>
 
-        <!-- Chuyển ngôn ngữ -->
-        <div class="lang-switch">
-          <button class="active" type="button" data-lang="vi">VI</button>
-          <button type="button" data-lang="en">EN</button>
-        </div>
-
         <div class="swordline" aria-hidden="true"></div>
 
-        <!-- KHỐI BÀI THƠ VÀ LỜI ĐỀ TỪ TRONG HỘP KÍNH NỔI HOÀNG GIA (CĂN GIỮA TUYỆT ĐỐI) -->
+        <!-- KHỐI SONG NGỮ 2 CỘT SONG SONG TRONG HỘP KÍNH HOÀNG GIA -->
         <div class="tkc-royal-poem-box">
+          <div class="tkc-bilingual-grid">
 
-          <!-- VI -->
-          <div id="vi" class="lang-block active">
-            <div class="poemtitle">LOGO TKC-VH</div>
-            <p class="poemtext">Song ảnh tiền duyên khắc cổ tâm,
+            <!-- CỘT TRÁI: TIẾNG VIỆT -->
+            <div class="tkc-column">
+              <div class="poemtitle">LOGO TKC-VH</div>
+              <p class="poemtext">Song ảnh tiền duyên khắc cổ tâm,
 Kim ngọc tương phùng hợp bản âm.
 Nhất thể song lưu đồng tri kiến,
 Lưỡng quang giao hội nhập huyền thâm.
@@ -253,17 +274,16 @@ Thoát tục linh căn hồi bản thể,
 Triêu sinh phối ngẫu chuyển hư cầm.
 TKC-VH thệ trung sơ nguyện,
 Vạn kiếp đồng hành bất nhị tầm.</p>
-
-            <div class="note2">
-              Logo TKC-VH là dấu ấn kết tinh từ hành trình văn chương nội quan, ký ức tinh thần, và kỷ luật sáng tác truyền thống.<br>
-              Slogan được viết như một lời thơ thề nguyện, để đặt nền móng nhất quán cho toàn bộ hệ tác phẩm mang tên Nhật Ký TKC-VH.
+              <div class="note2">
+                Logo TKC-VH là dấu ấn kết tinh từ hành trình văn chương nội quan, ký ức tinh thần, và kỷ luật sáng tác truyền thống.<br>
+                Slogan được viết như một lời thơ thề nguyện, để đặt nền móng nhất quán cho toàn bộ hệ tác phẩm mang tên Nhật Ký TKC-VH.
+              </div>
             </div>
-          </div>
 
-          <!-- EN -->
-          <div id="en" class="lang-block" style="display: none;">
-            <div class="poemtitle">LOGO TKC-VH</div>
-            <p class="poemtext">Twin shadows, ancient vows carved in the soul;
+            <!-- CỘT PHẢI: TIẾNG ANH -->
+            <div class="tkc-column">
+              <div class="poemtitle">LOGO TKC-VH</div>
+              <p class="poemtext">Twin shadows, ancient vows carved in the soul;
 Gold meets jade — two tones returning whole.
 One body, two bright currents share one sight;
 Two lights converge and descend to depth of night.
@@ -272,13 +292,13 @@ Beyond the mortal dust, their roots ascend;
 At dawn, paired breath stirs the void again.
 TKC-VH keeps the First Oath ever true;
 Through countless lives they walk — no longer two.</p>
-
-            <div class="note2">
-              The TKC-VH logo is a culmination of an introspective literary journey, spiritual memories, and traditional creative discipline.<br>
-              The slogan is written as a poetic vow, laying a consistent foundation for the entire series of works titled TKC-VH Diary.
+              <div class="note2">
+                The TKC-VH logo is a culmination of an introspective literary journey, spiritual memories, and traditional creative discipline.<br>
+                The slogan is written as a poetic vow, laying a consistent foundation for the entire series of works titled TKC-VH Diary.
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
 
         <!-- KHO ẢNH TRƯNG BÀY (GALLERY SHOWCASE VỚI HIỆU ỨNG TRÁNG GƯƠNG & BÓNG ĐỔ) -->
