@@ -5,18 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Public GPG Key | TKC-VH</title>
 
-	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/favicon-64.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon/favicon-64.png">
 	
-  <!-- === TKC-VH | Security Header (FINAL • no inline scripts) === -->
+  <!-- === TKC-VH | Security Header === -->
   <meta http-equiv="Content-Security-Policy"
   content="
   default-src 'self';
   img-src 'self' https://tkc-vh.github.io data:;
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
   font-src 'self' https://fonts.gstatic.com;
-  script-src 'self';
+  script-src 'self' 'unsafe-inline' https://api.github.com;
+  connect-src 'self' https://api.github.com;
   frame-ancestors 'none';
   base-uri 'self';
   form-action 'self';
@@ -31,7 +32,7 @@
   <meta name="robots" content="index,follow" />
   <script src="./legal.js" defer></script>
 
-  <!-- Page-only micro refinements (legal.css stays unchanged) -->
+  <!-- Page-only micro refinements & Floating Windows Style -->
   <style>
     /* Make all card titles single-line + elegant */
     .gate h3{
@@ -104,11 +105,129 @@
       color: rgba(255,240,210,.95);
     }
 
-    /* Optional: tighten bottom signature */
     .sigline{
       text-align:center;
       margin-top: 16px;
       opacity: .90;
+    }
+
+    /* ===============================
+       TKC-VH | FLOATING ARCHIVE WINDOWS (GitHub Pages)
+    ================================ */
+    .tkc-floating-box {
+      margin: 20px 0;
+      border: 1px solid rgba(255,211,119,.28);
+      border-radius: 16px;
+      background: rgba(0,0,0,.45);
+      box-shadow: inset 0 2px 10px rgba(0,0,0,.6), 0 8px 25px rgba(0,0,0,.3);
+      overflow: hidden;
+    }
+
+    .tkc-floating-header {
+      background: rgba(255,211,119,.1);
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255,211,119,.22);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13.5px;
+      color: #ffdf88;
+      font-weight: bold;
+      letter-spacing: .03em;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tkc-floating-header a.tkc-ext-btn {
+      color: #ffdf88;
+      text-decoration: none;
+      font-size: 11.5px;
+      border: 1px solid rgba(255,211,119,.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255,211,119,.08);
+      transition: all .2s ease;
+    }
+
+    .tkc-floating-header a.tkc-ext-btn:hover {
+      background: rgba(255,211,119,.25);
+      border-color: rgba(255,211,119,.6);
+    }
+
+    .tkc-floating-content {
+      max-height: 380px;
+      overflow-y: auto;
+      padding: 12px 14px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,211,119,.4) rgba(0,0,0,.3);
+    }
+
+    .tkc-floating-content::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    .tkc-floating-content::-webkit-scrollbar-track {
+      background: rgba(0,0,0,.3);
+    }
+
+    .tkc-floating-content::-webkit-scrollbar-thumb {
+      background: rgba(255,211,119,.35);
+      border-radius: 4px;
+    }
+
+    .tkc-floating-content::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,211,119,.6);
+    }
+
+    .tkc-archive-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 12px;
+      margin-bottom: 7px;
+      background: rgba(255,255,255,.02);
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+
+    .tkc-archive-item:hover {
+      background: rgba(255,211,119,.06);
+      border-color: rgba(255,211,119,.25);
+      transform: translateX(4px);
+    }
+
+    .tkc-archive-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .tkc-archive-name {
+      color: #ffdf88;
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    .tkc-archive-desc {
+      color: rgba(244,236,223,.7);
+      font-size: 11.5px;
+    }
+
+    .tkc-archive-action {
+      font-size: 11.5px;
+      color: rgba(255,211,119,.85);
+      white-space: nowrap;
+      padding-left: 10px;
+    }
+
+    .tkc-loading-text {
+      text-align: center;
+      color: rgba(244,236,223,.6);
+      font-size: 12.5px;
+      padding: 16px;
     }
   </style>
 </head>
@@ -158,40 +277,33 @@
 
         <!-- Compact hero -->
         <div class="hero-mini">
-          <h1>SHA-256 & PUBLIC GPG KEY  </h1>
+          <h1>SHA-256 &amp; PUBLIC GPG KEY</h1>
           <div class="subtitle">
             Cổng Xác Thực Cho <span class="pill">SHA-256</span> &amp; Chữ Ký Số <span class="pill">GPG/PGP</span>
           </div>
         </div>
 
-        <!-- Keep nav (same class names to match legal.css) -->
+        <!-- Navigation -->
         <nav aria-label="TKC-VH Legal Navigation">
           <div class="tabs" role="navigation">
             <a class="tab" href="../index.html">Trang Chủ</a>
             <a class="tab" href="../works.html">Works</a>
-		    <a class="tab" href="../series.html">Series</a>
-
-			<a class="tab active" href="./public-gpg-key.html">GPG Key</a>
-
-			  
+            <a class="tab" href="../series.html">Series</a>
+            <a class="tab active" href="./public-gpg-key.html">GPG Key</a>
             <a class="tab" href="./index.html">Legal</a>
-       		<a class="tab" href="./copyright.html">Bản quyền</a>
+            <a class="tab" href="./copyright.html">Bản quyền</a>
             <a class="tab" href="./disclaimer.html">Disclaimer</a>
             <a class="tab" href="./nguon-anh-va-tu-lieu.html">Nguồn tư liệu</a>
             <a class="tab" href="./quyen-so-huu-danh-xung.html">Danh xưng</a>
             <a class="tab" href="./vo-dieu-tam.html">Vợ Diệu Tâm</a>
             <a class="tab" href="./author.html">Author</a>
-			<a class="tab" href="./logo.html">Logo</a>
-
+            <a class="tab" href="./logo.html">Logo</a>
           </div>
         </nav>
 
-  
         <hr />
 
-        <!-- ===============================
-             AUTHENTICITY CERTIFICATES (CARDS) — Primary focus
-        ================================ -->
+        <!-- AUTHENTICITY CERTIFICATES -->
         <section id="auth-certificates" aria-label="Authenticity Certificates">
           <h2 class="gold-title" style="text-align:center; font-size: 18px; letter-spacing:.08em;">
             ⚜︎ AUTHENTICITY CERTIFICATES ⚜︎
@@ -245,9 +357,7 @@
 
         <div class="rowline"></div>
 
-        <!-- ===============================
-             TECHNICAL (COLLAPSIBLE) — keep proof, but hidden by default
-        ================================ -->
+        <!-- TECHNICAL GPG KEY DETAILS -->
         <section class="tech" aria-label="Technical GPG Key Details">
           <details>
             <summary>Technical Proof (Fingerprint + Public Key Block) 🐢 </summary>
@@ -274,7 +384,6 @@
             <p class="mini" style="margin:10px 0 6px;"><b>ASCII-armored Public Key</b></p>
             
 <pre id="keyblock">
-
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBGk9DeABEACtnbrxeBFRThtaTGFmpsIBVooAqg7Yg2L93Q/mAPgxk2loccrY
@@ -318,61 +427,40 @@ dLeMvakWtK4tL0phjqh9hX3wGJ7qcrT+FpM25WXu
           </details>
         </section>
 
-<div class="rowline"></div>
+        <div class="rowline"></div>
 
-        <!-- ===============================
-             TECHNICAL (COLLAPSIBLE) — keep proof, but hidden by default
-        ================================ -->
-        <section class="tech" aria-label="SSH Fingerprint - SHA256">
-          <details>
-            <summary>◈TKC-VH • 2025 🐢  Kho chữ ký số & SSH
-Fingerprint - SHA256: </summary>
+        <!-- ====================================================
+             CỬA SỔ NỔI 1: TKC-VH • 2025 (KÉO CUỘN DỮ LIỆU ĐỘNG)
+             ==================================================== -->
+        <div class="tkc-floating-box">
+          <div class="tkc-floating-header">
+            <span>◈ TKC-VH • 2025 🐢 Kho chữ ký số &amp; SSH Fingerprint</span>
+            <a class="tkc-ext-btn" href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH%7B2025%7D" rel="noopener" target="_blank">Mở trên GitHub ↗</a>
+          </div>
+          <div class="tkc-floating-content" id="gh-list-2025">
+            <div class="tkc-loading-text">Đang đồng bộ dữ liệu thư mục 2025...</div>
+          </div>
+        </div>
 
-            <p class="mini" style="margin:10px 6px 10px; text-align:center;">
+        <div class="rowline"></div>
 
-<a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2025}"
-target="_blank" rel="noopener">
- <br>
-<span class="pill">
-	github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2025} </span> </a>
+        <!-- ====================================================
+             CỬA SỔ NỔI 2: TKC-VH • 2026 (KÉO CUỘN DỮ LIỆU ĐỘNG)
+             ==================================================== -->
+        <div class="tkc-floating-box">
+          <div class="tkc-floating-header">
+            <span>◈ TKC-VH • 2026 🐢 Kho chữ ký số &amp; SSH Fingerprint</span>
+            <a class="tkc-ext-btn" href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH%7B2026%7D" rel="noopener" target="_blank">Mở trên GitHub ↗</a>
+          </div>
+          <div class="tkc-floating-content" id="gh-list-2026">
+            <div class="tkc-loading-text">Đang đồng bộ dữ liệu thư mục 2026...</div>
+          </div>
+        </div>
 
-   </p>
-
- <br>
-
-			    </details>
-        </section>
-		  
-
-<div class="rowline"></div>
-
-        <!-- ===============================
-             TECHNICAL (COLLAPSIBLE) — keep proof, but hidden by default
-        ================================ -->
-        <section class="tech" aria-label="SSH Fingerprint - SHA256">
-          <details>
-            <summary>◈TKC-VH • 2026 🐢  Kho chữ ký số & SSH
-Fingerprint - SHA256: </summary>
-
-            <p class="mini" style="margin:10px 6px 10px; text-align:center;">
-
-<a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2026}"
-target="_blank" rel="noopener">
- <br>
-<span class="pill">
-	github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/TKC-VH{2026} </span> </a>
-
-   </p>
-
- <br>
-
-  </details>
-        </section>
-		  
-		  
         <div class="sigline">
           <div class="footer">“Dấu Vân Tay Là Lời Thề - Chữ Ký Là Lời Chứng.”
-		<h3>⚜︎ TRAN KHAC CUONG ⚜︎</h3></div>
+            <h3>⚜︎ TRAN KHAC CUONG ⚜︎</h3>
+          </div>
         </div>
 
       </div><!-- /gold-frame -->
@@ -380,5 +468,53 @@ target="_blank" rel="noopener">
       <div class="footer">© 2025 TKC-VH • All rights reserved</div>
     </div><!-- /card -->
   </div><!-- /page -->
+
+  <!-- SCRIPT ĐỒNG BỘ NỘI DUNG TỰ ĐỘNG TỪ GITHUB API -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      function loadGitHubFolders(folderName, targetId) {
+        var container = document.getElementById(targetId);
+        if (!container) return;
+
+        var apiUrl = "https://api.github.com/repos/tkc-vh/tkc-vh.github.io/contents/assets/" + encodeURIComponent(folderName);
+
+        fetch(apiUrl)
+          .then(function(res) {
+            if (!res.ok) throw new Error("Fetch error");
+            return res.json();
+          })
+          .then(function(data) {
+            var folders = data.filter(function(item) { return item.type === "dir"; });
+            folders.sort(function(a, b) {
+              return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: "base" });
+            });
+
+            if (folders.length === 0) {
+              container.innerHTML = '<div class="tkc-loading-text">Không có thư mục nào.</div>';
+              return;
+            }
+
+            var html = "";
+            folders.forEach(function(folder) {
+              html += '<a class="tkc-archive-item" href="' + folder.html_url + '" target="_blank" rel="noopener">' +
+                '<div class="tkc-archive-info">' +
+                  '<span class="tkc-archive-name">' + folder.name + '</span>' +
+                  '<span class="tkc-archive-desc">Kho lưu trữ chữ ký số &amp; chứng thư trực tuyến</span>' +
+                '</div>' +
+                '<span class="tkc-archive-action">Xem file ➔</span>' +
+              '</a>';
+            });
+
+            container.innerHTML = html;
+          })
+          .catch(function(err) {
+            container.innerHTML = '<div class="tkc-loading-text" style="color:#ff9999;">Không thể nạp danh sách. <a href="https://github.com/tkc-vh/tkc-vh.github.io/tree/main/assets/' + encodeURIComponent(folderName) + '" target="_blank" style="color:#ffdf88;">Xem trên GitHub ↗</a></div>';
+          });
+      }
+
+      loadGitHubFolders("TKC-VH{2025}", "gh-list-2025");
+      loadGitHubFolders("TKC-VH{2026}", "gh-list-2026");
+    });
+  </script>
 </body>
 </html>
