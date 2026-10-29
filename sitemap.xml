@@ -4,54 +4,147 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-    <!-- Core Page -->
+    <!-- ==================== CORE PAGES ==================== -->
     <url>
         <loc>https://tkc-vh.github.io/</loc>
-        <lastmod>2026-10-23</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-
-    <!-- Main Sections -->
     <url>
         <loc>https://tkc-vh.github.io/works.html</loc>
-        <lastmod>2026-10-23</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
-
     <url>
         <loc>https://tkc-vh.github.io/series.html</loc>
-        <lastmod>2026-10-23</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
-    <!-- Legal & Security Pages -->
     <url>
-        <loc>https://tkc-vh.github.io/legal/</loc>
-        <lastmod>2026-10-23</lastmod>
+        <loc>https://tkc-vh.github.io/security-transparency.html</loc>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
+    <!-- ==================== WORKS & CHAPTERS ==================== -->
+    <!-- T19 -->
+    <url>
+        <loc>https://tkc-vh.github.io/t19/T19-SHA-256.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/t19/c1/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- T35 -->
+    <url>
+        <loc>https://tkc-vh.github.io/t35/T35-SHA-256.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/t35/c1/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- T42 -->
+    <url>
+        <loc>https://tkc-vh.github.io/t42/T42-SHA-256.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/t42/c2/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- ==================== LEGAL & POLICY HALL ==================== -->
+    <url>
+        <loc>https://tkc-vh.github.io/legal/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/legal/author.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/legal/copyright.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/legal/disclaimer.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/legal/logo.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/legal/nguon-anh-va-tu-lieu.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
     <url>
         <loc>https://tkc-vh.github.io/legal/public-gpg-key.html</loc>
-        <lastmod>2026-10-23</lastmod>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/legal/quyen-so-huu-danh-xung.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/legal/tkc-vh-glossary.html</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://tkc-vh.github.io/legal/vo-dieu-tam.html</loc>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
 
+    <!-- ==================== SECURITY & METADATA ==================== -->
     <url>
         <loc>https://tkc-vh.github.io/SECURITY.md</loc>
-        <lastmod>2026-10-23</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
-
     <url>
         <loc>https://tkc-vh.github.io/.well-known/security.txt</loc>
-        <lastmod>2026-10-23</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
